@@ -50,10 +50,14 @@ I believe these skills make me an effective communicator and collaborator, able 
 ## 🏅 Achievements
 
 - **CS50x: Introduction to Computer Science** – Certificate earned  
-  <img width="2246" height="1588" alt="CS50x_Jean_Kocman_certificate" src="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" />
+  <a href="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" target="_blank">
+    <img src="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" alt="CS50x_Jean_Kocman_certificate" width="250"/>
+  </a>
 - **CS50 Python: Introduction to Programming with Python** – In progress
 - **ITNetwork Web Application Development Course** – Certificate earned  
-  <img width="752" height="804" alt="Certificate_Python-Jean_Kocman_print" src="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" />
+  <a href="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" target="_blank">
+    <img src="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" alt="Certificate_Python-Jean_Kocman_print" width="200"/>
+  </a>
 
 ---
 
