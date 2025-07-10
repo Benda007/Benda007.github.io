@@ -1,6 +1,6 @@
 # My Journey in Computer Science: Projects Portfolio
 
-Welcome to my portfolio, showcasing my learning journey through Harvard University's CS50x, CS50 Python courses and an re-qualification program certified by the Czech Ministry of Education and tought by IT Network company, Youth, and Sport. This compilation demonstrates my skills in foundational computer science and advanced web application development.
+Welcome to my portfolio, which showcases my learning journey through Harvard University's CS50x and CS50 Python courses, and a re-qualification program certified by the Czech Ministry of Education and taught by the IT Network company, Youth, and Sport. This compilation demonstrates my skills in foundational computer science and advanced web application development.
 
 ## CS50x Projects Overview
 
