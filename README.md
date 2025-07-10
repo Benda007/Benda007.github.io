@@ -107,15 +107,34 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ---
 
-### CS50 Python Course
+## CS50 Python Course Overview
 
-- **Problem Sets:** Tackled a range of programming challenges involving input/output, text and data manipulation, and algorithm design.
-- **Testing & Debugging:** Developed strong habits for writing clean code and creating comprehensive test cases.
-- **OOP:** Modeled real-world entities and behaviors with custom Python classes.
-- **API Usage:** Interacted with external services for data retrieval (e.g., Bitcoin price API).
+### Course Highlights
+- **Foundational Python Skills**: Developed a strong base in Python programming through varied problem sets that focused on fundamental operations such as input/output handling, text manipulation, and control flows.
+- **Data Manipulation and Processing**: Achieved proficiency in handling diverse data types and structures, utilizing techniques like string manipulations, list comprehensions, and dictionary operations.
+- **File Handling and I/O**: Implemented solutions involving data storage, retrieval, and processing, managing CSV files, and text manipulation.
+- **Testing and Debugging**: Created extensive test cases for functions and used debugging techniques to ensure code accuracy and reliability.
+- **Object-Oriented Programming (OOP)**: Designed custom classes to model real-world entities, mastering encapsulation and method implementation.
 
-**Final Project:**  
-- **KODI Add-on:** Built a media streaming plugin for KODI/LibreELEC, featuring secure user authentication, media search, and direct streaming with Python scripting and API integration.
+### Notable Projects and Approaches
+- **Problem Set Solutions**:
+  - **INDOR**: Focuses on basic input handling and text manipulation, fundamental skills for any programming task.
+  - **FACES**: Demonstrates functions, iteration, and string replacement, essential for data transformations.
+  - **BANK**: Illustrates decision-making in applications using string operations and control flows.
+  - **TWTR**: Showcases string manipulation skills for filtering and processing text data effectively.
+  - **PLATES**: Implements input validation through conditionals, loops, and string logic.
+  - **FUEL**: Models state-based systems using mathematical operations and logical conditionals.
+  - **GAME**: Develops an interactive application incorporating randomness and user inputs.
+  - **BITCOIN**: Highlights API interaction skills to process real-time data using HTTP requests.
+  - **JAR**: Demonstrates OOP principles by encapsulating data and behaviors within custom classes.
+
+### Final Project: KODI Add-on for Online Storage Server
+- **Interactive Media Add-on**: Developed an add-on for KODI and LibreELEC that facilitates media streaming from an online storage server.
+  - **Features**: Included secure user authentication, media search capabilities, and direct streaming.
+  - **Skills Demonstrated**: API integration, Python scripting, and compliance with KODI's add-on architecture.
+  - **Future Plans**: Focused on enhancing error handling, refining the user interface, and optimizing the overall user experience.
+
+---
 
 ---
 
@@ -124,7 +143,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 - **HTML/CSS:** Applied advanced layout and responsive design techniques.
 - **Python Foundations & OOP:** Mastered Python’s core features and object-oriented paradigms.
-- **Django:** Built web applications with authentication and MVC architecture.
+- **Django:** Built web applications with authentication.
 - **Advanced UI:** Enhanced user experience with intuitive interfaces and persistent data management.
 
 ---
