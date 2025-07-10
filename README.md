@@ -16,17 +16,18 @@ Welcome to my portfolio, showcasing my learning journey through Harvard Universi
   - **RECOVER**: Implementing JPEG recovery from corrupted memory cards.
 
 ### 2. SQL and Data Management
-- **SQL (Songs and Movies Database)**: Learned to query and manage data efficiently, crafting complex queries across multiple tables.
-- **Fiftyville Mystery**: Utilized SQL skills to solve a detective challenge, effectively querying cross-referenced data.
+- **SQL (Songs and Movies Database)**: Crafted complex queries across multiple tables to efficiently query and manage data.
+- **Fiftyville Mystery**: Demonstrated advanced SQL skills to solve a detailed detective challenge that involved intricate data analysis and problem-solving.
 
 ### 3. Web Development (Python, Flask, HTML/CSS)
 - **Birthday App**: Created a web application to manage friends' birthdays using Flask and SQLite.
-- **Finance**: Developed a stock management application for buying and selling simulations, incorporating real-time API data.
-- **Homepage**: Designed a responsive personal website with HTML, CSS, Bootstrap, and JavaScript.
+- **Finance**: Developed a stock management application for buying/selling simulations, incorporating real-time API data and displaying portfolio summaries.
+- **Homepage**: Designed a responsive personal website using HTML, CSS, Bootstrap, and JavaScript.
 
 ### 4. Problem Solving and Algorithmic Thinking
 - **Speller**: Implemented efficient spell-checking algorithms using hash tables.
 - **Inheritance**: Simulated genetic inheritance patterns with optimized algorithms in C.
+- **Tideman**: Designed and implemented a ranked voting system using graph theory and cycle detection algorithms, showcasing complex decision-making processes and recursive function implementation.
 
 ### Final Project: Ludo Game
 - **Interactive Ludo Game**: Developed a web-based Ludo game using HTML, CSS, JavaScript, and Flask.
@@ -39,25 +40,29 @@ Welcome to my portfolio, showcasing my learning journey through Harvard Universi
 ## CS50 Python Course Overview
 
 ### Course Highlights
-- Developed a strong foundation in Python programming through practical problem sets and projects.
-- Gained proficiency in working with APIs, data structures, file I/O, exception handling, and OOP.
+- **Foundational Python Skills**: Developed a strong base in Python programming through varied problem sets that focused on fundamental operations such as input/output handling, text manipulation, and control flows.
+- **Data Manipulation and Processing**: Achieved proficiency in handling diverse data types and structures, utilizing techniques like string manipulations, list comprehensions, and dictionary operations.
+- **File Handling and I/O**: Implemented solutions involving data storage, retrieval, and processing, managing CSV files, and text manipulation.
+- **Testing and Debugging**: Created extensive test cases for functions and used debugging techniques to ensure code accuracy and reliability.
+- **Object-Oriented Programming (OOP)**: Designed custom classes to model real-world entities, mastering encapsulation and method implementation.
 
-### Final Project: WebShare.cz KODI Add-on
-- **Project Description**: Developed a KODI and LibreELEC add-on to enable streaming of online media hosted on WebShare.cz by leveraging their API.
-- **Key Features**:
-  - **User Authentication**: Implemented secure user login with hashing for password protection using MD5 and SHA-1.
-  - **Media Search**: Allows users to search for movies or TV series directly from KODI's interface by interfacing with WebShare's search API.
-  - **Streaming Capability**: Retrieves streamable URLs for identified media files to facilitate direct playback on KODI.
-- **Technical Components**:
-  - **Python Scripting**: Core logic for API interaction and user input handling is encapsulated in Python functions.
-  - **API Integration**: Utilized WebShare.cz's API for operations like login, search, and retrieving file streams.
-  - **Add-on Structure**: Conformed to KODI's add-on guidelines, including developing key components like `addon.xml` for metadata and `default.py` as an entry-point.
-  - **Testing**: Established unit tests for top-level functions using `pytest` to ensure reliability and correctness.
+### Notable Projects and Approaches
+- **Problem Set Solutions**:
+  - **INDOR**: Focuses on basic input handling and text manipulation, fundamental skills for any programming task.
+  - **FACES**: Demonstrates functions, iteration, and string replacement, essential for data transformations.
+  - **BANK**: Illustrates decision-making in applications using string operations and control flows.
+  - **TWTR**: Showcases string manipulation skills for filtering and processing text data effectively.
+  - **PLATES**: Implements input validation through conditionals, loops, and string logic.
+  - **FUEL**: Models state-based systems using mathematical operations and logical conditionals.
+  - **GAME**: Develops an interactive application incorporating randomness and user inputs.
+  - **BITCOIN**: Highlights API interaction skills to process real-time data using HTTP requests.
+  - **JAR**: Demonstrates OOP principles by encapsulating data and behaviors within custom classes.
 
-### Current Development Focus
-- Enhancing error handling and logging capabilities.
-- Refining the user interface for KODI settings via `settings.xml`.
-- Iterating on feedback to optimize functionality and user experience.
+### Final Project: KODI Add-on for Online Storage Server
+- **Interactive Media Add-on**: Developed an add-on for KODI and LibreELEC that facilitates media streaming from an online storage server.
+  - **Features**: Included secure user authentication, media search capabilities, and direct streaming.
+  - **Skills Demonstrated**: API integration, Python scripting, and compliance with KODI's add-on architecture.
+  - **Future Plans**: Focused on enhancing error handling, refining the user interface, and optimizing the overall user experience.
 
 ---
 
