@@ -22,7 +22,7 @@ I am seeking opportunities as a junior developer, technical project coordinator,
 
 - 🌍 Based in the Czech Republic
 - Professional with a successful career in Global Purchasing and Procurement. Driven by curiosity and a passion for lifelong learning, I recently embarked on a journey into computer science and software development. While I am new to coding, my experience in international business, negotiation, and operations gives me a unique perspective on technology’s role in solving real-world problems.
-- 🎓 Certified by Harvard University (CS50x) and IT Network (requalification recognized by the Czech Ministry of Education, Youth, and Sport)
+- 🎓 Certified by Harvard University   (CS50x) and IT Network (requalification course recognized by the Czech Ministry of Education, Youth, and Sport)
 - 🌱 Focused on full-stack development, problem-solving, and creating user-friendly applications
 - 💡 Always exploring new technologies and best practices
 
@@ -38,7 +38,11 @@ My journey into programming truly began with Harvard’s CS50—a renowned and r
 ---
 
 ## 🤝 Teamwork & Collaboration
-
+- Effective communicator in multicultural teams
+- Skilled at listening, understanding, and supporting colleagues
+- Experience leading cross-regional projects
+- Adaptable and proactive in dynamic environments
+  
 I thrive in team environments and enjoy discussing ideas, learning from others, and offering my help wherever I can. My professional background in global purchasing has taught me to truly listen to my counterparts, understand their needs, and reformulate requirements for clear solutions.
 
 Currently, I work in a multicultural and cross-regional environment, regularly collaborating with colleagues from diverse backgrounds and perspectives. This experience has strengthened my ability to communicate effectively, adapt to different working styles, and build consensus within international teams.
