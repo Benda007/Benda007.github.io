@@ -33,7 +33,7 @@ I am seeking opportunities as a junior developer, technical project coordinator,
 Since childhood, I have been fascinated by technology—whether it was exploring computers, mastering advanced software usage, or later modifying and enhancing Android phone operating systems.  
 After years in global purchasing, I was inspired to learn coding to better understand and shape the digital tools transforming business and our future.
 
-My journey into programming truly began with Harvard’s CS50—a renowned and rigorous introduction to computer science. CS50 was deeply inspiring and strongly motivated me to continue learning and developing my coding skills, no matter how steep the learning curve. I am excited to contribute to projects that bridge technology and real-world operations.
+My journey into programming truly began with Harvard’s CS50, a renowned and rigorous introduction to computer science. CS50 was deeply inspiring and strongly motivated me to continue learning and developing my coding skills, no matter how steep the learning curve. I am excited to contribute to projects that bridge technology and real-world operations.
 
 ---
 
