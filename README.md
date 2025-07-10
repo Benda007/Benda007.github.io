@@ -1,97 +1,143 @@
-# My Journey in Computer Science: Projects Portfolio
+# 👋 Hi, I’m Benda007
 
-Welcome to my portfolio, which showcases my learning journey through Harvard University's CS50x and CS50 Python courses, and a re-qualification program certified by the Czech Ministry of Education and taught by the IT Network company, Youth, and Sport. This compilation demonstrates my skills in foundational computer science and advanced web application development.
-
-## CS50x Projects Overview
-
-### 1. C Programming Language
-- **Problem Sets 1–5**: Developed skills in basic programming constructs, data types, control flow, and memory management in C. Key projects included:
-  - **HELLO**: Writing simple programs to understand structure and syntax.
-  - **MARIO**: Building pyramids using loops and conditionals.
-  - **CASH**: Implementing a greedy algorithm for coin change.
-  - **SCRABBLE**: Calculating scores for Scrabble words using custom functions.
-  - **READABILITY**: Implementing the Coleman-Liau index to assess text grade level.
-  - **CAESAR**: Crafting a basic cryptographic cipher program.
-  - **FILTER-LESS**: Transforming image pixels by manipulating file headers and colors.
-  - **RECOVER**: Implementing JPEG recovery from corrupted memory cards.
-
-### 2. SQL and Data Management
-- **SQL (Songs and Movies Database)**: Crafted complex queries across multiple tables to efficiently query and manage data.
-- **Fiftyville Mystery**: Demonstrated advanced SQL skills to solve a detailed detective challenge that involved intricate data analysis and problem-solving.
-
-### 3. Web Development (Python, Flask, HTML/CSS)
-- **Birthday App**: Created a web application to manage friends' birthdays using Flask and SQLite.
-- **Finance**: Developed a stock management application for buying/selling simulations, incorporating real-time API data and displaying portfolio summaries.
-- **Homepage**: Designed a responsive personal website using HTML, CSS, Bootstrap, and JavaScript.
-
-### 4. Problem Solving and Algorithmic Thinking
-- **Speller**: Implemented efficient spell-checking algorithms using hash tables.
-- **Inheritance**: Simulated genetic inheritance patterns with optimized algorithms in C.
-- **Tideman**: Designed and implemented a ranked voting system using graph theory and cycle detection algorithms, showcasing complex decision-making processes and recursive function implementation.
-
-### Final Project: Ludo Game
-- **Interactive Ludo Game**: Developed a web-based Ludo game using HTML, CSS, JavaScript, and Flask.
-  - **Features**: Includes responsive design with Bootstrap, game logic automation, and dynamic animations for an engaging experience.
-  - **Skills Demonstrated**: Full-stack development with backend server handling in Flask.
-  - **Future Plans**: Integrating game state persistence with SQL and feature expansion.
+![Profile Badge](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)
+![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)
+![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
 
 ---
 
-## CS50 Python Course Overview
+## 📝 Summary
 
-### Course Highlights
-- **Foundational Python Skills**: Developed a strong base in Python programming through varied problem sets that focused on fundamental operations such as input/output handling, text manipulation, and control flows.
-- **Data Manipulation and Processing**: Achieved proficiency in handling diverse data types and structures, utilizing techniques like string manipulations, list comprehensions, and dictionary operations.
-- **File Handling and I/O**: Implemented solutions involving data storage, retrieval, and processing, managing CSV files, and text manipulation.
-- **Testing and Debugging**: Created extensive test cases for functions and used debugging techniques to ensure code accuracy and reliability.
-- **Object-Oriented Programming (OOP)**: Designed custom classes to model real-world entities, mastering encapsulation and method implementation.
-
-### Notable Projects and Approaches
-- **Problem Set Solutions**:
-  - **INDOR**: Focuses on basic input handling and text manipulation, fundamental skills for any programming task.
-  - **FACES**: Demonstrates functions, iteration, and string replacement, essential for data transformations.
-  - **BANK**: Illustrates decision-making in applications using string operations and control flows.
-  - **TWTR**: Showcases string manipulation skills for filtering and processing text data effectively.
-  - **PLATES**: Implements input validation through conditionals, loops, and string logic.
-  - **FUEL**: Models state-based systems using mathematical operations and logical conditionals.
-  - **GAME**: Develops an interactive application incorporating randomness and user inputs.
-  - **BITCOIN**: Highlights API interaction skills to process real-time data using HTTP requests.
-  - **JAR**: Demonstrates OOP principles by encapsulating data and behaviors within custom classes.
-
-### Final Project: KODI Add-on for Online Storage Server
-- **Interactive Media Add-on**: Developed an add-on for KODI and LibreELEC that facilitates media streaming from an online storage server.
-  - **Features**: Included secure user authentication, media search capabilities, and direct streaming.
-  - **Skills Demonstrated**: API integration, Python scripting, and compliance with KODI's add-on architecture.
-  - **Future Plans**: Focused on enhancing error handling, refining the user interface, and optimizing the overall user experience.
+Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments.
 
 ---
 
-## IT Network Course: Programming of Web Applications in Python
+## 🎯 What I’m Looking For
 
-### Course Content Overview
-- **HTML & CSS**: Grasped static web design principles along with advanced layout techniques.
-- **Python Foundations**: Strengthened my understanding of variables, control structures, and data types in Python programming.
-- **Object-Oriented Programming (OOP)**: Gained in-depth knowledge about encapsulation, inheritance, and polymorphism in Python.
-- **Collections & Iterators**: Mastered data structures, including tuples, sets, dictionaries, and working with iterators.
-- **Django Framework**: Built web applications using Django, focusing on MVC architecture and user authentication.
+I am seeking opportunities as a junior developer, technical project coordinator, or business analyst where I can bridge my business experience with my growing technical skills. I am especially interested in roles that value teamwork, clear communication, and cross-functional problem-solving.
 
-### Skills & Technologies
-- **Languages**: C, Python, SQL, JavaScript, HTML, CSS
-- **Frameworks & Tools**: Flask, Django, SQLite, Bootstrap, PyCharm
-- **Concepts**: Algorithms, Data Structures, OOP, APIs, Responsive Design
+---
 
-### Personal Touch
-- Implemented advanced UI features for web applications, ensuring an intuitive user experience.
-- Enhanced projects with database connectivity for persistent data management.
+## 🚀 About Me
 
-### Conclusion
-This portfolio reflects my comprehensive journey and achievements in computer science, combining foundational learning with practical application development. I look forward to leveraging these skills in future professional opportunities.
+- 🌍 Based in the Czech Republic
+- Professional with a successful career in Global Purchasing and Procurement. Driven by curiosity and a passion for lifelong learning, I recently embarked on a journey into computer science and software development. While I am new to coding, my experience in international business, negotiation, and operations gives me a unique perspective on technology’s role in solving real-world problems.
+- 🎓 Certified by Harvard University (CS50x) and IT Network (requalification recognized by the Czech Ministry of Education, Youth, and Sport)
+- 🌱 Focused on full-stack development, problem-solving, and creating user-friendly applications
+- 💡 Always exploring new technologies and best practices
 
-Thank you for reviewing my portfolio! Explore each project to see detailed insights into my work and capabilities.
+---
 
---- 
+## 🔄 Career Switch: From Global Purchasing to Coding
 
-**Connect with Me**
-- [LinkedIn](#)
-- [Twitter](#)
-- [GitHub](#)
+Since childhood, I have been fascinated by technology—whether it was exploring computers, mastering advanced software usage, or later modifying and enhancing Android phone operating systems.  
+After years in global purchasing, I was inspired to learn coding to better understand and shape the digital tools transforming business and our future.
+
+My journey into programming truly began with Harvard’s CS50—a renowned and rigorous introduction to computer science. CS50 was deeply inspiring and strongly motivated me to continue learning and developing my coding skills, no matter how steep the learning curve. I am excited to contribute to projects that bridge technology and real-world operations.
+
+---
+
+## 🤝 Teamwork & Collaboration
+
+I thrive in team environments and enjoy discussing ideas, learning from others, and offering my help wherever I can. My professional background in global purchasing has taught me to truly listen to my counterparts, understand their needs, and reformulate requirements for clear solutions.
+
+Currently, I work in a multicultural and cross-regional environment, regularly collaborating with colleagues from diverse backgrounds and perspectives. This experience has strengthened my ability to communicate effectively, adapt to different working styles, and build consensus within international teams.
+
+I believe these skills make me an effective communicator and collaborator, able to contribute positively to any team—whether in business or technology.
+
+---
+
+## 🏅 Achievements
+
+- **CS50x: Introduction to Computer Science** – Certificate earned  
+  ![image1](image1)
+- **CS50 Python: Introduction to Programming with Python** – In progress
+- **ITNetwork Web Application Development Course** – Certificate earned  
+  ![image2](image2)
+
+---
+
+## 💻 Skills & Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)
+![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)
+![SQL](https://img.shields.io/badge/SQL-4479A1?logo=sqlite&logoColor=white&style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=flat-square)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)
+![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat-square)
+![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white&style=flat-square)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white&style=flat-square)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat-square)
+![PyCharm](https://img.shields.io/badge/PyCharm-000000?logo=pycharm&logoColor=white&style=flat-square)
+
+**Concepts:**  
+Algorithms, Data Structures, OOP, APIs, Responsive Design
+
+---
+
+## 📚 Project Highlights
+
+### CS50x Projects
+
+#### 1. C Programming Language
+- **HELLO, MARIO, CASH, SCRABBLE:** Built foundational programs to master control flow, memory, and data structures.
+- **READABILITY & CAESAR:** Implemented text analysis using the Coleman-Liau index and built simple cryptographic tools.
+- **FILTER-LESS & RECOVER:** Manipulated image data and recovered JPEGs from corrupted memory cards, practicing file I/O and data recovery.
+
+#### 2. SQL & Data Analysis
+- **Songs & Movies Database:** Wrote advanced SQL queries for real-world datasets.
+- **Fiftyville Mystery:** Solved a detective challenge through intricate data analysis.
+
+#### 3. Web Development (Python, Flask, HTML/CSS)
+- **Birthday App:** Managed user data and dates using Flask and SQLite.
+- **Finance:** Developed a simulated stock trading platform with real-time API integration.
+- **Homepage:** Built and styled a personal website with HTML, CSS, Bootstrap, and JavaScript.
+
+#### 4. Algorithmic Thinking
+- **Speller:** Designed an efficient spell checker using hash tables.
+- **Tideman:** Created a ranked voting system utilizing graph theory and cycle detection.
+
+#### Final Project: Ludo Game
+- **Web-based Ludo game** (HTML, CSS, JS, Flask): Responsive design, automated gameplay, and plans for persistent game state and feature expansion.
+
+---
+
+### CS50 Python Course
+
+- **Problem Sets:** Tackled a range of programming challenges involving input/output, text and data manipulation, and algorithm design.
+- **Testing & Debugging:** Developed strong habits for writing clean code and creating comprehensive test cases.
+- **OOP:** Modeled real-world entities and behaviors with custom Python classes.
+- **API Usage:** Interacted with external services for data retrieval (e.g., Bitcoin price API).
+
+**Final Project:**  
+- **KODI Add-on:** Built a media streaming plugin for KODI/LibreELEC, featuring secure user authentication, media search, and direct streaming with Python scripting and API integration.
+
+---
+
+### IT Network Course: Programming of Web Applications in Python
+#### Requalification program certified by the Czech Ministry of Education
+
+- **HTML/CSS:** Applied advanced layout and responsive design techniques.
+- **Python Foundations & OOP:** Mastered Python’s core features and object-oriented paradigms.
+- **Django:** Built web applications with authentication and MVC architecture.
+- **Advanced UI:** Enhanced user experience with intuitive interfaces and persistent data management.
+
+---
+
+## 🌟 Personal Approach
+
+- I enjoy breaking down complex problems into manageable steps and iteratively improving my projects.
+- I value intuitive user experiences, robust code, and clear documentation.
+- I am always eager to learn, experiment, and contribute to meaningful projects.
+
+---
+
+## 📫 Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white&style=flat-square)](https://www.linkedin.com/in/jeankocman/)
+[![GitHub](https://img.shields.io/badge/GitHub-Benda007-181717?logo=github&logoColor=white&style=flat-square)](https://github.com/Benda007)
+
+---
+
+> _Thank you for visiting my portfolio! Explore my projects to see my journey in action, and let’s connect if you want to collaborate or chat about tech._
