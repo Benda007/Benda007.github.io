@@ -1,13 +1,8 @@
 # 👋 Hi, I’m Benda007
 
-![Profile Badge](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)
-![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)
+[![Profile Badge](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)](https://cs50.harvard.edu/)
+[![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)](https://en.wikipedia.org/wiki/Czech_Republic)
 ![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
-
-[![Profile Badge](https://img.shields.io/badge/Profile-Active-blue)](https://github.com/Benda007)
-[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
-[![C](https://img.shields.io/badge/C-Programming-blue?logo=c)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Build Status](https://github.com/Benda007/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Benda007/portfolio/actions/workflows/ci.yml) 
 
 ---
 
@@ -72,17 +67,19 @@ I believe these skills make me an effective communicator and collaborator, able 
 
 ## 💻 Skills & Technologies
 
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)
-![SQL](https://img.shields.io/badge/SQL-4479A1?logo=sqlite&logoColor=white&style=flat-square)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=flat-square)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)
-![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat-square)
-![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white&style=flat-square)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white&style=flat-square)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat-square)
-![PyCharm](https://img.shields.io/badge/PyCharm-000000?logo=pycharm&logoColor=white&style=flat-square)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)](https://docs.python.org/3/)
+[![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)](https://manual.cs50.io/)
+[![SQL](https://img.shields.io/badge/SQL-4479A1?logo=sqlite&logoColor=white&style=flat-square)](https://www.w3schools.com/sql/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)](https://www.w3schools.com/js/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=flat-square)](https://www.w3schools.com/html/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)](https://www.w3schools.com/css/)
+[![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat-square)](https://flask.palletsprojects.com/en/stable/)
+[![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white&style=flat-square)](https://www.djangoproject.com/)
+[![Jinja](https://img.shields.io/badge/Jinja-f2e54d?logo=jinja&logoColor=red&style=flat-square)](https://jinja.palletsprojects.com/en/stable/intro/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white&style=flat-square)](https://sqlite.org/docs.html)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat-square)](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+[![PyCharm](https://img.shields.io/badge/PyCharm-000000?logo=pycharm&logoColor=white&style=flat-square)](https://www.jetbrains.com/pycharm/download/?section=windows)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/)
 
 **Concepts:**  
 Algorithms, Data Structures, OOP, APIs, Responsive Design
@@ -91,7 +88,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ## 📚 Project Highlights
 
-### CS50x Projects
+### [CS50x Course and Projects Overview](https://cs50.harvard.edu/x/2024/)
 
 #### 1. C Programming Language
 - **HELLO, MARIO, CASH, SCRABBLE:** Built foundational programs to master control flow, memory, and data structures.
@@ -116,7 +113,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ---
 
-## CS50 Python Course Overview
+## [CS50 Python Course and Project Overview](https://cs50.harvard.edu/python/)
 
 ### Course Highlights
 - **Foundational Python Skills**: Developed a strong base in Python programming through varied problem sets that focused on fundamental operations such as input/output handling, text manipulation, and control flows.
@@ -147,7 +144,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ---
 
-### IT Network Course: Programming of Web Applications in Python
+### [IT Network Course: Programming of Web Applications in Python](https://www.itnetwork.cz/)
 #### Requalification program certified by the Czech Ministry of Education
 
 - **HTML/CSS:** Applied advanced layout and responsive design techniques.
@@ -160,7 +157,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 ## 🌟 Personal Approach
 
 - I enjoy breaking down complex problems into manageable steps and iteratively improving my projects.
-- I value intuitive user experiences, robust code, and clear documentation.
+- I value intuitive user experiences, open communication between people and robust code.
 - I am always eager to learn, experiment, and contribute to meaningful projects.
 
 ---
