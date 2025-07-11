@@ -95,25 +95,25 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 ### [CS50x - Přehled kurzů a projektů](https://cs50.harvard.edu/x/2024/)
 
 #### 1. Programovací jazyk C 
-- **Hello, Mario, Cash, Scrabble:** Základní programy na řízení toku, práci s pamětí a datovými strukturami.
-- **Readibility & Caesar:** Analýza textu pomocí indexu Coleman-Liau a vytvoření jednoduchých kryptografických nástrojů.
-- **Filter & Recover:** Práce s obrazovými daty a obnova JPEG souborů z poškozených paměťových karet, procvičení práce se soubory a obnovy dat.
+- **HELLO, MARIO, CASH, SCRABBLE:** Základní programy na řízení toku, práci s pamětí a datovými strukturami.
+- **READABILITY & CAESAR:** Analýza textu pomocí indexu Coleman-Liau a vytvoření jednoduchých kryptografických nástrojů.
+- **FILTER & RECOVER:** Práce s obrazovými daty a obnova JPEG souborů z poškozených paměťových karet, procvičení práce se soubory a obnovy dat.
 
 #### 2. SQL a analýza dat
-- **Songs & Movies Database:** Pokročilé SQL dotazy na reálných datech.
-- **Fiftyville Mystery:** Řešení těchto detektivních úkolů pomocí detailní datové analýzy.
+- **SONGS & MOVIES DATABASE:** Pokročilé SQL dotazy na reálných datech.
+- **FIFTYVILLE MYSTERY:** Řešení těchto detektivních úkolů pomocí detailní datové analýzy.
 
 #### 3. Webový vývoj (Python, Flask, HTML/CSS)
-- **Birthday App:** Správu uživatelských dat a narozenin s pomocí Flask a SQLite.
-- **Finance:** Simulovaná obchodní platforma pro akcie s integrací reálných API.
-- **Homepage:** Osobní webová stránka navržená a stylizovaná pomocí HTML, CSS, Bootstrap a JavaScriptu.
+- **BIRTHDAY APP:** Správu uživatelských dat a narozenin s pomocí Flask a SQLite.
+- **FINANCE:** Simulovaná obchodní platforma pro akcie s integrací reálných API.
+- **HOMEPAGE:** Osobní webová stránka navržená a stylizovaná pomocí HTML, CSS, Bootstrap a JavaScriptu.
 
 #### 4. Algoritmické myšlení ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
-- **Speller:** Efektivní kontrola pravopisu pomocí hash tabulek. 
-- **Tideman:** Systém pro hlasování využívající grafovou teorii a detekci cyklů. 
+- **SPELLER:** Efektivní kontrola pravopisu pomocí hash tabulek. 
+- **TIDEMAN:** Systém pro hlasování využívající grafovou teorii a detekci cyklů. 
 
 #### Závěrečný projekt: Ludo hra
-- **Webová Ludo hra** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
+- **Webová hra Člověče nezlob se** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
 
 ---
 
