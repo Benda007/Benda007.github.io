@@ -4,6 +4,11 @@
 ![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)
 ![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
 
+[![Profile Badge](https://img.shields.io/badge/Profile-Active-blue)](https://github.com/Benda007)
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+[![C](https://img.shields.io/badge/C-Programming-blue?logo=c)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Build Status](https://github.com/Benda007/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Benda007/portfolio/actions/workflows/ci.yml) 
+
 ---
 
 ## 📝 Summary
