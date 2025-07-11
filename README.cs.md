@@ -1,75 +1,75 @@
-[![English](https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png)](README.md)
-[![Čeština](https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png)](README.cs.md)
+<a href="README.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="30"/></a>
+<a href="README.cs.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="30"/></a>
 
-# 👋 Ahoj, já jsem Jean
+# 👋 Ahoj, jsem Jean
 
 [![Profilový odznak](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)](https://cs50.harvard.edu/)
-[![Lokalita](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)](https://en.wikipedia.org/wiki/Czech_Republic)
-![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
+[![Lokalita](https://img.shields.io/badge/Lokalita-Česká%20republika-orange?style=flat-square)](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%A1_republika)
+![Status](https://img.shields.io/badge/Otevřený%20pro-Nové%20příležitosti-green?style=flat-square)
 
 ---
 
-## 📝 Přehled
+## 📝 Shrnutí
 
-Zkušený profesionál v oblasti globálního nákupu a nedávný absolvent Harvard CS50, nadšený pro využívání obchodního vhledu a technických dovedností k tvorbě praktických softwarových řešení. Silné schopnosti v týmové spolupráci, řešení problémů a přizpůsobivosti v rychle se měnícím prostředí.
+Jsem zkušený profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí.
 
 ---
 
 ## 🎯 Co hledám
 
-Hledám příležitosti na pozici junior developera, technického koordinátora projektů nebo business analytika, kde mohu propojit své obchodní zkušenosti s rostoucími technickými dovednostmi. Zajímám se především o role, které oceňují týmovou práci, jasnou komunikaci a mezioborové řešení problémů.
+Rád bych našel příležitosti jako junior developer, technický koordinátor projektů nebo business analytik, kde bych mohl propojit své obchodní zkušenosti s rozvíjejícími se technickými schopnostmi. Zajímají mě role, které kladou důraz na týmovou práci, jasnou komunikaci a řešení problémů napříč obory.
 
 ---
 
 ## 🚀 O mně
 
-- 🌍 Bydlím v České republice, kraj Vysočina
-- Profesionál s úspěšnou kariérou v oblasti globálního nákupu a logistiky. Veden zvídavostí a vášní pro celoživotní vzdělávání jsem se nedávno vydal na cestu do světa informatiky a softwarového vývoje. Přestože jsem v programování nováček, zkušenosti z mezinárodního obchodu, vyjednávání a řízení provozu mi dávají jedinečný pohled na roli technologií při řešení reálných problémů.
-- 🎓 Certifikace: Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR)
-- 🌱 Zaměření na full-stack vývoj, řešení problémů a tvorbu uživatelsky přívětivých aplikací
-- 💡 Neustále se zajímám o nové technologie a osvědčené postupy
+- 🌍 Žiji v České republice, kraj Vysočina
+- Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>
+- Mám úspěšnou kariéru v oblasti globálního nákupu a správě obchodních vztahů. Vždy jsem byl hnán zvědavostí a vášní pro celoživotní učení, což mě přivedlo ke studiu informatiky a vývoji softwaru. Přestože jsem v programování začátečník, mé zkušenosti z mezinárodního obchodu, vyjednávání a řízení obchodních vztahů mi poskytují jedinečný pohled na roli technologií při řešení reálných problémů.
+- 🎓 Mám certifikáty z Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR)
+- 🌱 Zaměřuji se na full-stack vývoj, řešení problémů a tvorbu uživatelsky přívětivých aplikací. 
+- 💡 Neustále sleduji nové technologie a vývoj v IT oblastech.
 
 ---
 
-## 🔄 Kariérní změna: Z nákupu ke kódování
+## 🔄 Změna kariéry: Z nákupu ke kódování
 
-Od dětství mě fascinovaly technologie – ať už to bylo zkoumání počítačů, zvládání pokročilého softwaru nebo později úpravy a vylepšování operačních systémů Android telefonů.  
-Po letech v globálním nákupu mě inspirovalo začít se učit programovat, abych lépe porozuměl a mohl ovlivňovat digitální nástroje, které mění svět byznysu a naší budoucnosti.
+Od dětství mě fascinovaly technologie, ať už šlo o objevování počítačů, používání pokročilého softwaru, úpravy hardwaru, nebo změny v operačních systémech Android (custom ROM). Po letech strávených v globálním nákupu jsem se rozhodl naučit programovat, abych lépe porozuměl a mohl ovlivňovat digitální nástroje, které transformují byznys i naši budoucnost.
 
-Moje cesta programováním opravdu začala s kurzem Harvard CS50 – renomovaným a náročným úvodem do informatiky. CS50 mě hluboce inspiroval a silně motivoval pokračovat v učení a rozvíjení programátorských dovedností, bez ohledu na obtížnost. Těším se na možnosti zapojit se do projektů, které propojují technologie s reálnou praxí.
+Moje cesta programováním začala s kurzem CS50 na Harvardu - prestižním a náročným úvodem do informatiky. Tento kurz mě hluboce a silně inspiroval a motivoval k dalšímu studiu a rozvíjení programátorských dovedností bez ohledu na svou náročnost a tempo. Těším se, že se zapojím do projektů, které propojí technologie s reálnými výzvami.
 
 ---
 
-## 🤝 Týmová práce & spolupráce
+## 🤝 Týmová práce a spolupráce
 
-- Efektivní komunikace v multikulturních týmech
-- Schopnost naslouchat, chápat a podporovat kolegy
-- Zkušenosti s vedením mezinárodních projektů
-- Přizpůsobivost a proaktivní přístup v dynamickém prostředí
+- Efektivně komunikuji v multikulturních týmech
+- Umím naslouchat, pochopit protistranu, i podporovat kolegy v každodenních úkolech
+- Mám zkušenosti s vedením mezinárodních projektů
+- Jsem přizpůsobivý a proaktivní v dynamickém prostředí dnešního světa
 
-Daří se mi v týmovém prostředí, rád diskutuji o nápadech, učím se od ostatních a nabízím pomoc tam, kde je potřeba. Moje zkušenosti z globálního nákupu mi daly schopnost skutečně naslouchat protistraně, pochopit jejich potřeby a přetvořit požadavky do jasných řešení.
+V týmu se cítím jako ryba ve vodě, ale nebojím se ani tým koordinovat. Rád diskutuji nad nápady, učím se od ostatních a přispívám tam, kde jsem potřeba. Mé zkušenosti z oblasti globálního nákupu mi daly schopnost naslouchat, pochopit a přetvářet požadavky do jasných řešení.
 
-V současnosti pracuji v multikulturním a mezinárodním prostředí a pravidelně spolupracuji s kolegy z různých zemí a s různými pohledy na věc. Tato zkušenost posílila mou schopnost efektivně komunikovat, přizpůsobit se odlišným pracovním stylům a budovat konsensus v mezinárodních týmech.
+Aktuálně pracuji v multikulturním a mezinárodním prostředí a často spolupracuji s kolegy i obchodními partnery z různých zemí a odlišným zázemím. Tato zkušenost posílila mou schopnost efektivně komunikovat, přizpůsobit se různým pracovním stylům a budovat konsensus v týmech.
 
-Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolupracovníka, který může pozitivně přispět do jakéhokoliv týmu – ať už v byznysu, nebo v technologiích.
+Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolupracovníka, který může pozitivně přispět do jakéhokoli týmu, ať už v byznysu, nebo v technologiích.
 
 ---
 
 ## 🏅 Úspěchy
 
-- **CS50x: Introduction to Computer Science** – Osvědčení získáno  
+- **CS50x: Úvod do informatiky** – Certifikát získán  
   <a href="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" target="_blank">
     <img src="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" alt="Certifikát CS50x Jean Kocman" width="250"/>
   </a>
-- **CS50 Python: Introduction to Programming with Python** – Probíhá
-- **IT Network: Vývoj webových aplikací** – Osvědčení získáno  
+- **CS50 Python: Úvod do programování v Pythonu** – Probíhá
+- **IT Network: Vývoj webových aplikací** – Certifikát získán  
   <a href="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" target="_blank">
     <img src="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" alt="Certifikát IT Network Python Jean Kocman" width="200"/>
   </a>
 
 ---
 
-## 💻 Dovednosti & technologie
+## 💻 Dovednosti a technologie
 
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)](https://docs.python.org/3/)
 [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)](https://manual.cs50.io/)
@@ -92,75 +92,75 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 
 ## 📚 Ukázky projektů
 
-### [CS50x – Přehled kurzů a projektů](https://cs50.harvard.edu/x/2024/)
+### [CS50x - Přehled kurzů a projektů](https://cs50.harvard.edu/x/2024/)
 
-#### 1. Programovací jazyk C
-- **HELLO, MARIO, CASH, SCRABBLE:** Základní programy pro zvládnutí řízení toku, práce s pamětí a datovými strukturami.
-- **READABILITY & CAESAR:** Implementace analýzy textu pomocí indexu Coleman-Liau a tvorba jednoduchých kryptografických nástrojů.
-- **FILTER-LESS & RECOVER:** Práce s obrazovými daty a obnova JPEG souborů z poškozených paměťových karet, procvičení práce se soubory a obnovy dat.
+#### 1. Programovací jazyk C 
+- **Hello, Mario, Cash, Scrabble:** Základní programy na řízení toku, práci s pamětí a datovými strukturami.
+- **Readibility & Caesar:** Analýza textu pomocí indexu Coleman-Liau a vytvoření jednoduchých kryptografických nástrojů.
+- **Filter & Recover:** Práce s obrazovými daty a obnova JPEG souborů z poškozených paměťových karet, procvičení práce se soubory a obnovy dat.
 
-#### 2. SQL & analýza dat
+#### 2. SQL a analýza dat
 - **Songs & Movies Database:** Pokročilé SQL dotazy na reálných datech.
-- **Fiftyville Mystery:** Detektivní úkol řešený pomocí detailní analýzy dat.
+- **Fiftyville Mystery:** Řešení těchto detektivních úkolů pomocí detailní datové analýzy.
 
 #### 3. Webový vývoj (Python, Flask, HTML/CSS)
-- **Birthday App:** Správa uživatelských dat a narozenin pomocí Flask a SQLite.
-- **Finance:** Simulovaná platforma pro obchodování s akciemi s integrací reálných API.
-- **Homepage:** Osobní webová stránka postavená a stylizovaná pomocí HTML, CSS, Bootstrap a JavaScriptu.
+- **Birthday App:** Správu uživatelských dat a narozenin s pomocí Flask a SQLite.
+- **Finance:** Simulovaná obchodní platforma pro akcie s integrací reálných API.
+- **Homepage:** Osobní webová stránka navržená a stylizovaná pomocí HTML, CSS, Bootstrap a JavaScriptu.
 
-#### 4. Algoritmické myšlení
-- **Speller:** Efektivní kontrola pravopisu pomocí hash tabulek.
-- **Tideman:** Systém pro hlasování s využitím grafové teorie a detekce cyklů.
+#### 4. Algoritmické myšlení ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+- **Speller:** Efektivní kontrola pravopisu pomocí hash tabulek. 
+- **Tideman:** Systém pro hlasování využívající grafovou teorii a detekci cyklů. 
 
 #### Závěrečný projekt: Ludo hra
-- **Webová Ludo hra** (HTML, CSS, JS, Flask): Responzivní design, automatizovaná hra a plány na perzistenci herního stavu a další rozšiřování.
+- **Webová Ludo hra** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
 
 ---
 
 ## [Přehled kurzu CS50 Python](https://cs50.harvard.edu/python/)
 
 ### Hlavní témata kurzu
-- **Základy Pythonu:** Silné základy v Pythonu díky různorodým úlohám zaměřeným na práci se vstupy/výstupy, manipulaci s textem a řízení toku programu.
-- **Manipulace a zpracování dat:** Zvládnutí různých datových typů a struktur, včetně využití stringů, list comprehensions a slovníků.
-- **Práce se soubory a I/O:** Řešení úloh s ukládáním, načítáním a zpracováním dat (CSV, text).
-- **Testování a ladění:** Tvorba rozsáhlých testovacích sad a využití ladicích technik pro zajištění správnosti kódu.
-- **Objektově orientované programování (OOP):** Vytváření vlastních tříd, zvládnutí zapouzdření a implementace metod.
+- **Základy Pythonu:** Silné základy v Pythonu díky široké škále úloh zaměřených na zpracování vstupů/výstupů, manipulaci s textem a řízení toku programu.
+- **Manipulace a zpracování dat:** Zvládnutí různých datových typů a struktur, včetně využití technik jako manipulace s řetězci, seznamovými výrazy a operacemi se slovníky.
+- **Práce se soubory a I/O:** Řešení úloh zahrnující ukládání, načítání a zpracování dat, včetně práce s CSV soubory a manipulace s texty.
+- **Testování a ladění:** Tvorba rozsáhlých testovacích sad a postupy ladění pro zajištění přesnosti kódu.
+- **Objektově orientované programování (OOP):** Návrh vlastních tříd pro modelování reálných objektů, zvládnutí zapouzdření a implementace metod.
 
-### Vybrané projekty a přístupy
+### Ukázkové projekty a přístupy
 - **Řešení úloh:**
-  - **INDOR:** Základy práce se vstupy a manipulace s textem.
-  - **FACES:** Funkce, iterace a nahrazování stringů – základní pro datové transformace.
-  - **BANK:** Rozhodovací logika v aplikacích pomocí stringů a řízení toku.
-  - **TWTR:** Filtrování a zpracování textových dat pomocí stringů.
-  - **PLATES:** Validace vstupů pomocí podmínek, smyček a logiky stringů.
-  - **FUEL:** Modelování stavových systémů, matematika a logické podmínky.
-  - **GAME:** Interaktivní aplikace využívající náhodnost a uživatelské vstupy.
-  - **BITCOIN:** Práce s API a zpracování dat v reálném čase přes HTTP požadavky.
-  - **JAR:** OOP principy při zapouzdření dat a chování v uživatelských třídách.
+  - **INDOR:** Zaměření na základní zpracování vstupů a textu.
+  - **FACES:** Demonstrace funkcí, iterací a nahrazování řetězců, nezbytné pro datové transformace.
+  - **BANK:** Ilustrace rozhodovací logiky v aplikacích pomocí řetězcových operací a řízení toku.
+  - **TWTR:** Filtrování a efektivní zpracování textových dat použitím manipulace s řetězci.
+  - **PLATES:** Validace vstupů s využitím podmínek, smyček a logické práce s řetězci.
+  - **FUEL:** Modelování stavových systémů za pomocí matematických operací a logických podmínek.
+  - **GAME:** Vývoj interaktivní aplikace zahrnující náhodné jevy a uživatelské vstupy.
+  - **BITCOIN:** Efektivní práce s API zpracování dat v reálném čase přes HTTP požadavky.
+  - **JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
 
-### Závěrečný projekt: KODI Add-on pro online úložiště
+### Závěrečný projekt: KODI doplněk pro online úložiště
 - **Mediální doplněk:** Add-on pro KODI a LibreELEC umožňující streamování médií z online úložiště.
-  - **Funkce:** Bezpečná autentizace uživatele, vyhledávání médií a přímé streamování.
+  - **Funkce:** Zahrnuje bezpečnou autentifikaci uživatele, možnosti vyhledávání médií a přímé streamování.
   - **Dovednosti:** Práce s API, skriptování v Pythonu a dodržení architektury KODI add-onů.
-  - **Plány do budoucna:** Zlepšení obsluhy chyb, vylepšení uživatelského rozhraní a optimalizace uživatelské zkušenosti.
+  - **Plány do budoucna:** Zaměřeno na vylepšení obsluhy chyb, zdokonalení uživatelského rozhraní a optimalizaci uživatelské zkušenosti.
 
 ---
 
 ### [IT Network: Programování webových aplikací v Pythonu](https://www.itnetwork.cz/)
 #### Rekvalifikační program akreditovaný MŠMT ČR
 
-- **HTML/CSS:** Pokročilé rozvržení a responzivní design.
-- **Základy Pythonu & OOP:** Osvojení základních vlastností Pythonu a objektového programování.
+- **HTML/CSS:** Pokročilé rozvržení a tvorba responzivního designu.
+- **Základy Pythonu & OOP:** Osvojení základů a objektově orientovaného programování v Pythonu.
 - **Django:** Vývoj webových aplikací s autentizací.
-- **Pokročilé UI:** Vylepšený uživatelský zážitek, intuitivní rozhraní a perzistence dat.
+- **Pokročilé uživatelské rozhraní:** Zlepšení uživatelského zážitku, intuitivní rozhraní a perzistence dat.
 
 ---
 
 ## 🌟 Osobní přístup
 
-- Rád rozkládám složité problémy na zvládnutelné kroky a postupně zdokonaluji projekty.
-- Oceňuji intuitivní uživatelskou zkušenost, otevřenou komunikaci mezi lidmi a robustní kód.
-- Vždy mám chuť učit se, experimentovat a přispívat k smysluplným projektům.
+- Rád rozdělím složité problémy na zvládnutelné části a postupně zdokonaluji své projekty.
+- Oceňuji intuitivní uživatelské ovládání, otevřenou mezilidskou komunikaci a robustní kód.
+- Mám chuť se neustále učit, experimentovat a přispívat k smysluplným projektům.
 
 ---
 
@@ -171,4 +171,4 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 
 ---
 
-> _Děkuji za návštěvu mého portfolia! Prozkoumejte mé projekty, abyste viděli mou cestu v praxi, a neváhejte se ozvat, pokud chcete spolupracovat nebo si popovídat o technologiích._
+> _Děkuji, že jste navštívili mé portfolio! Prozkoumejte mé projekty a uvidíte mou cestu v akci. Pokud máte zájem o spolupráci nebo si chcete popovídat o technologiích, neváhejte mě kontaktovat._
