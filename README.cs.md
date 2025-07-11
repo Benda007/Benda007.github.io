@@ -136,13 +136,13 @@ Algoritmy, datové struktury, OOP, API, responzivní design
   - **FUEL:** Modelování stavových systémů za pomocí matematických operací a logických podmínek.
   - **GAME:** Vývoj interaktivní aplikace zahrnující náhodné jevy a uživatelské vstupy.
   - **BITCOIN:** Efektivní práce s API zpracování dat v reálném čase přes HTTP požadavky.
-  - **JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
+  - **COOKIE JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
 
 ### Závěrečný projekt: KODI doplněk pro online úložiště
 - **Mediální doplněk:** Add-on pro KODI a LibreELEC umožňující streamování médií z online úložiště.
   - **Funkce:** Zahrnuje bezpečnou autentifikaci uživatele, možnosti vyhledávání médií a přímé streamování.
   - **Dovednosti:** Práce s API, skriptování v Pythonu a dodržení architektury KODI add-onů.
-  - **Plány do budoucna:** Zaměřeno na vylepšení obsluhy chyb, zdokonalení uživatelského rozhraní a optimalizaci uživatelské zkušenosti.
+  - **Plány do budoucna:** Zaměřeno na vylepšení kontroly chyb, zdokonalení uživatelského rozhraní a optimalizaci uživatelského zážitku.
 
 ---
 
