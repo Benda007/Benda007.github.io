@@ -34,7 +34,7 @@ I am seeking opportunities as a junior developer, technical project coordinator,
 
 ## 🔄 Career Switch: From Global Purchasing to Coding
 
-Since childhood, I have been fascinated by technology—whether it was exploring computers, mastering advanced software, or later modifying and enhancing Android phone operating systems.  
+Since childhood, I have been fascinated by technology—whether it was exploring computers, mastering advanced software, or later modifying and enhancing Android phone operating systems (custom ROMs).  
 After years in global purchasing, I was inspired to learn to code to better understand and shape the digital tools transforming business and our future.
 
 My journey into programming truly began with Harvard’s CS50, a renowned and rigorous introduction to computer science. CS50 was deeply inspiring and strongly motivated me to continue learning and developing my coding skills, no matter how steep the learning curve. I am excited to contribute to projects that bridge technology and real-world operations.
@@ -98,23 +98,23 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 #### 1. C Programming Language
 - **HELLO, MARIO, CASH, SCRABBLE:** Built foundational programs to master control flow, memory, and data structures.
 - **READABILITY & CAESAR:** Implemented text analysis using the Coleman-Liau index and built simple cryptographic tools.
-- **FILTER-LESS & RECOVER:** Manipulated image data and recovered JPEGs from corrupted memory cards, practicing file I/O and data recovery.
+- **FILTER & RECOVER:** Manipulated image data and recovered JPEGs from corrupted memory cards, practicing file I/O and data recovery.
 
 #### 2. SQL & Data Analysis
-- **Songs & Movies Database:** Wrote advanced SQL queries for real-world datasets.
-- **Fiftyville Mystery:** Solved a detective challenge through intricate data analysis.
+- **SONGS & MOVIES DATABASE:** Wrote advanced SQL queries for real-world datasets.
+- **FIFTYVILLE MYSTERY:** Solved a detective challenge through intricate data analysis.
 
 #### 3. Web Development (Python, Flask, HTML/CSS)
-- **Birthday App:** Managed user data and dates using Flask and SQLite.
-- **Finance:** Developed a simulated stock trading platform with real-time API integration.
-- **Homepage:** Built and styled a personal website with HTML, CSS, Bootstrap, and JavaScript.
+- **BIRTHDAY APP:** Managed user data and dates using Flask and SQLite.
+- **FINANCE:** Developed a simulated stock trading platform with real-time API integration.
+- **HOMEPAGE:** Built and styled a personal website with HTML, CSS, Bootstrap, and JavaScript.
 
-#### 4. Algorithmic Thinking
-- **Speller:** Designed an efficient spell checker using hash tables.
-- **Tideman:** Created a ranked voting system utilizing graph theory and cycle detection.
+#### 4. Algorithmic Thinking ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+- **SPELLER:** Designed an efficient spell checker using hash tables.
+- **TIDEMAN:** Created a ranked voting system utilizing graph theory and cycle detection.
 
 #### Final Project: Ludo Game
-- **Web-based Ludo game** (HTML, CSS, JS, Flask): Responsive design, automated gameplay, and plans for persistent game state and feature expansion.
+- **Web-based Ludo game** (HTML, CSS, JS, Flask, Python): Responsive design, automated gameplay, and plans for persistent game state and feature expansion.
 
 ---
 
