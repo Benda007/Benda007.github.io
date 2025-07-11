@@ -112,7 +112,7 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 - **SPELLER:** Efektivní kontrola pravopisu pomocí hash tabulek. 
 - **TIDEMAN:** Systém pro hlasování využívající grafovou teorii a detekci cyklů. 
 
-#### Závěrečný projekt: Ludo hra
+#### Závěrečný projekt: Hra Člověče nezlob se 
 - **Webová hra Člověče nezlob se** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
 
 ---
