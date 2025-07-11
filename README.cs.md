@@ -1,7 +1,7 @@
 <a href="README.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="30"/></a>
 <a href="README.cs.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="30"/></a>
 
-# 👋 Ahoj, jsem Jean
+# 👋 Ahoj, já jsem Jean
 
 [![Profilový odznak](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)](https://cs50.harvard.edu/)
 [![Lokalita](https://img.shields.io/badge/Lokalita-Česká%20republika-orange?style=flat-square)](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%A1_republika)
