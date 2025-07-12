@@ -115,6 +115,8 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 #### Final Project: Ludo Game
 - **Web-based Ludo game** (HTML, CSS, JS, Flask, Python): Responsive design, automated gameplay, and plans for persistent game state and feature expansion.
+- **[See the code](./CS50x_project/)**
+
 
 ---
 
