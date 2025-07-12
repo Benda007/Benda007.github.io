@@ -156,7 +156,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 - **Python Foundations & OOP:** Mastered Python’s core features and object-oriented paradigms.
 - **Django:** Built web applications with authentication.
 - **Advanced UI:** Enhanced user experience with intuitive interfaces and persistent data management.
-- **Final project:** 
+- **Final project:** A console application for managing insurance policyholders' records, allowing users to add, display, search, and export policyholder data.
 - **[See the code](./ITNetwork_project)**
 
 ---
