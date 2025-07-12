@@ -5,11 +5,11 @@
 #### Video Demo: [Člověče nezlob se-video](https://youtu.be/VCyraBtktCQ)
 
 #### Popis:
-**Hra Člověče nezlob se** je interaktivní webová verze oblíbené deskové hry, vyvinutá jako můj závěrečný projekt v rámci kurzu CS50x. Tato aplikace kombinuje moderní techniky webového vývoje pomocí HTML, CSS a JavaScriptu pro frontend a Python s Flaskem pro backend. Ukazuje soudržnou digitální rekreaci Ludo, s důrazem na robustní funkčnost a zapojení uživatelů.
+**Hra Člověče nezlob se** je interaktivní webová verze oblíbené deskové hry, vyvinutá jako můj závěrečný projekt v rámci kurzu CS50x. Tato aplikace kombinuje moderní techniky webového vývoje pomocí HTML, CSS a JavaScriptu pro frontend a Python s Flaskem pro backend. Ukazuje digitální rekreaci Člověče nezlob se, s důrazem na robustní funkčnost a zapojení uživatelů.
 
 ## Přehled projektu
 
-Hra replikovuje základní mechaniku Ludo, umožňuje více hráčům zapojit se do strategického hraní. Aplikace je navržena tak, aby simulovala dynamiku skutečné hry, jako je házení kostkou, pohyb figurek a automatizované řízení tahů, to vše v intuitivním a vizuálně příjemném rozhraní.
+Hra replikovuje základní mechaniku Člověče nezlob se, umožňuje více hráčům zapojit se do strategického hraní. Aplikace je navržena tak, aby simulovala dynamiku skutečné hry, jako je házení kostkou, pohyb figurek a automatizované řízení tahů, to vše v intuitivním a vizuálně příjemném rozhraní.
 
 ### Hlavní funkce
 
