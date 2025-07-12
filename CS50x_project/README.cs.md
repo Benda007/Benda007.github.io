@@ -2,7 +2,7 @@
 <a href="README.cs.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="30"/></a>
 # Hra Člověče nezlob se
 
-#### Video Demo: [Hra Člověče nezlob se-video](https://youtu.be/VCyraBtktCQ)
+#### Video Demo: [Člověče nezlob se-video](https://youtu.be/VCyraBtktCQ)
 
 #### Popis:
 **Hra Člověče nezlob se** je interaktivní webová verze oblíbené deskové hry, vyvinutá jako můj závěrečný projekt v rámci kurzu CS50x. Tato aplikace kombinuje moderní techniky webového vývoje pomocí HTML, CSS a JavaScriptu pro frontend a Python s Flaskem pro backend. Ukazuje soudržnou digitální rekreaci Ludo, s důrazem na robustní funkčnost a zapojení uživatelů.
