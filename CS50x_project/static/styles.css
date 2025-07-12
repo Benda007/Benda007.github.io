@@ -1,0 +1,283 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff; /* Light background color */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(11, 50px);
+    grid-template-rows: repeat(11, 50px);
+    width: 550px;
+    height: 550px;
+    border: 3px solid #00cccc;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7e98e; /* Board background */
+}
+
+#board div {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prompt {
+    margin: auto;
+    padding: 10px;
+    background-color: #f8fafa; /* Background - change it for better visibility */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#rollDice {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#rollDice:hover {
+    background-color: #0056b3;
+}
+
+#choiceContainer button {
+    margin-right: 15px; /* Margin for spacing from the right side */
+}
+
+#choiceContainer button:last-child {
+    margin-right: 0; /* Remove margin from the last button so code can continue without spaces */
+}
+
+
+/*selected pieces for move - for game*/
+.selected {
+    border: 4px solid #00ffff;
+}
+
+#center-image {
+    grid-column: 6;
+    grid-row: 6;
+    width: 50px;
+    height: 50px;
+    padding: 1px;
+}
+
+.path-cell {
+    border: 1px solid #ccc;
+    background-color: #f8f4ff;
+    z-index: 1; /* Ensure path cells are below pieces but above the board */
+    /*consider how to place pieces visually above border of the game board*/
+}
+
+.status-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.header-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+#diceResult {
+    color: #007bff;
+}
+
+#currentPlayer {
+    color: #28a745;
+}
+
+/* Graphical efect to piece movement*/
+/* .highlight-move {
+    transition: transform 0.5s ease-in-out;
+} */
+
+/* Piece styling */
+.piece {
+    transition: transform 0.5s ease;
+    width: 40px;
+    height: 40px;
+    background-color: #e0ffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.inner-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Cell bacground styling */
+.red-cell {
+    background-color: #af002a;
+    box-sizing: border-box;
+}
+
+.blue-cell {
+    background-color: #1e90ff;
+    box-sizing: border-box;
+}
+
+.green-cell {
+    background-color: #7fff00;
+    box-sizing: border-box;
+}
+
+.yellow-cell {
+    background-color: #fcf75e;
+    box-sizing: border-box;
+}
+
+.red-piece .inner-circle {
+    background-color: #fd0e35;
+}
+
+.blue-piece .inner-circle {
+    background-color: blue;
+}
+
+.green-piece .inner-circle {
+    background-color: green;
+}
+
+.yellow-piece .inner-circle {
+    background-color: #f5c71a;
+}
+
+.bi {
+    position: absolute;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    z-index: 1;
+}
+
+.yellow-start {
+    color: #f5c71a;
+}
+
+.red-start {
+    color: #fd0e35;
+}
+
+.green-start {
+    color: green;
+}
+
+.blue-start {
+    color: #1e90ff;
+}
+
+/* Custom animation for pieces */
+@keyframes movePieceStart {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes movePieceEnd {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.animate-move-start {
+    animation: movePieceStart 0.5s ease-in-out forwards;
+}
+
+.animate-move-end {
+    animation: movePieceEnd 0.5s ease-in-out forwards;
+}
+
+/* Kick-off animations */
+@keyframes kickOffRed {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-150px, -150px);
+        opacity: 0;
+    }
+}
+@keyframes kickOffBlue {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(150px, -150px);
+        opacity: 0;
+    }
+}
+@keyframes kickOffYellow {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(150px, 150px);
+        opacity: 0;
+    }
+}
+@keyframes kickOffGreen {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-150px, 150px);
+        opacity: 0;
+    }
+}
+
+.red-kick-off {
+    animation: kickOffRed 0.5s forwards;
+}
+.blue-kick-off {
+    animation: kickOffBlue 0.5s forwards;
+}
+.yellow-kick-off {
+    animation: kickOffYellow 0.5s forwards;
+}
+.green-kick-off {
+    animation: kickOffGreen 0.5s forwards;
+}
+
+
