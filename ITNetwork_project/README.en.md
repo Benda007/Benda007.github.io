@@ -1,5 +1,5 @@
-<a href="README.en.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="30"/></a>
-<a href="README.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="30"/></a>
+<a href="README.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="30"/></a>
+<a href="README.cs.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="30"/></a>
 # Insurance Policyholders Record
 
 This project is the final test of a course organized by ITNetwork. It is a console application for managing the records of insurance policyholders, allowing users to add, display, search, and export data about policyholders.
