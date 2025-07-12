@@ -1,3 +1,5 @@
+
+
 # Evidence pojištěnců
 
 Tento projekt je závěrečným testem kurzu pořádaného společností ITNetwork. Jedná se o konzolovou aplikaci pro správu evidence pojištěnců, která umožňuje přidávat, zobrazovat, vyhledávat a exportovat data pojištěnců.
