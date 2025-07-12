@@ -156,6 +156,8 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 - **Python Foundations & OOP:** Mastered Python’s core features and object-oriented paradigms.
 - **Django:** Built web applications with authentication.
 - **Advanced UI:** Enhanced user experience with intuitive interfaces and persistent data management.
+- **Final project:** 
+- **[See the code](./ITNetwork_project)**
 
 ---
 
