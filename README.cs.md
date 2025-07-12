@@ -11,7 +11,7 @@
 
 ## 📝 Shrnutí
 
-Jsem zkušený profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí.
+Jsem profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí.
 
 ---
 
@@ -23,10 +23,10 @@ Rád bych našel příležitosti jako junior developer, technický koordinátor 
 
 ## 🚀 O mně
 
-- 🌍 Žiji v České republice, kraj Vysočina
-- Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>
-- Mám úspěšnou kariéru v oblasti globálního nákupu a správě obchodních vztahů. Vždy jsem byl hnán zvědavostí a vášní pro celoživotní učení, což mě přivedlo ke studiu informatiky a vývoji softwaru. Přestože jsem v programování začátečník, mé zkušenosti z mezinárodního obchodu, vyjednávání a řízení obchodních vztahů mi poskytují jedinečný pohled na roli technologií při řešení reálných problémů.
-- 🎓 Mám certifikáty z Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR)
+- 🌍 Žiji v České republice, kraj Vysočina.
+- Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
+- Mám úspěšnou kariéru v oblasti globálního nákupu a správě obchodních vztahů. Vždy jsem byl hnán zvědavostí a vášní pro celoživotní učení, což mě přivedlo ke studiu informatiky a vývoji softwaru. Mé zkušenosti z mezinárodního obchodu, vyjednávání a řízení obchodních vztahů mi poskytují jedinečný pohled na roli technologií při řešení reálných problémů.
+- 🎓 Mám certifikáty z Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR).
 - 🌱 Zaměřuji se na full-stack vývoj, řešení problémů a tvorbu uživatelsky přívětivých aplikací. 
 - 💡 Neustále sleduji nové technologie a vývoj v IT oblastech.
 
