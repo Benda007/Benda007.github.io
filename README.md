@@ -25,7 +25,7 @@ I am seeking opportunities as a junior developer, technical project coordinator,
 
 - 🌍 Based in the Czech Republic, Vysočina region.
 - Speaking Czech <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> and English <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
-- Professional with a successful career in global purchasing and procurement. Driven by curiosity and a passion for lifelong learning, I have recently embarked on a journey into computer science and software development. My experience in international business, negotiation, and operations gives me a unique perspective on technology’s role in solving real-world problems.
+- 💹 Professional with a successful career in global purchasing and procurement. Driven by curiosity and a passion for lifelong learning, I have recently embarked on a journey into computer science and software development. My experience in international business, negotiation, and operations gives me a unique perspective on technology’s role in solving real-world problems.
 - 🎓 Certified by Harvard University (CS50x) and IT Network (requalification course recognized by the Czech Ministry of Education, Youth, and Sport).
 - 🌱 Focused on full-stack development, problem-solving, and creating user-friendly applications.
 - 💡 Always exploring new technologies and best practices.
