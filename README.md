@@ -172,7 +172,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 ## 📫 Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white&style=flat-square)](https://www.linkedin.com/in/jeankocman/)
-[![GitHub](https://img.shields.io/badge/GitHub-Benda007-181717?logo=github&logoColor=white&style=flat-square)](https://github.com/Benda007)
+[![GitHub](https://img.shields.io/badge/GitHub-Benda007-181717?logo=github&logoColor=white&style=flat-square)](https://github.com/Benda007/Benda007.github.io/)
 
 ---
 
