@@ -113,6 +113,7 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 
 #### Závěrečný projekt: Hra Člověče nezlob se 
 - **Webová hra Člověče nezlob se** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
+- **[Kód k nahlédnutí](./CS50x_project/)**
 
 ---
 
@@ -152,6 +153,8 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 - **Základy Pythonu & OOP:** Osvojení základů a objektově orientovaného programování v Pythonu.
 - **Django:** Vývoj webových aplikací s autentizací.
 - **Pokročilé uživatelské rozhraní:** Zlepšení uživatelského zážitku, intuitivní rozhraní a perzistence dat.
+- **Závěrečný projekt:** Konzolová aplikace pro správu záznamů o pojistnících, která uživatelům umožňuje přidávat, zobrazovat, vyhledávat a exportovat data o pojistnících.
+- **[Kód k nahlédnutí](./ITNetwork_project)**
 
 ---
 
