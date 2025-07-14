@@ -58,15 +58,14 @@ Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolu
 ## 🏅 Úspěchy
 
 - **CS50x: Úvod do informatiky** – Certifikát získán  
-  <a href="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" target="_blank">
-    <img src="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" alt="Certifikát CS50x Jean Kocman" width="250"/>
+   <a href="https://Benda007.github.io/data/CS50x_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/CS50x_certificate.png" alt="CS50x Jean Kocman certificate" width="250"/>
   </a>
 - **CS50 Python: Úvod do programování v Pythonu** – Probíhá
 - **IT Network: Vývoj webových aplikací** – Certifikát získán  
-  <a href="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" target="_blank">
-    <img src="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" alt="Certifikát IT Network Python Jean Kocman" width="200"/>
+  <a href="https://Benda007.github.io/data/ITNetwork_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/ITNetwork_certificate.png" alt="IT Network Python Jean Kocman certificate" width="200"/>
   </a>
-
 ---
 
 ## 💻 Dovednosti a technologie
