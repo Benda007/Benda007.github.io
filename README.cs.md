@@ -10,8 +10,8 @@
 ---
 
 ## 📝 Shrnutí
-
-Jsem profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí.
+| <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" width="200"/> | Jsem profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí. |
+|---|:---|
 
 ---
 
