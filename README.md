@@ -10,8 +10,8 @@
 ---
 
 ## 📝 Summary
-
-Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments.
+| <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" width="200"/> | Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments. |
+|---|:---|
 
 ---
 
