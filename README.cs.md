@@ -23,8 +23,8 @@ Rád bych našel příležitosti jako junior developer, technický koordinátor 
 
 ## 🚀 O mně
 
-- 🌍 Žiji v České republice, kraj Vysočina.
-- 🗺️ Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
+- 🗺️ Žiji v České republice, kraj Vysočina.
+- 🌍 Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
 - 💹 Mám úspěšnou kariéru v oblasti globálního nákupu a správě obchodních vztahů. Vždy jsem byl hnán zvědavostí a vášní pro celoživotní učení, což mě přivedlo ke studiu informatiky a vývoji softwaru. Mé zkušenosti z mezinárodního obchodu, vyjednávání a řízení obchodních vztahů mi poskytují jedinečný pohled na roli technologií při řešení reálných problémů.
 - 🎓 Mám certifikáty z Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR).
 - 🌱 Zaměřuji se na full-stack vývoj, řešení problémů a tvorbu uživatelsky přívětivých aplikací. 
