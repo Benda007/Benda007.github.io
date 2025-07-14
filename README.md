@@ -59,13 +59,13 @@ I believe these skills make me an effective communicator and collaborator, able 
 ## 🏅 Achievements
 
 - **CS50x: Introduction to Computer Science** – Certificate earned  
-  <a href="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" target="_blank">
-    <img src="https://github.com/user-attachments/assets/a4668f89-d30e-478c-9e6f-acab63242c27" alt="CS50x Jean Kocman certificate" width="250"/>
+  <a href="https://Benda007.github.io/data/CS50x_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/CS50x_certificate.png" alt="CS50x Jean Kocman certificate" width="250"/>
   </a>
 - **CS50 Python: Introduction to Programming with Python** – In progress
 - **IT Network Web Application Development Course** – Certificate earned  
-  <a href="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" target="_blank">
-    <img src="https://github.com/user-attachments/assets/db6b2f91-a920-4e07-add4-24fb8e45c80c" alt="IT Network Python Jean Kocman certificate" width="200"/>
+  <a href="https://Benda007.github.io/data/ITNetwork_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/ITNetwork_certificate.png" alt="IT Network Python Jean Kocman certificate" width="200"/>
   </a>
 
 ---
