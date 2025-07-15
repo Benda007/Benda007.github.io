@@ -73,6 +73,8 @@ I believe these skills make me an effective communicator and collaborator, able 
 
 ## 💻 Skills & Technologies
 
+As I continue to develop my coding skills, I have gained experience with the following technologies:
+
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)](https://docs.python.org/3/)
 [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)](https://manual.cs50.io/)
 [![SQL](https://img.shields.io/badge/SQL-4479A1?logo=sqlite&logoColor=white&style=flat-square)](https://www.w3schools.com/sql/)
