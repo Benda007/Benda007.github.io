@@ -70,6 +70,8 @@ Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolu
 
 ## 💻 Dovednosti a technologie
 
+S rozvojem svých programátorských dovedností jsem získal zkušenosti s následujícími technologiemi:
+
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square)](https://docs.python.org/3/)
 [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=flat-square)](https://manual.cs50.io/)
 [![SQL](https://img.shields.io/badge/SQL-4479A1?logo=sqlite&logoColor=white&style=flat-square)](https://www.w3schools.com/sql/)
