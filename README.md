@@ -10,6 +10,16 @@
 ---
 
 ## 📝 Summary
+
+<div style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
+    <div style="flex: 0 0 200px; margin-right: 20px;">
+        <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" style="width: 200px; height: auto; border-radius: 8px;"/>
+    </div>
+    <div style="flex: 1 1 auto; min-width: 200px;">
+        <p>Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments.</p>
+    </div>
+</div>
+
 | <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" width="200"/> | Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments. |
 |---|:---|
 
