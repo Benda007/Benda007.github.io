@@ -4,6 +4,7 @@
 # 👋 Ahoj, já jsem Jean
 
 [![Profilový odznak](https://img.shields.io/badge/Harvard-CS50-blue?style=flat-square)](https://cs50.harvard.edu/)
+[![W3Schools Badge](https://img.shields.io/badge/W3Schools-Studuji-blue)](https://www.w3schools.com/)
 [![Lokalita](https://img.shields.io/badge/Lokalita-Česká%20republika-orange?style=flat-square)](https://cs.wikipedia.org/wiki/%C4%8Cesk%C3%A1_republika)
 ![Status](https://img.shields.io/badge/Otevřený%20pro-Nové%20příležitosti-green?style=flat-square)
 
