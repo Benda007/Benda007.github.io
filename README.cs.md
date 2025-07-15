@@ -85,6 +85,7 @@ S rozvojem svých programátorských dovedností jsem získal zkušenosti s nás
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat-square)](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 [![PyCharm](https://img.shields.io/badge/PyCharm-000000?logo=pycharm&logoColor=white&style=flat-square)](https://www.jetbrains.com/pycharm/download/?section=windows)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/)
+[![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](https://code.visualstudio.com/docs)
 
 **Koncepty:**  
 Algoritmy, datové struktury, OOP, API, responzivní design
