@@ -121,16 +121,16 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 
 ---
 
-## [Přehled kurzu CS50 Python](https://cs50.harvard.edu/python/)
+### [Přehled kurzu CS50 Python](https://cs50.harvard.edu/python/)
 
-### Hlavní témata kurzu
+#### Hlavní témata kurzu
 - **Základy Pythonu:** Silné základy v Pythonu díky široké škále úloh zaměřených na zpracování vstupů/výstupů, manipulaci s textem a řízení toku programu.
 - **Manipulace a zpracování dat:** Zvládnutí různých datových typů a struktur, včetně využití technik jako manipulace s řetězci, seznamovými výrazy a operacemi se slovníky.
 - **Práce se soubory a I/O:** Řešení úloh zahrnující ukládání, načítání a zpracování dat, včetně práce s CSV soubory a manipulace s texty.
 - **Testování a ladění:** Tvorba rozsáhlých testovacích sad a postupy ladění pro zajištění přesnosti kódu.
 - **Objektově orientované programování (OOP):** Návrh vlastních tříd pro modelování reálných objektů, zvládnutí zapouzdření a implementace metod.
 
-### Ukázkové projekty a přístupy
+#### Ukázkové projekty a přístupy
 - **Řešení úloh:**
   - **INDOR:** Zaměření na základní zpracování vstupů a textu.
   - **FACES:** Demonstrace funkcí, iterací a nahrazování řetězců, nezbytné pro datové transformace.
@@ -142,7 +142,7 @@ Algoritmy, datové struktury, OOP, API, responzivní design
   - **BITCOIN:** Efektivní práce s API zpracování dat v reálném čase přes HTTP požadavky.
   - **COOKIE JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
 
-### Závěrečný projekt: KODI doplněk pro online úložiště
+#### Závěrečný projekt: KODI doplněk pro online úložiště - realizace probíhá
 - **Mediální doplněk:** Add-on pro KODI a LibreELEC umožňující streamování médií z online úložiště.
   - **Funkce:** Zahrnuje bezpečnou autentifikaci uživatele, možnosti vyhledávání médií a přímé streamování.
   - **Dovednosti:** Práce s API, skriptování v Pythonu a dodržení architektury KODI add-onů.
@@ -157,7 +157,9 @@ Algoritmy, datové struktury, OOP, API, responzivní design
 - **Základy Pythonu & OOP:** Osvojení základů a objektově orientovaného programování v Pythonu.
 - **Django:** Vývoj webových aplikací s autentizací.
 - **Pokročilé uživatelské rozhraní:** Zlepšení uživatelského zážitku, intuitivní rozhraní a perzistence dat.
-- **Závěrečný projekt:** Konzolová aplikace pro správu záznamů o pojistnících, která uživatelům umožňuje přidávat, zobrazovat, vyhledávat a exportovat data o pojistnících.
+
+#### Závěrečný projekt: 
+- **Konzolová aplikace:** Aplikace pro správu záznamů o pojistnících, která uživatelům umožňuje přidávat, zobrazovat, vyhledávat a exportovat data o pojistnících.
 - **[Kód k nahlédnutí](./ITNetwork_project)**
 
 ---
