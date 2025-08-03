@@ -142,11 +142,11 @@ Algoritmy, datové struktury, OOP, API, responzivní design
   - **BITCOIN:** Efektivní práce s API zpracování dat v reálném čase přes HTTP požadavky.
   - **COOKIE JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
 
-#### Závěrečný projekt: KODI doplněk pro online úložiště - realizace probíhá
-- **Mediální doplněk:** Add-on pro KODI a LibreELEC umožňující streamování médií z online úložiště.
-  - **Funkce:** Zahrnuje bezpečnou autentifikaci uživatele, možnosti vyhledávání médií a přímé streamování.
-  - **Dovednosti:** Práce s API, skriptování v Pythonu a dodržení architektury KODI add-onů.
-  - **Plány do budoucna:** Zaměřeno na vylepšení kontroly chyb, zdokonalení uživatelského rozhraní a optimalizaci uživatelského zážitku.
+#### Závěrečný projekt: Sledování výskytů bolestí hlavy
+- **:** 
+  - **Funkce:** 
+  - **Dovednosti:** 
+  - **Plány do budoucna:** 
 
 ---
 
