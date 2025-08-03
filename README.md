@@ -146,11 +146,11 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
   - **BITCOIN:** Highlighted API interaction skills to process real-time data using HTTP requests.
   - **JAR:** Demonstrated OOP principles by encapsulating data and behaviors within custom classes.
 
-### Final Project: KODI Add-on for Online Storage Server
-- **Interactive Media Add-on:** Developed an add-on for KODI and LibreELEC that facilitates media streaming from an online storage server.
-  - **Features:** Includes secure user authentication, media search capabilities, and direct streaming.
-  - **Skills Demonstrated:** API integration, Python scripting, and compliance with KODI's add-on architecture.
-  - **Future Plans:** Focused on enhancing error handling, refining the user interface, and optimizing the overall user experience.
+### Final Project: Headache tracker CLI and web app
+- **:** 
+  - **Features:** 
+  - **Skills Demonstrated:** 
+  - **Future Plans:** 
 
 ---
 
