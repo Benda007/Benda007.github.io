@@ -62,7 +62,11 @@ Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolu
    <a href="https://Benda007.github.io/data/CS50x_certificate.png" target="_blank">
     <img src="https://Benda007.github.io/data/CS50x_certificate.png" alt="CS50x Jean Kocman certificate" width="250"/>
   </a>
-- **CS50 Python: Úvod do programování v Pythonu** – Probíhá
+- **CS50 Python: Úvod do programování v Pythonu** – Certifikát získán  
+  <a href="https://Benda007.github.io/data/CS50P_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/CS50P_certificate.png" alt="CS50P Jean Kocman certificate" width="250"/>
+  </a>
+  
 - **IT Network: Rekvalifikační kurz - Vývoj webových aplikací** – Certifikát získán  
   <a href="https://Benda007.github.io/data/ITNetwork_certificate.png" target="_blank">
     <img src="https://Benda007.github.io/data/ITNetwork_certificate.png" alt="IT Network Python Jean Kocman certificate" width="200"/>
