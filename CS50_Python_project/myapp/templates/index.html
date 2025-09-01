@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Headache Tracker</title>
+        <!-- Linking Bootstrap CSS for styles -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Linking custom styles -->
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container-fluid mt-5">
+            <!-- Page title -->
+            <h1 class="text-center mb-4">Headache Tracker</h1>
+            <div class="row">
+                <!-- Left Column: Headache Record Form -->
+                <div class="col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">New Headache Record</h5>
+                            <!-- Form to submit new headache records -->
+                            <form id="headacheForm" action="{{ url_for('add_record') }}" method="post">
+                                <!-- User name input field -->
+                                <div class="mb-3">
+                                    <label for="userName" class="form-label">User Name</label>
+                                    <input type="text" class="form-control" id="userName" name="user_name" required>
+                                </div>
+                                <!-- User age input field -->
+                                <div class="mb-3">
+                                    <label for="userAge" class="form-label">Age</label>
+                                    <input type="number" class="form-control" id="userAge" name="user_age" required>
+                                </div>
+                                <!-- User sex selection -->
+                                <div class="mb-3">
+                                    <label for="userSex" class="form-label">Sex</label>
+                                    <select id="userSex" name="user_sex" class="form-control" required>
+                                        <option value="">Please select</option>
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
+                                    </select>
+                                </div>
+                                <!-- Date of headache input field -->
+                                <div class="mb-3">
+                                    <label for="headacheDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="headacheDate" name="headache_date" required>
+                                </div>
+                                <!-- Time of headache input field -->
+                                <div class="mb-3">
+                                    <label for="headacheTime" class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="headacheTime" name="headache_time" required>
+                                </div>
+                                <!-- Duration of headache input field -->
+                                <div class="mb-3">
+                                    <label for="duration" class="form-label">Duration (minutes)</label>
+                                    <input type="number" class="form-control" id="duration" name="duration" min="1" max="1440" required>
+                                </div>
+                                <!-- Intensity of headache input field -->
+                                <div class="mb-3">
+                                    <label for="intensity" class="form-label">Intensity (1-10)</label>
+                                    <input type="number" class="form-control" id="intensity" name="intensity" min="1" max="10" required>
+                                </div>
+                                <!-- Trigger selection field -->
+                                <div class="mb-3">
+                                    <label for="trigger" class="form-label">Trigger</label>
+                                    <select id="trigger" name="trigger" class="form-control">
+                                        <!-- Listing common headache triggers -->
+                                        <option value="">Please select</option>
+                                        <option value="Tyramine">Tyramine (Found in aged cheeses and cured meats.)</option>
+                                        <!-- Additional triggers -->
+                                        <option value="Nitrates/Nitrites">Nitrates/Nitrites (Common in processed meats like bacon and hot dogs.)</option>
+                                        <option value="Alcohol">Alcohol (Especially red wine.)</option>
+                                        <option value="Caffeine">Caffeine (Found in coffee, tea, and some sodas.)</option>
+                                        <option value="Monosodium Glutamate (MSG)">Monosodium Glutamate (MSG) (Used as a flavor enhancer in many foods.)</option>
+                                        <option value="Aspartame">Aspartame (An artificial sweetener in diet products.)</option>
+                                        <option value="Chocolate">Chocolate (Contains caffeine and theobromine.)</option>
+                                        <option value="Cultured Dairy Products">Cultured Dairy Products (Like yogurt and sour cream.)</option>
+                                        <option value="Processed Foods">Processed Foods (High in preservatives and additives.)</option>
+                                        <option value="High Sugar Intake">High Sugar Intake (Can cause blood sugar fluctuations.)</option>
+                                        <option value="Dehydration">Dehydration (Not drinking enough water.)</option>
+                                        <option value="Irregular Meal Patterns">Irregular Meal Patterns (Skipping meals or eating at odd times.)</option>
+                                    </select>
+                                </div>
+                                <!-- Headache type selection field -->
+                                <div class="mb-3">
+                                    <label for="headacheType" class="form-label">Headache Type</label>
+                                    <select id="headacheType" name="headache_type" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option value="Tension">Tension</option>
+                                        <option value="Migraine">Migraine</option>
+                                        <option value="Cluster">Cluster</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <!-- Stress level selection field -->
+                                <div class="mb-3">
+                                    <label for="stressLevel" class="form-label">Stress Level</label>
+                                    <select id="stressLevel" name="stress_level" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Moderate">Moderate</option>
+                                        <option value="High">High</option>
+                                        <option value="Severe">Severe</option>
+                                    </select>
+                                </div>
+                                <!-- Sleep quality selection field -->
+                                <div class="mb-3">
+                                    <label for="sleepQuality" class="form-label">Sleep Quality</label>
+                                    <select id="sleepQuality" name="sleep_quality" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option value="Low">Low (less than 6 hours)</option>
+                                        <option value="Medium">Medium (6 to 8 hours)</option>
+                                        <option value="High">High (7 to 9 hours)</option>
+                                    </select>
+                                </div>
+                                <!-- Medication selection field -->
+                                <div class="mb-3">
+                                    <label for="medication" class="form-label">Medication</label>
+                                    <select id="medication" name="medication" class="form-control" required>
+                                        <option value="">Please select</option>
+                                        <option value="Paracetamol">Paracetamol - Safe for most; short-term use.</option>
+                                        <!-- Additional medications -->
+                                        <option value="Ibuprofen">Ibuprofen - Effective; caution with GI issues.</option>
+                                        <option value="Aspirin">Aspirin - Not for children; Reye's risk.</option>
+                                        <option value="Naproxen">Naproxen - Effective; similar to ibuprofen.</option>
+                                        <option value="Metamizol">Metamizol - Similar to Paracetamol but a bit stronger.</option>
+                                        <option value="Diclofenac">Diclofenac - Caution in CV/GI issues.</option>
+                                        <option value="Sumatriptan">Sumatriptan - For acute migraines; medical guidance needed.</option>
+                                        <option value="Rizatriptan">Rizatriptan - For acute migraines; consult provider.</option>
+                                        <option value="Eletriptan">Eletriptan - For migraines; caution in CV issues.</option>
+                                    </select>
+                                </div>
+                                <!-- Dosage input field -->
+                                <div class="mb-3">
+                                    <label for="dosage" class="form-label">Dosage (pills)</label>
+                                    <input type="number" class="form-control" id="dosage" name="dosage" min="1" required>
+                                </div>
+                                <!-- Effectiveness selection field -->
+                                <div class="mb-3">
+                                    <label for="effectiveness" class="form-label">Effectiveness</label>
+                                    <select id="effectiveness" name="effectiveness" class="form-control" required>
+                                        <option value="">Please select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <!-- Submit button for the form -->
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">Add Record</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Display Records and Graphs -->
+                <div class="col-md-9">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Records</h5>
+                            <!-- Records table -->
+                            <div id="resultsArea">
+                                <div class="table-responsive">
+                                    <table id="recordTable" class="table table-striped table-bordered">
+                                        <!-- JavaScript will populate the table rows here -->
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Graphs</h5>
+                            <!-- Canvas for rendering charts -->
+                            <canvas id="myTriggerChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Linking Bootstrap and Chart.js scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+
+</html>

@@ -1,0 +1,11 @@
+# requirements.txt
+
+# To install all necessary packages, execute the following command in your terminal:
+# pip install -r requirements.txt
+
+
+Flask
+pandas
+openpyxl
+tabulate
+pytest
