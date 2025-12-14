@@ -155,8 +155,16 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
   - **Features:** 
   - **Skills Demonstrated:** 
   - **Future Plans:**
-  - - **[See the code](./CS50_Python_project)**
+  - **[See the code](./CS50_Python_project)**
 
+---
+## [CS50 SQL Course and Project Overview](https://cs50.harvard.edu/sql/)
+
+### Course Highlights
+
+### Final Project: 
+- **Coffe consumption tracker** (SQLite) multiple tables, views, indexes and queries, helping to track habits and costs of drinking coffee in a company. 
+- **[See the code](./CS50_SQL_project/)**
 ---
 
 ### [IT Network Course: Programming of Web Applications in Python](https://www.itnetwork.cz/)
