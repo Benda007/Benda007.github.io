@@ -152,10 +152,10 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
   - **JAR:** Demonstrated OOP principles by encapsulating data and behaviors within custom classes.
 
 ### Final Project: Headache tracker CLI and web app
-- **:** 
   - **Features:** 
   - **Skills Demonstrated:** 
-  - **Future Plans:** 
+  - **Future Plans:**
+  - - **[See the code](./CS50_Python_project)**
 
 ---
 
