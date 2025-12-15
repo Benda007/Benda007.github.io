@@ -183,7 +183,7 @@
         }
 
         .hero-image img {
-            width: 100%;
+            width: 70%;
             border-radius: 20px;
             box-shadow: var(--shadow-lg);
         }
