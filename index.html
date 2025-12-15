@@ -1,284 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jean Kocman - IT Developer | Portfolio</title>
-    <meta name="description" content="Jean Kocman - IT Developer and Technical Professional. Portfolio showcasing full-stack development projects and expertise in Python, Web Development, and Software Engineering.">
-    <meta name="keywords" content="developer, python, web development, full-stack, portfolio, czech republic">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jean Kocman - IT Developer | Portfolio</title>
+        <meta name="description" content="Jean Kocman - IT Developer and Technical Professional. Portfolio showcasing full-stack development projects and expertise in Python, Web Development, and Software Engineering.">
+        <meta name="keywords" content="developer, python, web development, full-stack, portfolio, czech republic">
+        <link rel="stylesheet" href="css/styles.css">
 
 
-</head>
-<body>
-    <!-- HEADER -->
-    <header>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">Jean Kocman</div>
+                    <ul class="nav-links">
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Jean Kocman</h1>
+                <p class="tagline">"From Global Purchasing to Code"</p>
+                <p>IT Developer & Technical Professional with a background in international business. Passionate about building practical software solutions that solve real-world problems.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">↓ View Projects</a>
+                    <a href="https://github.com/Benda007" target="_blank" class="btn btn-secondary">GitHub Profile →</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="data/JK_photo.jpg" alt="Jean Kocman - IT Developer">
+            </div>
+        </section>
+
         <div class="container">
-            <nav>
-                <div class="logo">Jean Kocman</div>
-                <ul class="nav-links">
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- PROJECTS SECTION -->
+            <section class="projects" id="projects">
+                <div class="section-title">
+                    <h2>Featured Projects</h2>
+                    <p>Showcase of my development work and technical expertise</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Web App -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>🚀 CS50x Web Application</h3>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag featured">Live Demo</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p>Full-stack web application built for Harvard's CS50x course. Features include user authentication, database management, and interactive user interface. This project demonstrates proficiency in backend development with Flask and frontend technologies.</p>
+                            <div class="project-buttons">
+                                <a href="projects/cs50x-web-app/" class="btn-small btn-demo">🚀 Launch Demo</a>
+                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/CS50x_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Advanced Python -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>🐍 Advanced Python Project</h3>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">Unit Testing</span>
+                                <span class="tag">Database Design</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p>Advanced Python project showcasing object-oriented programming principles, custom API development, and comprehensive unit testing. Includes complete documentation and professional code organization. Demonstrates mastery of Python best practices and software architecture patterns.</p>
+                            <div class="project-buttons">
+                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/CS50_Python_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
+                                <a href="#contact" class="btn-small btn-code">📧 More Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Insurance Manager -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>📊 Insurance Manager System</h3>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">Data Processing</span>
+                                <span class="tag">CSV</span>
+                                <span class="tag">Business Logic</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p>Real-world application developed during IT Network professional retraining program. Manages insurance policies, insured persons, and complex business logic. Demonstrates ability to translate business requirements into technical solutions and handle data-driven applications.</p>
+                            <div class="project-buttons">
+                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/ITNetwork_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
+                                <a href="#contact" class="btn-small btn-code">📧 More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EDUCATION TIMELINE -->
+            <section class="education" id="education">
+                <div class="section-title">
+                    <h2>Education & Certifications</h2>
+                    <p>Professional development and technical training</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-items">
+                        <!-- CS50x -->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>CS50x: Introduction to Computer Science</h3>
+                                <p class="institution">Harvard University</p>
+                                <p>University-level course covering C, Python, SQL, Web Development, and computer science fundamentals. This rigorous program provides comprehensive knowledge of algorithms, data structures, and software engineering principles.</p>
+                            </div>
+                            <div>
+                                <a href="data/CS50x_certificate.png" target="_blank">
+                                    <img src="data/CS50x_certificate.png" alt="CS50x Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                </a>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <!-- CS50P -->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>CS50 Python: Introduction to Programming</h3>
+                                <p class="institution">Harvard University</p>
+                                <p>Advanced Python programming course focusing on object-oriented programming, software design, and practical application development. Builds on foundational CS knowledge with industry-relevant Python practices.</p>
+                            </div>
+                            <div>
+                                <a href="data/CS50P_certificate.png" target="_blank">
+                                    <img src="data/CS50P_certificate.png" alt="CS50P Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                </a>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <!-- IT Network -->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>IT Professional Retraining Program</h3>
+                                <p class="institution">IT Network | Certified by Czech Ministry of Education, Youth and Sports</p>
+                                <p>Official professional retraining program accredited by the Czech government. Comprehensive curriculum covering programming, databases, software development, and IT professional standards. This certification validates professional competency for IT careers in Czech Republic.</p>
+                            </div>
+                            <div>
+                                <a href="data/ITNetwork_certificate.png" target="_blank">
+                                    <img src="data/ITNetwork_certificate.png" alt="IT Network Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                </a>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section class="skills" id="skills">
+                <div class="section-title">
+                    <h2>Technical Skills</h2>
+                    <p>Technologies and tools I work with</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4>Python</h4>
+                        <p>Advanced</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Flask</h4>
+                        <p>Web Framework</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>HTML5</h4>
+                        <p>Markup</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>CSS3</h4>
+                        <p>Styling</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>JavaScript</h4>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>SQL</h4>
+                        <p>Databases</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Git / GitHub</h4>
+                        <p>Version Control</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>OOP</h4>
+                        <p>Programming Paradigm</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Jean Kocman</h1>
-            <p class="tagline">"From Global Purchasing to Code"</p>
-            <p>IT Developer & Technical Professional with a background in international business. Passionate about building practical software solutions that solve real-world problems.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">↓ View Projects</a>
-                <a href="https://github.com/Benda007" target="_blank" class="btn btn-secondary">GitHub Profile →</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="data/JK_photo.jpg" alt="Jean Kocman - IT Developer">
-        </div>
-    </section>
+        <!-- FOOTER -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <h2>Let's Work Together</h2>
+                    <p style="margin: 20px 0; font-size: 16px;">Open to new opportunities in development, technical roles, and IT projects</p>
 
-    <div class="container">
-        <!-- PROJECTS SECTION -->
-        <section class="projects" id="projects">
-            <div class="section-title">
-                <h2>Featured Projects</h2>
-                <p>Showcase of my development work and technical expertise</p>
-                <div class="accent-line"></div>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1: Web App -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>🚀 CS50x Web Application</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag featured">Live Demo</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p>Full-stack web application built for Harvard's CS50x course. Features include user authentication, database management, and interactive user interface. This project demonstrates proficiency in backend development with Flask and frontend technologies.</p>
-                        <div class="project-buttons">
-                            <a href="projects/cs50x-web-app/" class="btn-small btn-demo">🚀 Launch Demo</a>
-                            <a href="https://github.com/Benda007/Benda007.github.io/tree/main/CS50x_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Advanced Python -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>🐍 Advanced Python Project</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">OOP</span>
-                            <span class="tag">Unit Testing</span>
-                            <span class="tag">Database Design</span>
-                            <span class="tag">API</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p>Advanced Python project showcasing object-oriented programming principles, custom API development, and comprehensive unit testing. Includes complete documentation and professional code organization. Demonstrates mastery of Python best practices and software architecture patterns.</p>
-                        <div class="project-buttons">
-                            <a href="https://github.com/Benda007/Benda007.github.io/tree/main/CS50_Python_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
-                            <a href="#contact" class="btn-small btn-code">📧 More Info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Insurance Manager -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>📊 Insurance Manager System</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">OOP</span>
-                            <span class="tag">Data Processing</span>
-                            <span class="tag">CSV</span>
-                            <span class="tag">Business Logic</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p>Real-world application developed during IT Network professional retraining program. Manages insurance policies, insured persons, and complex business logic. Demonstrates ability to translate business requirements into technical solutions and handle data-driven applications.</p>
-                        <div class="project-buttons">
-                            <a href="https://github.com/Benda007/Benda007.github.io/tree/main/ITNetwork_project" target="_blank" class="btn-small btn-code">📄 Source Code</a>
-                            <a href="#contact" class="btn-small btn-code">📧 More Info</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION TIMELINE -->
-        <section class="education" id="education">
-            <div class="section-title">
-                <h2>Education & Certifications</h2>
-                <p>Professional development and technical training</p>
-                <div class="accent-line"></div>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-items">
-                    <!-- CS50x -->
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>CS50x: Introduction to Computer Science</h3>
-                            <p class="institution">Harvard University</p>
-                            <p>University-level course covering C, Python, SQL, Web Development, and computer science fundamentals. This rigorous program provides comprehensive knowledge of algorithms, data structures, and software engineering principles.</p>
-                        </div>
-                        <div>
-                            <a href="data/CS50x_certificate.png" target="_blank">
-                                <img src="data/CS50x_certificate.png" alt="CS50x Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                            </a>
-                        </div>
-                        <div class="timeline-dot"></div>
+                    <div class="social-links">
+                        <a href="https://github.com/Benda007" target="_blank" title="GitHub">GH</a>
+                        <a href="https://www.linkedin.com/in/jean-kocman/" target="_blank" title="LinkedIn">In</a>
+                        <a href="mailto:your.email@example.com" title="Email">✉</a>
                     </div>
 
-                    <!-- CS50P -->
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>CS50 Python: Introduction to Programming</h3>
-                            <p class="institution">Harvard University</p>
-                            <p>Advanced Python programming course focusing on object-oriented programming, software design, and practical application development. Builds on foundational CS knowledge with industry-relevant Python practices.</p>
-                        </div>
-                        <div>
-                            <a href="data/CS50P_certificate.png" target="_blank">
-                                <img src="data/CS50P_certificate.png" alt="CS50P Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                            </a>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
+                    <p style="font-size: 16px; margin-bottom: 10px;">
+                        <strong>📍 Location:</strong> Jihlava, Czech Republic<br>
+                        <strong>📧 Email:</strong> <a href="mailto:your.email@example.com" style="color: var(--primary-color);">your.email@example.com</a>
+                    </p>
+                </div>
 
-                    <!-- IT Network -->
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>IT Professional Retraining Program</h3>
-                            <p class="institution">IT Network | Certified by Czech Ministry of Education, Youth and Sports</p>
-                            <p>Official professional retraining program accredited by the Czech government. Comprehensive curriculum covering programming, databases, software development, and IT professional standards. This certification validates professional competency for IT careers in Czech Republic.</p>
-                        </div>
-                        <div>
-                            <a href="data/ITNetwork_certificate.png" target="_blank">
-                                <img src="data/ITNetwork_certificate.png" alt="IT Network Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                            </a>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Jean Kocman. All rights reserved. | <a href="README.md" style="color: var(--primary-color);">Detailed About</a></p>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <!-- SKILLS SECTION -->
-        <section class="skills" id="skills">
-            <div class="section-title">
-                <h2>Technical Skills</h2>
-                <p>Technologies and tools I work with</p>
-                <div class="accent-line"></div>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h4>Python</h4>
-                    <p>Advanced</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Flask</h4>
-                    <p>Web Framework</p>
-                </div>
-                <div class="skill-item">
-                    <h4>HTML5</h4>
-                    <p>Markup</p>
-                </div>
-                <div class="skill-item">
-                    <h4>CSS3</h4>
-                    <p>Styling</p>
-                </div>
-                <div class="skill-item">
-                    <h4>JavaScript</h4>
-                    <p>Web Development</p>
-                </div>
-                <div class="skill-item">
-                    <h4>SQL</h4>
-                    <p>Databases</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Git / GitHub</h4>
-                    <p>Version Control</p>
-                </div>
-                <div class="skill-item">
-                    <h4>OOP</h4>
-                    <p>Programming Paradigm</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <h2>Let's Work Together</h2>
-                <p style="margin: 20px 0; font-size: 16px;">Open to new opportunities in development, technical roles, and IT projects</p>
-
-                <div class="social-links">
-                    <a href="https://github.com/Benda007" target="_blank" title="GitHub">GH</a>
-                    <a href="https://www.linkedin.com/in/jean-kocman/" target="_blank" title="LinkedIn">In</a>
-                    <a href="mailto:your.email@example.com" title="Email">✉</a>
-                </div>
-
-                <p style="font-size: 16px; margin-bottom: 10px;">
-                    <strong>📍 Location:</strong> Jihlava, Czech Republic<br>
-                    <strong>📧 Email:</strong> <a href="mailto:your.email@example.com" style="color: var(--primary-color);">your.email@example.com</a>
-                </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Jean Kocman. All rights reserved. | <a href="README.md" style="color: var(--primary-color);">Detailed About</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+        <script>
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-        });
 
-        // Add scroll animation for elements
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+            // Add scroll animation for elements
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.project-card, .timeline-item, .skill-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
             });
-        }, observerOptions);
+        </script>
+    </body>
 
-        document.querySelectorAll('.project-card, .timeline-item, .skill-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
 </html>
