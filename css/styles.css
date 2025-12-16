@@ -184,7 +184,7 @@
         }
 
         .hero-image img {
-            width: 70%;
+            width: 50%;
             border-radius: 20px;
             box-shadow: var(--shadow-lg);
         }
