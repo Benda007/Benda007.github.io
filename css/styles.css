@@ -6,6 +6,7 @@
             --text-light: #6b7280;
             --bg-light: #f9fafb;
             --bg-white: #ffffff;
+            --bg-green: #2fdb8b;
             --border-color: #e5e7eb;
 
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -27,7 +28,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             color: var(--text-dark);
-            background-color: var(--bg-white);
+            background-color: var(--bg-green);
             line-height: 1.6;
         }
 
