@@ -6,7 +6,7 @@
             --text-light: #6b7280;
             --bg-light: #f9fafb;
             --bg-white: #ffffff;
-            --bg-lightblue: #307bdf;
+            /* --bg-lightblue: #307bdf; */
             --border-color: #95b5f3;
 
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
