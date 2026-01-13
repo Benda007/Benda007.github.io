@@ -487,11 +487,12 @@
             margin-bottom: 40px;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
+        .social-icon {
+            width: 20px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            transition: opacity .15s ease, transform .15s ease;
         }
 
         .social-links a {
@@ -510,7 +511,13 @@
 
         .social-links a:hover {
             background: var(--primary-color);
-            transform: translateY(-5px);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .social-links a:hover .social-icon {
+            opacity: 0.85;
+            transform: translateY(-1px);
         }
 
         .footer-bottom {
@@ -550,4 +557,3 @@
                 padding: 60px 0;
             }
         }
-
