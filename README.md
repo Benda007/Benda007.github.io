@@ -116,7 +116,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 ## 📚 Project Highlights
 
 ### [CS50x Course and Projects Overview](https://cs50.harvard.edu/x/2024/)
-
+**[View projects →](./CS50x_project/)**
 #### 1. C Programming Language
 - **HELLO, MARIO, CASH, SCRABBLE:** Built foundational programs to master control flow, memory, and data structures.
 - **READABILITY & CAESAR:** Implemented text analysis using the Coleman-Liau index and built simple cryptographic tools.
