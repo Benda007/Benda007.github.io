@@ -12,14 +12,21 @@
 
 ## 📝 Summary
 
-| <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" width="200"/> | Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments. |
-|---|:---|
+ Experienced global purchasing professional and recent graduate of Harvard’s CS50, passionate about leveraging business insight and technical skills to build practical software solutions. Skilled in team collaboration, problem-solving, and adapting to fast-changing environments. 
 
 ---
 
 ## 🎯 What I’m Looking For
 
-I am seeking opportunities as a junior developer, technical project coordinator, or business analyst, where I can bridge my business experience with my growing technical skills. I am especially interested in roles that value teamwork, clear communication, and cross-functional problem-solving.
+I am seeking opportunities in:
+- **Digital Procurement** - combining procurement expertise with tech skills
+- **Business Analysis** - bridging business requirements and technical solutions
+- **IT Category Management** - managing technology procurement and vendor relationships
+- **Hybrid business-tech roles** - leveraging both my 15+ years of procurement 
+  experience and technical capabilities
+
+I am especially interested in roles that value cross-functional collaboration, 
+data-driven decision making, and digital transformation.
 
 ---
 
@@ -27,10 +34,15 @@ I am seeking opportunities as a junior developer, technical project coordinator,
 
 - 🗺️ Based in the Czech Republic, Vysočina region.
 - 🌍 Speaking Czech <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> and English <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
-- 💹 Professional with a successful career in global purchasing and procurement. Driven by curiosity and a passion for lifelong learning, I have recently embarked on a journey into computer science and software development. My experience in international business, negotiation, and operations gives me a unique perspective on technology’s role in solving real-world problems.
-- 🎓 Certified by Harvard University (CS50x) and IT Network (requalification course recognized by the Czech Ministry of Education, Youth, and Sport).
-- 🌱 Focused on full-stack development, problem-solving, and creating user-friendly applications.
-- 💡 Always exploring new technologies and best practices.
+- 💹 **Business & Technology Professional:** 15+ years of global procurement 
+experience in automotive and financial sectors. Recently completed Harvard's 
+CS50 program to formalize technical skills I was already using - SQL for 
+data analysis, Python for automation, process optimization. Now seeking to 
+combine business acumen with hands-on technical capabilities in hybrid 
+business-tech roles.
+- 🎓 **Certified** by Harvard University (CS50x) and IT Network (requalification course recognized by the Czech Ministry of Education, Youth, and Sport).
+- 🌱 **Focused** on full-stack development, problem-solving, and creating user-friendly applications.
+- 💡 **Always exploring** new technologies and best practices.
 
 ---
 
