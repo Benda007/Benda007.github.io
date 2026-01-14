@@ -115,79 +115,53 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ## 📚 Project Highlights
 
-### [CS50x Course and Projects Overview](https://cs50.harvard.edu/x/2024/)
-**[View projects →](./CS50x_project/)**
-#### 1. C Programming Language
-- **HELLO, MARIO, CASH, SCRABBLE:** Built foundational programs to master control flow, memory, and data structures.
-- **READABILITY & CAESAR:** Implemented text analysis using the Coleman-Liau index and built simple cryptographic tools.
-- **FILTER & RECOVER:** Manipulated image data and recovered JPEGs from corrupted memory cards, practicing file I/O and data recovery.
+### CS50x: Introduction to Computer Science (Harvard University) (https://cs50.harvard.edu/x/2024/)
+#### Completed Harvard's rigorous CS50x course covering: 
+- **Languages & Technologies:** C, Python, SQL, HTML/CSS, JavaScript, Flask 
+- **Core Concepts:** Algorithms, data structures, memory management, web development 
+- **Projects:** Built 25+ projects including web applications, database systems, 
+  and algorithmic solutions 
 
-#### 2. SQL & Data Analysis
-- **SONGS & MOVIES DATABASE:** Wrote advanced SQL queries for real-world datasets.
-- **FIFTYVILLE MYSTERY:** Solved a detective challenge through intricate data analysis.
+**Final Project:** Web-based Ludo Game (HTML, CSS, JS, Flask, Python). Responsive design, automated gameplay, and plans for persistent game state and feature expansion. 
+- **[View detailed projects →](./projects/project1/README.md)**
 
-#### 3. Web Development (Python, Flask, HTML/CSS)
-- **BIRTHDAY APP:** Managed user data and dates using Flask and SQLite.
-- **FINANCE:** Developed a simulated stock trading platform with real-time API integration.
-- **HOMEPAGE:** Built and styled a personal website with HTML, CSS, Bootstrap, and JavaScript.
+---
 
-#### 4. Algorithmic Thinking ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
-- **SPELLER:** Designed an efficient spell checker using hash tables.
-- **TIDEMAN:** Created a ranked voting system utilizing graph theory and cycle detection.
+### CS50 Python: Introduction to Programming (Harvard University) (https://cs50.harvard.edu/python/) 
+#### Advanced Python course focusing on: 
+- **Core Skills:** OOP, file I/O, data processing, API integration, unit testing 
+- **Projects:** 40+ problem sets demonstrating Python mastery 
 
-#### Final Project: Ludo Game
-- **Web-based Ludo game** (HTML, CSS, JS, Flask, Python): Responsive design, automated gameplay, and plans for persistent game state and feature expansion.
-- **[See the code](./CS50x_project/)**
+**Final Project:** Headache Tracker (CLI & Web Interface): Enables users to log, track, and analyze headache occurrences in an organized manner. Users can record the specifics of each headache—such as date, duration, intensity, dietary triggers, stress levels, sleep quality, and the effectiveness of any medications used. 
+**[View code →](./projects/project2/README.md)** 
 
 
 ---
 
-## [CS50 Python Course and Project Overview](https://cs50.harvard.edu/python/)
+### CS50 SQL: Introduction to Databases (Harvard University) (https://cs50.harvard.edu/sql/)
+#### Database design and optimization: 
+- **Skills:** Relational database design, SQL queries, indexing, data modeling 
+- **Projects:** Complex database applications with multiple tables and views. 25+ projects sets completed
 
-### Course Highlights
-- **Foundational Python Skills:** Developed a strong base in Python programming through varied problem sets, focusing on fundamental operations such as input/output handling, text manipulation, and control flow.
-- **Data Manipulation and Processing:** Achieved proficiency in handling diverse data types and structures, utilizing techniques like string manipulation, list comprehensions, and dictionary operations.
-- **File Handling and I/O:** Implemented solutions involving data storage, retrieval, and processing, including managing CSV files and text manipulation.
-- **Testing and Debugging:** Created extensive test cases for functions and used debugging techniques to ensure code accuracy and reliability.
-- **Object-Oriented Programming (OOP):** Designed custom classes to model real-world entities, mastering encapsulation and method implementation.
-
-### Notable Projects and Approaches
-- **Problem Set Solutions:**
-  - **INDOR:** Focused on basic input handling and text manipulation, fundamental skills for any programming task.
-  - **FACES:** Demonstrated functions, iteration, and string replacement, essential for data transformations.
-  - **BANK:** Illustrated decision-making in applications using string operations and control flow.
-  - **TWTR:** Showcased string manipulation skills for filtering and processing text data effectively.
-  - **PLATES:** Implemented input validation through conditionals, loops, and string logic.
-  - **FUEL:** Modeled state-based systems using mathematical operations and logical conditionals.
-  - **GAME:** Developed an interactive application incorporating randomness and user input.
-  - **BITCOIN:** Highlighted API interaction skills to process real-time data using HTTP requests.
-  - **JAR:** Demonstrated OOP principles by encapsulating data and behaviors within custom classes.
-
-### Final Project: Headache tracker CLI and web app
-  - **Features:** 
-  - **Skills Demonstrated:** 
-  - **Future Plans:**
-  - **[See the code](./CS50_Python_project)**
+**Final Project:** Coffee Consumption Tracker (SQLite): A normalized SQLite database and reporting toolkit for tracking office coffee usage across multiple locations and departments. 
+**[View code →](./projects/project4/README.md/)** 
 
 ---
-## [CS50 SQL Course and Project Overview](https://cs50.harvard.edu/sql/)
 
-### Course Highlights
+### IT Network: Web Application Development with Python (Ministry of Education Certified) (https://www.itnetwork.cz/)
+#### Professional retraining program covering: 
+- **Technologies:** Python, Django, HTML/CSS, SQL, OOP, database integration 
+- **Certification:** Official Czech government-recognized qualification 
 
-### Final Project: 
-- **Coffe consumption tracker** (SQLite) multiple tables, views, indexes and queries, helping to track habits and costs of drinking coffee in a company. 
-- **[See the code](./CS50_SQL_project/)**
+**Final Project:** Insurance Manager System (Console Application): Allows managing the records of insurance policyholders, allowing users to add, display, search, and export data about policyholders
+**[View code →](./projects/project3/README.md)** 
+
 ---
 
-### [IT Network Course: Programming of Web Applications in Python](https://www.itnetwork.cz/)
-#### Requalification program certified by the Czech Ministry of Education
+## 📚 Project Highlights 
 
-- **HTML/CSS:** Applied advanced layout and responsive design techniques.
-- **Python Foundations & OOP:** Mastered Python’s core features and object-oriented paradigms.
-- **Django:** Built web applications with authentication.
-- **Advanced UI:** Enhanced user experience with intuitive interfaces and persistent data management.
-- **Final project:** A console application for managing insurance policyholders' records, allowing users to add, display, search, and export policyholder data.
-- **[See the code](./ITNetwork_project)**
+I have completed multiple comprehensive programming courses and built practical 
+projects demonstrating both technical proficiency and business application. 
 
 ---
 
