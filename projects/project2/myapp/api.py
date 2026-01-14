@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
-from myapp.db import HeadacheTracker
-from myapp.core import get_headaches_by_trigger
+from myapp.db import HeadacheTracker, DatabaseManager
+from myapp.core import get_headaches_by_trigger, filter_criteria as core_filter_criteria
 from datetime import datetime
 import logging
 
@@ -130,6 +130,157 @@ def headaches_by_trigger():
         return jsonify(result), 200
     finally:
         tracker.close()
+
+
+@app.route('/api/filter', methods=['POST'])
+def filter_records_api():
+    """
+    API endpoint to filter headache records based on criteria.
+    
+    Request Body (JSON):
+        - user_name: str (optional)
+        - start_date: str (YYYY-MM-DD, optional)
+        - end_date: str (YYYY-MM-DD, optional)
+        - medication: str (optional)
+        - diet: str (optional)
+        - sleep: str (optional)
+        - stress: str (optional)
+        - effectiveness: str (Yes/No, optional)
+        - intensity: int (optional)
+    
+    Returns:
+        JSON response with filtered records and column names.
+    """
+    if not request.json:
+        return jsonify({"error": "Request must be in JSON format."}), 400
+    
+    try:
+        data = request.json
+        filter_criteria = {
+            'user_name': data.get('user_name', '').strip().title() or None,
+            'start_date': data.get('start_date', '').strip() or None,
+            'end_date': data.get('end_date', '').strip() or None,
+            'medication': data.get('medication', '').strip().title() or None,
+            'diet': data.get('diet', '').strip().title() or None,
+            'sleep': data.get('sleep', '').strip().title() or None,
+            'stress': data.get('stress', '').strip().title() or None,
+            'effectiveness': data.get('effectiveness') or None,
+            'intensity': data.get('intensity') or None,
+        }
+        
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            records, column_names = core_filter_criteria(tracker, filter_criteria)
+            return jsonify({
+                "records": records,
+                "columns": column_names,
+                "count": len(records)
+            }), 200
+        finally:
+            tracker.close()
+            
+    except Exception as e:
+        app.logger.error(f"Error filtering records: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/edit/<int:record_id>', methods=['PUT'])
+def edit_record_api(record_id):
+    """
+    API endpoint to edit a headache record by ID.
+    
+    Args:
+        record_id: int - The ID of the headache record to edit
+        
+    Request Body (JSON):
+        Any fields that need to be updated (date, time, duration, intensity, etc.)
+    
+    Returns:
+        JSON response indicating success or error.
+    """
+    if not request.json:
+        return jsonify({"error": "Request must be in JSON format."}), 400
+    
+    try:
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            tracker.edit_record(record_id, request.json)
+            return jsonify({"message": f"Record {record_id} updated successfully."}), 200
+        finally:
+            tracker.close()
+            
+    except Exception as e:
+        app.logger.error(f"Error editing record: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/delete/<int:record_id>', methods=['DELETE'])
+def delete_record_api(record_id):
+    """
+    API endpoint to delete a headache record by ID.
+    
+    Args:
+        record_id: int - The ID of the headache record to delete
+    
+    Returns:
+        JSON response indicating success or error.
+    """
+    try:
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            tracker.delete_record(record_id)
+            return jsonify({"message": f"Record {record_id} deleted successfully."}), 200
+        finally:
+            tracker.close()
+            
+    except Exception as e:
+        app.logger.error(f"Error deleting record: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/unique-values', methods=['GET'])
+def get_unique_values():
+    """
+    API endpoint to retrieve unique values for filtering options.
+    
+    Query Parameters:
+        - field: str - The database field to get unique values for
+                      (users.user_name, headaches.date, medications.medication, 
+                       triggers.diet, triggers.sleep_quality, triggers.stress_level, headaches.intensity)
+    
+    Returns:
+        JSON response with list of unique values.
+    """
+    field = request.args.get('field')
+    
+    if not field:
+        return jsonify({"error": "field parameter is required"}), 400
+    
+    try:
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            values = tracker.get_unique_values(field)
+            return jsonify({"field": field, "values": values}), 200
+        finally:
+            tracker.close()
+            
+    except Exception as e:
+        app.logger.error(f"Error getting unique values: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/stop', methods=['GET'])
+def stop_server():
+    """
+    Endpoint to gracefully stop the Flask server when returning to CLI.
+    
+    Returns:
+        JSON response indicating that the user should stop the server.
+    """
+    return jsonify({
+        "message": "To return to CLI, please press Ctrl+C in your terminal to stop the web server.",
+        "instruction": "The CLI menu will automatically reappear after you stop the server."
+    }), 200
 
 
 if __name__ == '__main__':

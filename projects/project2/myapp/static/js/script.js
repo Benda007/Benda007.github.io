@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Handle "Return to CLI" button
+    const returnToCLIBtn = document.getElementById('returnToCLIBtn');
+    if (returnToCLIBtn) {
+        returnToCLIBtn.addEventListener('click', () => {
+            // Show a message to the user
+            const message = `
+╔════════════════════════════════════════════╗
+║  Returning to CLI Mode                     ║
+╚════════════════════════════════════════════╝
+
+To return to CLI menu:
+1. Stop the web server (press Ctrl+C in your terminal)
+2. The CLI menu will automatically appear
+3. You can then use all CLI options again
+
+The web server has been configured to allow
+easy switching between CLI and Web interfaces.
+
+Thank you for using Headache Tracker!
+            `;
+            alert(message);
+            // Stop the Flask server by navigating away or closing
+            window.location.href = 'http://localhost:5000/api/stop';
+        });
+    }
+    
     // Initial setup: Fetch records and update table & chart when the page loads
     fetchRecordsAndUpdate();
 

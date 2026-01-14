@@ -18,6 +18,14 @@ def run_api():
 
     Launches the application in debug mode, accessible via the default localhost settings.
     """
+    print("\n" + "="*60)
+    print("🌐 Web Interface is running at: http://localhost:5000")
+    print("="*60)
+    print("\nYou can:")
+    print("  • Use the web interface in your browser")
+    print("  • Click 'Return to CLI' button to come back to the menu")
+    print("  • Press Ctrl+C to stop the server")
+    print("="*60 + "\n")
     app.run(debug=True)
 
 
@@ -245,7 +253,73 @@ def main():
     elif args.upload:
         upload_from_excel(db_manager, args.file)
     else:
-        load_data()
+        # Default CLI menu mode
+        interactive_menu()
+
+
+def interactive_menu():
+    """
+    Interactive CLI menu allowing users to navigate between CLI and web interface.
+    
+    This function creates a repeating menu where users can:
+    - View all records
+    - Add a new record
+    - Filter records
+    - Edit/Delete records
+    - Export/Import from Excel
+    - Switch to web interface
+    - Exit the application
+    """
+    while True:
+        print("\n" + "="*60)
+        print("📋 HEADACHE TRACKER - Main Menu")
+        print("="*60)
+        print("1. View all records")
+        print("2. Add a new headache record")
+        print("3. Filter records by criteria")
+        print("4. Edit or delete a record")
+        print("5. Export records to Excel")
+        print("6. Import records from Excel")
+        print("7. Switch to Web Interface (HTML)")
+        print("8. Exit")
+        print("="*60)
+        
+        choice = input("\nEnter your choice (1-8): ").strip()
+        
+        if choice == "1":
+            print("\n--- Viewing All Records ---")
+            load_data()
+        elif choice == "2":
+            print("\n--- Add New Record ---")
+            add_record()
+        elif choice == "3":
+            print("\n--- Filter Records ---")
+            filter_records()
+        elif choice == "4":
+            print("\n--- Edit or Delete Record ---")
+            filter_records()
+            tracker = HeadacheTracker()
+            edit_or_delete_records(tracker)
+        elif choice == "5":
+            filename = input("\nEnter Excel filename (e.g., headaches.xlsx): ").strip()
+            if filename:
+                export_to_excel(DatabaseManager(), filename)
+        elif choice == "6":
+            filename = input("\nEnter Excel filename to import from: ").strip()
+            if filename:
+                upload_from_excel(DatabaseManager(), filename)
+        elif choice == "7":
+            print("\n" + "="*60)
+            print("🌐 Starting Web Interface...")
+            print("="*60)
+            run_api()
+            # After web server stops, continue with menu
+            print("\n🔄 Returning to CLI Menu...\n")
+        elif choice == "8":
+            print("\n✅ Thank you for using Headache Tracker. Goodbye!")
+            break
+        else:
+            print("\n❌ Invalid choice. Please enter a number between 1 and 8.")
 
 
 if __name__ == "__main__":
