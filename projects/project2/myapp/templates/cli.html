@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headache Tracker - CLI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .cli-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 20px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .cli-output {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #0a0a0a;
+            border: 1px solid #003300;
+            border-radius: 3px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+        .cli-input-group {
+            display: flex;
+            gap: 10px;
+        }
+        .cli-input-group input {
+            flex: 1;
+            background-color: #1e1e1e;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .cli-input-group input:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 5px #00ff00;
+        }
+        .cli-input-group button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .cli-input-group button:hover {
+            background-color: #00cc00;
+        }
+        .prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .prompt::before {
+            content: "$ ";
+        }
+        .error {
+            color: #ff6b6b;
+        }
+        .success {
+            color: #51cf66;
+        }
+        .info {
+            color: #74c0fc;
+        }
+        .question {
+            color: #ffd43b;
+        }
+        .nav-top {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav-top a {
+            background-color: #0066ff;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        .nav-top a:hover {
+            background-color: #0052cc;
+        }
+        h1 {
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>🏥 Headache Tracker - CLI</h1>
+    <div class="nav-top">
+        <a href="/">🌐 Web Interface</a>
+    </div>
+
+    <div class="cli-container">
+        <div class="cli-output" id="output"></div>
+        <div class="cli-input-group">
+            <input type="text" id="input" placeholder="Enter command..." autofocus>
+            <button id="submit">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const output = document.getElementById('output');
+        const input = document.getElementById('input');
+        const submit = document.getElementById('submit');
+
+        // CLI State Machine
+        let cliState = {
+            mode: 'command', // command, waiting_input
+            command: null,
+            currentQuestion: 0,
+            data: {},
+            questions: []
+        };
+
+        // Initialize CLI
+        function initCLI() {
+            clearOutput();
+            printOutput('<span class="info">Headache Tracker CLI - Web Based</span>', false);
+            printOutput('');
+            printOutput('<span class="info">Type "help" for available commands</span>', false);
+            printOutput('');
+            cliState.mode = 'command';
+        }
+
+        function printOutput(text, newline = true) {
+            if (newline) {
+                output.innerHTML += text + '<br>';
+            } else {
+                output.innerHTML += text;
+            }
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function clearOutput() {
+            output.innerHTML = '';
+        }
+
+        function displayHelp() {
+            printOutput('<span class="success">Available Commands:</span>', false);
+            printOutput('');
+            printOutput('  <span class="prompt">view</span>       - View all records');
+            printOutput('  <span class="prompt">add</span>        - Add a new headache record');
+            printOutput('  <span class="prompt">filter</span>     - Filter records by criteria');
+            printOutput('  <span class="prompt">edit</span>       - Edit a headache record');
+            printOutput('  <span class="prompt">delete</span>     - Delete a headache record');
+            printOutput('  <span class="prompt">export</span>     - Export records to CSV');
+            printOutput('  <span class="prompt">import</span>     - Import records from file');
+            printOutput('  <span class="prompt">init</span>       - Initialize database');
+            printOutput('  <span class="prompt">triggers</span>   - View headache statistics');
+            printOutput('  <span class="prompt">records</span>    - View all records as JSON');
+            printOutput('  <span class="prompt">clear</span>      - Clear terminal');
+            printOutput('  <span class="prompt">exit</span>       - Exit CLI');
+            printOutput('  <span class="prompt">help</span>       - Show this help');
+            printOutput('');
+        }
+
+        async function handleCommand(cmd) {
+            cmd = cmd.trim().toLowerCase();
+            if (!cmd) return;
+
+            printOutput('<span class="prompt">' + cmd + '</span>');
+
+            try {
+                if (cmd === 'help') {
+                    displayHelp();
+                } else if (cmd === 'view') {
+                    await commandView();
+                } else if (cmd === 'triggers') {
+                    await commandTriggers();
+                } else if (cmd === 'records') {
+                    await commandRecords();
+                } else if (cmd === 'add') {
+                    cliState.mode = 'waiting_input';
+                    cliState.command = 'add';
+                    cliState.currentQuestion = 0;
+                    cliState.data = {};
+                    cliState.questions = [
+                        { field: 'user_name', prompt: 'Enter user name: ', type: 'text' },
+                        { field: 'user_age', prompt: 'Enter age: ', type: 'number' },
+                        { field: 'user_sex', prompt: 'Enter sex (M/F): ', type: 'text' },
+                        { field: 'date_of_headache', prompt: 'Enter date (YYYY-MM-DD): ', type: 'text' },
+                        { field: 'time_of_headache', prompt: 'Enter time (HH:MM): ', type: 'text' },
+                        { field: 'duration', prompt: 'Enter duration (minutes): ', type: 'number' },
+                        { field: 'intensity', prompt: 'Enter intensity (1-10): ', type: 'number' },
+                        { field: 'trigger', prompt: 'Enter trigger (or press Enter to skip): ', type: 'text' },
+                        { field: 'headache_type', prompt: 'Enter headache type (or press Enter to skip): ', type: 'text' },
+                        { field: 'medication', prompt: 'Enter medication (or press Enter to skip): ', type: 'text' },
+                        { field: 'dosage', prompt: 'Enter dosage (or press Enter to skip): ', type: 'number' },
+                        { field: 'effectiveness', prompt: 'Was medication effective? (Yes/No, or press Enter): ', type: 'text' }
+                    ];
+                    printOutput('<span class="question">?' + cliState.questions[0].prompt + '</span>', false);
+                } else if (cmd === 'filter') {
+                    cliState.mode = 'waiting_input';
+                    cliState.command = 'filter';
+                    cliState.currentQuestion = 0;
+                    cliState.data = {};
+                    cliState.questions = [
+                        { field: 'user_name', prompt: 'Filter by user name (press Enter to skip): ', type: 'text' },
+                        { field: 'start_date', prompt: 'Filter by start date YYYY-MM-DD (press Enter to skip): ', type: 'text' },
+                        { field: 'end_date', prompt: 'Filter by end date YYYY-MM-DD (press Enter to skip): ', type: 'text' },
+                        { field: 'medication', prompt: 'Filter by medication (press Enter to skip): ', type: 'text' },
+                        { field: 'diet', prompt: 'Filter by diet trigger (press Enter to skip): ', type: 'text' },
+                        { field: 'sleep', prompt: 'Filter by sleep quality (press Enter to skip): ', type: 'text' },
+                        { field: 'stress', prompt: 'Filter by stress level (press Enter to skip): ', type: 'text' },
+                        { field: 'intensity', prompt: 'Filter by intensity (1-10, press Enter to skip): ', type: 'number' }
+                    ];
+                    printOutput('<span class="question">?' + cliState.questions[0].prompt + '</span>', false);
+                } else if (cmd === 'edit') {
+                    cliState.mode = 'waiting_input';
+                    cliState.command = 'edit';
+                    cliState.currentQuestion = 0;
+                    cliState.data = {};
+                    cliState.questions = [
+                        { field: 'record_id', prompt: 'Enter record ID to edit: ', type: 'number' },
+                        { field: 'intensity', prompt: 'New intensity (press Enter to skip): ', type: 'number' },
+                        { field: 'duration', prompt: 'New duration in minutes (press Enter to skip): ', type: 'number' },
+                        { field: 'medication', prompt: 'New medication (press Enter to skip): ', type: 'text' },
+                        { field: 'effectiveness', prompt: 'Was medication effective? (Yes/No, or press Enter): ', type: 'text' }
+                    ];
+                    printOutput('<span class="question">?' + cliState.questions[0].prompt + '</span>', false);
+                } else if (cmd === 'delete') {
+                    cliState.mode = 'waiting_input';
+                    cliState.command = 'delete';
+                    cliState.currentQuestion = 0;
+                    cliState.data = {};
+                    cliState.questions = [
+                        { field: 'record_id', prompt: 'Enter record ID to delete: ', type: 'number' },
+                        { field: 'confirm', prompt: 'Are you sure? (yes/no): ', type: 'text' }
+                    ];
+                    printOutput('<span class="question">?' + cliState.questions[0].prompt + '</span>', false);
+                } else if (cmd === 'export') {
+                    await commandExport();
+                } else if (cmd === 'import') {
+                    printOutput('<span class="info">Import feature requires file selection (use Web Interface for file upload)</span>');
+                } else if (cmd === 'init') {
+                    cliState.mode = 'waiting_input';
+                    cliState.command = 'init';
+                    cliState.currentQuestion = 0;
+                    cliState.data = {};
+                    printOutput('<span class="error">WARNING: This will reset ALL data!</span>');
+                    printOutput('<span class="question">?Are you sure? (yes/no): </span>', false);
+                } else if (cmd === 'clear') {
+                    clearOutput();
+                } else if (cmd === 'exit') {
+                    printOutput('<span class="error">Goodbye!</span>');
+                    input.disabled = true;
+                    submit.disabled = true;
+                } else {
+                    printOutput('<span class="error">Unknown command: ' + cmd + '</span>');
+                    printOutput('<span class="info">Type "help" for available commands</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+            printOutput('');
+        }
+
+        async function handleInput(value) {
+            if (cliState.mode === 'waiting_input') {
+                printOutput('<span class="prompt">' + value + '</span>');
+                
+                // Skip empty inputs for optional fields
+                if (value === '' && isOptionalField(cliState.questions[cliState.currentQuestion].field)) {
+                    cliState.data[cliState.questions[cliState.currentQuestion].field] = null;
+                } else if (value !== '') {
+                    cliState.data[cliState.questions[cliState.currentQuestion].field] = value;
+                }
+
+                cliState.currentQuestion++;
+
+                if (cliState.currentQuestion < cliState.questions.length) {
+                    const nextQ = cliState.questions[cliState.currentQuestion];
+                    printOutput('<span class="question">?' + nextQ.prompt + '</span>', false);
+                } else {
+                    // All questions answered - execute command
+                    await executeFormCommand();
+                    cliState.mode = 'command';
+                }
+            } else {
+                await handleCommand(value);
+            }
+        }
+
+        function isOptionalField(field) {
+            const optional = ['trigger', 'headache_type', 'medication', 'dosage', 'effectiveness',
+                            'user_name', 'start_date', 'end_date', 'diet', 'sleep', 'stress', 'intensity',
+                            'duration'];
+            return optional.includes(field);
+        }
+
+        async function executeFormCommand() {
+            try {
+                if (cliState.command === 'add') {
+                    await submitAdd();
+                } else if (cliState.command === 'filter') {
+                    await submitFilter();
+                } else if (cliState.command === 'edit') {
+                    await submitEdit();
+                } else if (cliState.command === 'delete') {
+                    await submitDelete();
+                } else if (cliState.command === 'init') {
+                    await submitInit();
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+            printOutput('');
+        }
+
+        async function commandView() {
+            try {
+                const response = await fetch('/records');
+                const data = await response.json();
+                if (data.records.length === 0) {
+                    printOutput('<span class="info">No records found</span>');
+                    return;
+                }
+                printOutput(data.columns.join(' | '));
+                data.records.forEach(record => {
+                    printOutput(record.join(' | '));
+                });
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function commandTriggers() {
+            try {
+                const response = await fetch('/headaches_by_trigger');
+                const data = await response.json();
+                if (data.length === 0) {
+                    printOutput('<span class="info">No trigger data found</span>');
+                    return;
+                }
+                printOutput('Trigger | Count');
+                data.forEach(item => {
+                    printOutput(item.trigger + ' | ' + item.headache_count);
+                });
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function commandRecords() {
+            try {
+                const response = await fetch('/records');
+                const data = await response.json();
+                printOutput('<span class="success">' + JSON.stringify(data, null, 2) + '</span>');
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function commandExport() {
+            try {
+                const response = await fetch('/api/export');
+                const result = await response.json();
+                if (response.ok) {
+                    printOutput('<span class="success">✓ ' + result.message + '</span>');
+                    const dataStr = result.data;
+                    const dataBlob = new Blob([dataStr], { type: 'text/csv' });
+                    const url = URL.createObjectURL(dataBlob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = result.filename;
+                    a.click();
+                    printOutput('<span class="success">File downloaded: ' + result.filename + '</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function submitAdd() {
+            try {
+                const formData = {
+                    user_name: cliState.data.user_name || '',
+                    user_age: cliState.data.user_age || 0,
+                    user_sex: cliState.data.user_sex || 'M',
+                    date_of_headache: cliState.data.date_of_headache || '',
+                    time_of_headache: cliState.data.time_of_headache || '',
+                    duration: cliState.data.duration || 0,
+                    intensity: cliState.data.intensity || 5,
+                    trigger: cliState.data.trigger || '',
+                    headache_type: cliState.data.headache_type || '',
+                    medication: cliState.data.medication || '',
+                    dosage: cliState.data.dosage || 0,
+                    effectiveness: cliState.data.effectiveness || ''
+                };
+
+                const response = await fetch('/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    printOutput('<span class="success">✓ ' + result.message + '</span>');
+                } else {
+                    printOutput('<span class="error">✗ ' + result.error + '</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function submitFilter() {
+            try {
+                const filterData = {
+                    user_name: cliState.data.user_name || null,
+                    start_date: cliState.data.start_date || null,
+                    end_date: cliState.data.end_date || null,
+                    medication: cliState.data.medication || null,
+                    diet: cliState.data.diet || null,
+                    sleep: cliState.data.sleep || null,
+                    stress: cliState.data.stress || null,
+                    intensity: cliState.data.intensity || null
+                };
+
+                const response = await fetch('/api/filter', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(filterData)
+                });
+                const result = await response.json();
+                if (response.ok && result.count > 0) {
+                    printOutput('<span class="success">Found ' + result.count + ' records:</span>');
+                    printOutput(result.columns.join(' | '));
+                    result.records.forEach(record => {
+                        printOutput(record.join(' | '));
+                    });
+                } else {
+                    printOutput('<span class="info">No records match your criteria</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function submitEdit() {
+            try {
+                const recordId = cliState.data.record_id;
+                if (!recordId) {
+                    printOutput('<span class="error">Record ID is required</span>');
+                    return;
+                }
+
+                const updateData = {};
+                if (cliState.data.intensity) updateData.intensity = cliState.data.intensity;
+                if (cliState.data.duration) updateData.duration = cliState.data.duration;
+                if (cliState.data.medication) updateData.medication = cliState.data.medication;
+                if (cliState.data.effectiveness) updateData.effectiveness = cliState.data.effectiveness;
+
+                const response = await fetch(`/api/edit/${recordId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updateData)
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    printOutput('<span class="success">✓ Record updated successfully</span>');
+                } else {
+                    printOutput('<span class="error">✗ ' + result.error + '</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function submitDelete() {
+            try {
+                const recordId = cliState.data.record_id;
+                const confirm = cliState.data.confirm ? cliState.data.confirm.toLowerCase() : 'no';
+                
+                if (confirm !== 'yes') {
+                    printOutput('<span class="info">Delete cancelled</span>');
+                    return;
+                }
+
+                const response = await fetch(`/api/delete/${recordId}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    printOutput('<span class="success">✓ Record deleted successfully</span>');
+                } else {
+                    printOutput('<span class="error">✗ ' + result.error + '</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        async function submitInit() {
+            try {
+                const confirm = cliState.data.confirm ? cliState.data.confirm.toLowerCase() : 'no';
+                if (confirm !== 'yes') {
+                    printOutput('<span class="info">Initialization cancelled</span>');
+                    return;
+                }
+
+                const response = await fetch('/api/init', { method: 'POST' });
+                const result = await response.json();
+                if (response.ok) {
+                    printOutput('<span class="success">✓ ' + result.message + '</span>');
+                } else {
+                    printOutput('<span class="error">✗ ' + result.error + '</span>');
+                }
+            } catch (error) {
+                printOutput('<span class="error">Error: ' + error.message + '</span>');
+            }
+        }
+
+        // Event Listeners
+        submit.addEventListener('click', async () => {
+            const value = input.value;
+            input.value = '';
+            await handleInput(value);
+            input.focus();
+        });
+
+        input.addEventListener('keypress', async (e) => {
+            if (e.key === 'Enter') {
+                const value = input.value;
+                input.value = '';
+                await handleInput(value);
+                input.focus();
+            }
+        });
+
+        // Initialize
+        initCLI();
+    </script>
+</body>
+</html>
