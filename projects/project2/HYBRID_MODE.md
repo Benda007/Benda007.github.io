@@ -1,20 +1,20 @@
 # Headache Tracker - Hybrid CLI/Web Mode
 
-## Přehled
+## Overview
 
-Aplikace nyní běží v **hybridním módu**, kde si uživatel může vybrat mezi:
-- **CLI (Command Line Interface)** - textové menu v terminálu
-- **Web Interface (HTML)** - webové rozhraní v prohlížeči
+The application now runs in **hybrid mode**, where users can choose between:
+- **CLI (Command Line Interface)** - text menu in the terminal
+- **Web Interface (HTML)** - web interface in a browser
 
-## Jak spustit aplikaci
+## How to Run the Application
 
-### Standardní spuštění (Interactive Menu)
+### Standard Launch (Interactive Menu)
 
 ```bash
 python project.py
 ```
 
-Zobrazí se vám interaktivní menu:
+An interactive menu will be displayed:
 
 ```
 ============================================================
@@ -31,150 +31,150 @@ Zobrazí se vám interaktivní menu:
 ============================================================
 ```
 
-### Spuštění příkazů z terminálu (CLI mode)
+### Running Commands from Terminal (CLI mode)
 
-Stále můžete používat příkazové argumenty jako dříve:
+You can still use command-line arguments as before:
 
 ```bash
-# Přidání nového záznamu
+# Add a new record
 python project.py --add
 
-# Filtrování záznamů
+# Filter records
 python project.py --filter
 
-# Editace/smazání záznamů
+# Edit/Delete records
 python project.py --edit
 python project.py --delete
 
-# Export do Excel
+# Export to Excel
 python project.py --export --file data.xlsx
 
-# Import z Excel
+# Import from Excel
 python project.py --upload --file data.xlsx
 
-# Zobrazení všech záznamů
+# View all records
 python project.py
 
-# Přímé spuštění web rozhraní
+# Launch web interface directly
 python project.py --web
 ```
 
-## Přepínání mezi CLI a Web Interface
+## Switching Between CLI and Web Interface
 
 ### CLI → Web Interface
 
-1. V interaktivním menu vyberte volbu **7** (Switch to Web Interface)
-2. Otevře se webové rozhraní v prohlížeči (http://localhost:5000)
-3. Můžete si vybrat mezi:
-   - Přidáním nových záznamů
-   - Prohlížením tabulky
-   - Prohlížením grafu
-   - Filtrováním záznamů
+1. In the interactive menu, select option **7** (Switch to Web Interface)
+2. The web interface will open in your browser (http://localhost:5000)
+3. You can choose between:
+   - Adding new records
+   - Viewing the records table
+   - Viewing graphs
+   - Filtering records
 
 ### Web Interface → CLI
 
-1. Na webové stránce klikněte na tlačítko **⬅️ Return to CLI** v horní části
-2. Otevře se okno s instrukcemi
-3. Stiskněte **Ctrl+C** v terminálu
-4. CLI menu se automaticky vrátí
+1. On the web page, click the **⬅️ Return to CLI** button at the top
+2. A window with instructions will appear
+3. Press **Ctrl+C** in the terminal
+4. The CLI menu will automatically return
 
-## Struktura aplikace
+## Application Structure
 
 ```
 project2/
-├── project.py                 # Main entry point s CLI menu
+├── project.py                 # Main entry point with CLI menu
 ├── myapp/
-│   ├── api.py                 # Flask webový server
-│   ├── db.py                  # Databázová logika
-│   ├── core.py                # Filtrování a logika
-│   ├── headache.db            # SQLite databáze
+│   ├── api.py                 # Flask web server
+│   ├── db.py                  # Database logic
+│   ├── core.py                # Filtering and logic
+│   ├── headache.db            # SQLite database
 │   ├── templates/
 │   │   └── index.html         # Web frontend
 │   └── static/
 │       ├── js/
-│       │   └── script.js       # JavaScript pro web
+│       │   └── script.js       # JavaScript for web
 │       └── css/
 │           └── styles.css     # Styling
 ├── requirements.txt
-└── Procfile                   # Pro Render.com
+└── Procfile                   # For Render.com
 ```
 
-## Render.com Nasazení
+## Render.com Deployment
 
-Na Render.com se aplikace standardně spouští v CLI interactive menu:
+On Render.com, the application is launched by default in CLI interactive menu:
 
 ```
 Build Command: pip install -r requirements.txt
 Start Command: python project.py
 ```
 
-Projekt běží v defaultním CLI módu, kde si uživatel může:
-1. Vybrat jednu z 8 opcí CLI menu
-2. Nebo si otevřít web rozhraní pokud chce grafické UI
+The project runs in default CLI mode, where users can:
+1. Select one of the 8 CLI menu options
+2. Or open the web interface if they prefer a graphical UI
 
-## API Endpoints (pro web interface)
+## API Endpoints (for web interface)
 
-Webové rozhraní komunikuje s těmito API endpoints:
+The web interface communicates with these API endpoints:
 
-- **GET** `/` - Hlavní stránka (HTML)
-- **POST** `/add` - Přidání nového záznamu
-- **GET** `/records` - Zobrazení všech záznamů
-- **GET** `/headaches_by_trigger` - Statistiky podle triggerů
-- **POST** `/api/filter` - Filtrování záznamů
-- **PUT** `/api/edit/<id>` - Editace záznamu
-- **DELETE** `/api/delete/<id>` - Smazání záznamu
-- **GET** `/api/unique-values` - Dostupné hodnoty pro filtry
-- **GET** `/api/stop` - Informace o návratu do CLI
+- **GET** `/` - Home page (HTML)
+- **POST** `/add` - Add a new record
+- **GET** `/records` - View all records
+- **GET** `/headaches_by_trigger` - Statistics by triggers
+- **POST** `/api/filter` - Filter records
+- **PUT** `/api/edit/<id>` - Edit a record
+- **DELETE** `/api/delete/<id>` - Delete a record
+- **GET** `/api/unique-values` - Available values for filters
+- **GET** `/api/stop` - Information about returning to CLI
 
-## Klíčové výhody
+## Key Benefits
 
-✅ **Minimální změny** - Existující kód zůstává nechangen
-✅ **Flexibilita** - Uživatel si vybere, co mu vyhovuje (CLI nebo Web)
-✅ **Seamless přepínání** - Snadno se přepínat mezi oběma módy
-✅ **Render.com kompatibilní** - Pracuje bez problémů
-✅ **Všechny funkce** - Všechny operace dostupné v obou módech
+✅ **Minimal Changes** - Existing code remains unchanged
+✅ **Flexibility** - Users can choose what works best (CLI or Web)
+✅ **Seamless Switching** - Easy to switch between both modes
+✅ **Render.com Compatible** - Works without any issues
+✅ **Full Features** - All operations available in both modes
 
-## Příklady použití
+## Usage Examples
 
-### Scénář 1: Jen CLI
+### Scenario 1: CLI Only
 ```bash
 python project.py
-# Vybere menu → Vybere operaci → Vrátí se do menu
-# Opakuje se dokud uživatel nevybere "Exit" (8)
+# Select menu → Select operation → Return to menu
+# Repeats until user selects "Exit" (8)
 ```
 
-### Scénář 2: Jen Web
+### Scenario 2: Web Only
 ```bash
 python project.py --web
-# Otevře se http://localhost:5000
-# Uživatel pracuje v prohlížeči
-# Ctrl+C zastaví server
+# Opens http://localhost:5000
+# User works in the browser
+# Ctrl+C stops the server
 ```
 
-### Scénář 3: Hybridní (CLI + Web)
+### Scenario 3: Hybrid (CLI + Web)
 ```bash
 python project.py
-# Menu → Vybere "Switch to Web Interface" (7)
-# Web interface otevřen
-# Klikne "Return to CLI"
-# Ctrl+C → Vrátí se do menu
+# Menu → Select "Switch to Web Interface" (7)
+# Web interface opens
+# Click "Return to CLI"
+# Ctrl+C → Return to menu
 ```
 
 ## Troubleshooting
 
-**Q: Tlačítko "Return to CLI" nefunguje**
-A: Je to design feature - jednoduše stiskněte Ctrl+C v terminálu
+**Q: The "Return to CLI" button doesn't work**
+A: It's a design feature - simply press Ctrl+C in the terminal
 
-**Q: Server se neukončuje**
-A: Stiskněte Ctrl+C v terminálu, kde běží server
+**Q: The server won't stop**
+A: Press Ctrl+C in the terminal where the server is running
 
-**Q: Port 5000 je už obsazený**
-A: Změňte PORT: `PORT=8000 python project.py --web`
+**Q: Port 5000 is already in use**
+A: Change the PORT: `PORT=8000 python project.py --web`
 
-## Závěr
+## Conclusion
 
-Aplikace nyní nabízí nejlepší z obou světů:
-- **CLI** pro quick operace a scripting
-- **Web** pro intuitivní a vizuální interakci
+The application now offers the best of both worlds:
+- **CLI** for quick operations and scripting
+- **Web** for intuitive and visual interaction
 
-Přepínání mezi nimi je hladké a uživatelsky přívětivé! 🎉
+Switching between them is smooth and user-friendly! 🎉
