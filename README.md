@@ -133,7 +133,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 - **Projects:** 40+ problem sets demonstrating Python mastery 
 
 **Final Project:** Headache Tracker (CLI & Web Interface): Enables users to log, track, and analyze headache occurrences in an organized manner. Users can record the specifics of each headache—such as date, duration, intensity, dietary triggers, stress levels, sleep quality, and the effectiveness of any medications used. 
-**[View code →](./projects/project2/README.md)** 
+**[View detailed projects →](./projects/project2/README.md)** 
 
 
 ---
@@ -144,7 +144,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 - **Projects:** Complex database applications with multiple tables and views. 25+ projects sets completed
 
 **Final Project:** Coffee Consumption Tracker (SQLite): A normalized SQLite database and reporting toolkit for tracking office coffee usage across multiple locations and departments. 
-**[View code →](./projects/project4/README.md/)** 
+**[View detailed projects →](./projects/project4/README.md/)** 
 
 ---
 
@@ -154,7 +154,7 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 - **Certification:** Official Czech government-recognized qualification 
 
 **Final Project:** Insurance Manager System (Console Application): Allows managing the records of insurance policyholders, allowing users to add, display, search, and export data about policyholders
-**[View code →](./projects/project3/README.md)** 
+**[View detailed projects →](./projects/project3/README.md)** 
 
 ---
 
