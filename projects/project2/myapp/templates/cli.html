@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headache Tracker - CLI Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+        }
+        .terminal {
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 20px;
+            height: 500px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .terminal-output {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .terminal-input {
+            display: flex;
+            gap: 10px;
+        }
+        .terminal-input input {
+            flex: 1;
+            background-color: #1e1e1e;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        .terminal-input button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .terminal-input button:hover {
+            background-color: #00cc00;
+        }
+        .prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .error {
+            color: #ff6b6b;
+        }
+        .success {
+            color: #51cf66;
+        }
+        .nav-tabs {
+            border-bottom: 2px solid #00ff00;
+        }
+        .nav-link {
+            color: #d4d4d4;
+            border: 1px solid transparent;
+        }
+        .nav-link.active {
+            background-color: #00ff00;
+            color: #000;
+            border-color: #00ff00;
+        }
+        .nav-link:hover {
+            color: #00ff00;
+        }
+        h1 {
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        .btn-switch {
+            background-color: #0066ff;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .btn-switch:hover {
+            background-color: #0052cc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <h1 class="text-center">🏥 Headache Tracker - CLI Interface</h1>
+        
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10">
+                <a href="/" class="btn btn-switch">🌐 Switch to Web Interface</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- Terminal Display -->
+                <div id="terminal" class="terminal">
+                    <div class="terminal-output" id="terminalOutput">
+<span class="prompt">Headache Tracker CLI - Web Based Terminal</span>
+<br><br>Available Commands:
+<br><span class="success">  view</span>          - View all records
+<br><span class="success">  add</span>           - Add a new headache record (opens form)
+<br><span class="success">  filter</span>        - Filter records by criteria (opens form)
+<br><span class="success">  records</span>       - Get all records as JSON
+<br><span class="success">  triggers</span>      - Get headache statistics by trigger
+<br><span class="success">  unique &lt;field&gt;</span> - Get unique values for a field
+<br><span class="success">  help</span>          - Show this help message
+<br><span class="success">  clear</span>         - Clear terminal
+<br><span class="success">  exit</span>          - Exit (closes terminal)
+<br><br><span class="prompt">Ready for input...</span>
+                    </div>
+                </div>
+
+                <!-- Terminal Input -->
+                <div class="terminal-input">
+                    <input type="text" id="commandInput" placeholder="Enter command..." autofocus>
+                    <button id="sendBtn">Send</button>
+                </div>
+
+                <!-- Quick Action Buttons -->
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Quick Actions:</h5>
+                            <button class="btn btn-outline-info btn-sm mb-2" onclick="executeCommand('view')">View Records</button>
+                            <button class="btn btn-outline-info btn-sm mb-2" onclick="executeCommand('triggers')">View Triggers</button>
+                            <button class="btn btn-outline-info btn-sm mb-2" onclick="executeCommand('records')">Get JSON</button>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Database Operations:</h5>
+                            <button class="btn btn-outline-warning btn-sm mb-2" onclick="openAddForm()">Add Record</button>
+                            <button class="btn btn-outline-warning btn-sm mb-2" onclick="openFilterForm()">Filter Records</button>
+                            <button class="btn btn-outline-danger btn-sm mb-2" onclick="executeCommand('help')">Help</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Record Modal -->
+                <div class="modal fade" id="addModal" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-light">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add New Headache Record</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addForm">
+                                    <div class="mb-3">
+                                        <label>User Name:</label>
+                                        <input type="text" id="userName" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Age:</label>
+                                        <input type="number" id="userAge" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Sex:</label>
+                                        <select id="userSex" class="form-control bg-dark text-light" required>
+                                            <option value="">Select...</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Date:</label>
+                                        <input type="date" id="headacheDate" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Time:</label>
+                                        <input type="time" id="headacheTime" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Duration (minutes):</label>
+                                        <input type="number" id="duration" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Intensity (1-10):</label>
+                                        <input type="number" id="intensity" min="1" max="10" class="form-control bg-dark text-light" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Trigger:</label>
+                                        <input type="text" id="trigger" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Headache Type:</label>
+                                        <select id="headacheType" class="form-control bg-dark text-light">
+                                            <option value="">Select...</option>
+                                            <option value="Tension">Tension</option>
+                                            <option value="Migraine">Migraine</option>
+                                            <option value="Cluster">Cluster</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Medication:</label>
+                                        <input type="text" id="medication" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Dosage (pills):</label>
+                                        <input type="number" id="dosage" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Effectiveness:</label>
+                                        <select id="effectiveness" class="form-control bg-dark text-light">
+                                            <option value="">Select...</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="submitAddForm()">Add Record</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Modal -->
+                <div class="modal fade" id="filterModal" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-dark text-light">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Filter Records</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="filterForm">
+                                    <div class="mb-3">
+                                        <label>User Name:</label>
+                                        <input type="text" id="filterUserName" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Start Date:</label>
+                                        <input type="date" id="filterStartDate" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>End Date:</label>
+                                        <input type="date" id="filterEndDate" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Medication:</label>
+                                        <input type="text" id="filterMedication" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Diet Trigger:</label>
+                                        <input type="text" id="filterDiet" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Sleep Quality:</label>
+                                        <input type="text" id="filterSleep" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Stress Level:</label>
+                                        <input type="text" id="filterStress" class="form-control bg-dark text-light">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Intensity:</label>
+                                        <input type="number" id="filterIntensity" min="1" max="10" class="form-control bg-dark text-light">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="submitFilterForm()">Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const terminal = document.getElementById('terminalOutput');
+        const input = document.getElementById('commandInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        // Handle Enter key
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') executeCommand(input.value);
+        });
+
+        // Handle Send button
+        sendBtn.addEventListener('click', () => executeCommand(input.value));
+
+        async function executeCommand(cmd) {
+            cmd = cmd.trim().toLowerCase();
+            if (!cmd) return;
+
+            appendOutput(`<span class="prompt">$ ${cmd}</span>`);
+            input.value = '';
+
+            try {
+                if (cmd === 'view') {
+                    const response = await fetch('/records');
+                    const data = await response.json();
+                    appendOutput(`<span class="success">${data.columns.join(' | ')}</span>`);
+                    data.records.forEach(record => {
+                        appendOutput(record.join(' | '));
+                    });
+                } else if (cmd === 'triggers') {
+                    const response = await fetch('/headaches_by_trigger');
+                    const data = await response.json();
+                    appendOutput(`<span class="success">Trigger | Count</span>`);
+                    data.forEach(item => {
+                        appendOutput(`${item.trigger} | ${item.headache_count}`);
+                    });
+                } else if (cmd === 'records') {
+                    const response = await fetch('/records');
+                    const data = await response.json();
+                    appendOutput(`<span class="success">${JSON.stringify(data, null, 2)}</span>`);
+                } else if (cmd === 'help') {
+                    appendOutput(`<span class="success">Available Commands:</span>
+  view     - View all records
+  triggers - Get headache statistics by trigger
+  records  - Get all records as JSON
+  help     - Show this help
+  clear    - Clear terminal
+  exit     - Exit`);
+                } else if (cmd === 'clear') {
+                    terminal.innerHTML = '<span class="prompt">Terminal cleared...</span>';
+                } else if (cmd === 'exit') {
+                    appendOutput('<span class="error">Exiting...</span>');
+                } else {
+                    appendOutput(`<span class="error">Unknown command: ${cmd}</span>`);
+                    appendOutput(`Type 'help' for available commands`);
+                }
+            } catch (error) {
+                appendOutput(`<span class="error">Error: ${error.message}</span>`);
+            }
+            
+            scrollTerminal();
+        }
+
+        function appendOutput(text) {
+            terminal.innerHTML += `<br>${text}`;
+        }
+
+        function scrollTerminal() {
+            const terminalDiv = document.getElementById('terminal');
+            terminalDiv.scrollTop = terminalDiv.scrollHeight;
+        }
+
+        function openAddForm() {
+            const modal = new bootstrap.Modal(document.getElementById('addModal'));
+            modal.show();
+        }
+
+        function openFilterForm() {
+            const modal = new bootstrap.Modal(document.getElementById('filterModal'));
+            modal.show();
+        }
+
+        async function submitAddForm() {
+            const formData = {
+                user_name: document.getElementById('userName').value,
+                user_age: document.getElementById('userAge').value,
+                user_sex: document.getElementById('userSex').value,
+                date_of_headache: document.getElementById('headacheDate').value,
+                time_of_headache: document.getElementById('headacheTime').value,
+                duration: document.getElementById('duration').value,
+                intensity: document.getElementById('intensity').value,
+                trigger: document.getElementById('trigger').value,
+                headache_type: document.getElementById('headacheType').value,
+                medication: document.getElementById('medication').value,
+                dosage: document.getElementById('dosage').value,
+                effectiveness: document.getElementById('effectiveness').value
+            };
+
+            try {
+                const response = await fetch('/add', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                const result = await response.json();
+                appendOutput(`<span class="success">✓ ${result.message}</span>`);
+                bootstrap.Modal.getInstance(document.getElementById('addModal')).hide();
+                document.getElementById('addForm').reset();
+            } catch (error) {
+                appendOutput(`<span class="error">✗ Error: ${error.message}</span>`);
+            }
+            scrollTerminal();
+        }
+
+        async function submitFilterForm() {
+            const filterData = {
+                user_name: document.getElementById('filterUserName').value || null,
+                start_date: document.getElementById('filterStartDate').value || null,
+                end_date: document.getElementById('filterEndDate').value || null,
+                medication: document.getElementById('filterMedication').value || null,
+                diet: document.getElementById('filterDiet').value || null,
+                sleep: document.getElementById('filterSleep').value || null,
+                stress: document.getElementById('filterStress').value || null,
+                intensity: document.getElementById('filterIntensity').value || null
+            };
+
+            try {
+                const response = await fetch('/api/filter', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(filterData)
+                });
+                const result = await response.json();
+                appendOutput(`<span class="success">Found ${result.count} records:</span>`);
+                appendOutput(`<span class="success">${result.columns.join(' | ')}</span>`);
+                result.records.forEach(record => {
+                    appendOutput(record.join(' | '));
+                });
+                bootstrap.Modal.getInstance(document.getElementById('filterModal')).hide();
+            } catch (error) {
+                appendOutput(`<span class="error">✗ Error: ${error.message}</span>`);
+            }
+            scrollTerminal();
+        }
+    </script>
+</body>
+</html>

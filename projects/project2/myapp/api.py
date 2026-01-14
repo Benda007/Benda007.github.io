@@ -19,6 +19,18 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/cli')
+def cli_interface():
+    """
+    CLI interface served as a web page.
+    Allows users to interact with the application through a web-based CLI.
+
+    Returns:
+        Rendered HTML for the CLI interface.
+    """
+    return render_template('cli.html')
+
+
 @app.route('/add', methods=['POST'])
 def add_record():
     """

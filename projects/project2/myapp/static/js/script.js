@@ -1,34 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Handle "Return to CLI" button
-    const returnToCLIBtn = document.getElementById('returnToCLIBtn');
-    if (returnToCLIBtn) {
-        returnToCLIBtn.addEventListener('click', () => {
-            // Show a message to the user
-            const message = `
-╔════════════════════════════════════════════╗
-║  Information about CLI Mode                ║
-╚════════════════════════════════════════════╝
-
-About CLI Mode:
-- CLI mode is only available when running locally
-- Use: python project.py
-
-Current Mode:
-- You are running in WEB MODE on Render.com
-- This is optimized for browser access
-- All features are available in this interface
-
-To use CLI mode:
-1. Run the application locally with: python project.py
-2. Select option 7 from the menu to switch to web
-3. Or use options 1-6 for CLI operations
-
-Thank you for using Headache Tracker!
-            `;
-            alert(message);
-        });
-    }
-    
     // Initial setup: Fetch records and update table & chart when the page loads
     fetchRecordsAndUpdate();
 
