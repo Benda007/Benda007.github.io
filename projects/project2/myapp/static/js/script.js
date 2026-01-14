@@ -6,22 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show a message to the user
             const message = `
 ╔════════════════════════════════════════════╗
-║  Returning to CLI Mode                     ║
+║  Information about CLI Mode                ║
 ╚════════════════════════════════════════════╝
 
-To return to CLI menu:
-1. Stop the web server (press Ctrl+C in your terminal)
-2. The CLI menu will automatically appear
-3. You can then use all CLI options again
+About CLI Mode:
+- CLI mode is only available when running locally
+- Use: python project.py
 
-The web server has been configured to allow
-easy switching between CLI and Web interfaces.
+Current Mode:
+- You are running in WEB MODE on Render.com
+- This is optimized for browser access
+- All features are available in this interface
+
+To use CLI mode:
+1. Run the application locally with: python project.py
+2. Select option 7 from the menu to switch to web
+3. Or use options 1-6 for CLI operations
 
 Thank you for using Headache Tracker!
             `;
             alert(message);
-            // Stop the Flask server by navigating away or closing
-            window.location.href = 'http://localhost:5000/api/stop';
         });
     }
     

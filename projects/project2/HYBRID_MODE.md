@@ -160,7 +160,21 @@ python project.py
 # Ctrl+C → Return to menu
 ```
 
-## Troubleshooting
+## Deployment Notes
+
+### Local Machine (python project.py)
+- CLI interactive menu is available
+- You can switch to web interface (option 7)
+- Web server runs on `http://localhost:5000`
+- You can return to CLI by pressing Ctrl+C
+
+### Render.com Deployment
+- **Only web interface is available** (no interactive CLI)
+- Web server runs on your Render.com URL
+- The "About CLI Mode" button provides information
+- To use CLI mode, run the application locally
+
+This is intentional - Render.com is a web hosting platform, not a terminal environment.
 
 **Q: The "Return to CLI" button doesn't work**
 A: It's a design feature - simply press Ctrl+C in the terminal
