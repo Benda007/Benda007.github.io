@@ -11,33 +11,40 @@
 ---
 
 ## 📝 Shrnutí
-| <img src="https://Benda007.github.io/data/JK_photo.jpg" alt="Personal photo" width="200"/> | Jsem profesionál v oblasti globálního nákupu a nedávný absolvent kurzu CS50x na Harvardu. Jsem připraven využívat obchodní znalosti a technické dovednosti při vytváření praktických softwarových řešení. Mám silné zaměření na týmovou spolupráci, řešení problémů a na adaptaci v rychle se měnícím prostředí. |
-|---|:---|
+
+Zkušený profesionál v oblasti globálního nákupu a nedávný absolvent Harvardu CS50, nadšený pro spojení obchodního vhledu a technických dovedností při vytváření praktických softwarových řešení. Vynikám v týmové spolupráci, řešení problémů a přizpůsobování se rychle se měnícím prostředím.
 
 ---
 
 ## 🎯 Co hledám
 
-Rád bych našel příležitosti jako junior developer, technický koordinátor projektů nebo business analytik, kde bych mohl propojit své obchodní zkušenosti s rozvíjejícími se technickými schopnostmi. Zajímají mě role, které kladou důraz na týmovou práci, jasnou komunikaci a řešení problémů napříč obory.
+Hledám příležitosti v:
+- **Digitální nákup** - kombinace zkušeností v nákupu s technickými dovednostmi
+- **Business analýza** - překlenutí obchodních požadavků a technických řešení
+- **IT kategoriální management** - správa technologického nákupu a vztahů s dodavateli
+- **Hybrid obchodně-tech role** - využití svých 15+ let zkušeností v nákupu a technických dovedností
+
+Zvláště mě zajímají role, které oceňují cross-funkční spolupráci, rozhodování na základě dat a digitální transformaci.
 
 ---
 
 ## 🚀 O mně
 
-- 🗺️ Žiji v České republice, kraj Vysočina.
-- 🌍 Hovořím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
-- 💹 Mám úspěšnou kariéru v oblasti globálního nákupu a správě obchodních vztahů. Vždy jsem byl hnán zvědavostí a vášní pro celoživotní učení, což mě přivedlo ke studiu informatiky a vývoji softwaru. Mé zkušenosti z mezinárodního obchodu, vyjednávání a řízení obchodních vztahů mi poskytují jedinečný pohled na roli technologií při řešení reálných problémů.
-- 🎓 Mám certifikáty z Harvard University (CS50x) a IT Network (rekvalifikační kurz uznaný MŠMT ČR).
-- 🌱 Zaměřuji se na full-stack vývoj, řešení problémů a tvorbu uživatelsky přívětivých aplikací. 
-- 💡 Neustále sleduji nové technologie a vývoj v IT oblastech.
+- 🗺️ Sídlím v České republice, region Vysočina.
+- 🌍 Mluvím česky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-czechia_1f1e8-1f1ff.png" alt="Čeština" width="15"/> a anglicky <img src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-kingdom_1f1ec-1f1e7.png" alt="English" width="15"/>.
+- 💹 **Profesionál v obchodu a technologiích:** 15+ let zkušeností v globálním nákupu v automobilovém a finančním sektoru. Nedávno jsem absolvoval Harvard CS50 program a formalizoval technické dovednosti, které jsem již používal - SQL pro analýzu dat, Python pro automatizaci, optimalizaci procesů. Nyní hledám kombinaci obchodního vhledu s praktickými technickými schopnostmi v hybrid obchodně-tech rolích.
+- 🎓 **Certifikován** Harvardskou univerzitou (CS50x) a IT Network (rekvalifikační kurz uznávaný Ministerstvem školství, mládeže a tělovýchovy).
+- 🌱 **Zaměřen** na full-stack vývoj, řešení problémů a vytváření uživatelsky přívětivých aplikací.
+- 💡 **Stále zkoumám** nové technologie a nejlepší postupy.
 
 ---
 
-## 🔄 Změna kariéry: Z nákupu ke kódování
+## 🔄 Změna kariéry: Z globálního nákupu ke kódování
 
-Od dětství mě fascinovaly technologie, ať už šlo o objevování počítačů, používání pokročilého softwaru, úpravy hardwaru, nebo změny v operačních systémech Android (custom ROM). Po letech strávených v globálním nákupu jsem se rozhodl naučit programovat, abych lépe porozuměl a mohl ovlivňovat digitální nástroje, které transformují byznys i naši budoucnost.
+Od dětství mě fascinovaly technologie - ať šlo o zkoumání počítačů, zvládnutí pokročilého softwaru, nebo později úpravu a vylepšování Android operačních systémů (custom ROM). 
+Po letech stráveném v globálním nákupu jsem se inspiroval, abych se naučil programovat, aby lépe pochopit a ovlivňovat digitální nástroje transformující podnikání a naši budoucnost.
 
-Moje cesta programováním začala s kurzem CS50 na Harvardu - prestižním a náročným úvodem do informatiky. Tento kurz mě hluboce a silně inspiroval a motivoval k dalšímu studiu a rozvíjení programátorských dovedností bez ohledu na svou náročnost a tempo. Těším se, že se zapojím do projektů, které propojí technologie s reálnými výzvami.
+Moje cesta do programování se skutečně začala s Harvardovým CS50, renomovaným a přísným úvodem do informatiky. CS50 mě hluboce inspiroval a silně motivoval k pokračování v učení a rozvoji svých kódovacích dovedností, bez ohledu na strmost křivky učení. Těším se na přispění k projektům, které spojují technologii a skutečné operace.
 
 ---
 
@@ -93,86 +100,59 @@ S rozvojem svých programátorských dovedností jsem získal zkušenosti s nás
 [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](https://code.visualstudio.com/docs)
 
 **Koncepty:**  
-Algoritmy, datové struktury, OOP, API, responzivní design
+Algoritmy, Datové struktury, OOP, API, Responzivní design
 
 ---
 
-## 📚 Ukázky projektů
+## 📚 Přehled projektů
 
-### [CS50x - Přehled kurzů a projektů](https://cs50.harvard.edu/x/2024/)
+### CS50x: Úvod do informatiky (Harvardská univerzita) (https://cs50.harvard.edu/x/2024/)
+#### Absolvoval jsem přísný kurs CS50x pokrývající: 
+- **Jazyky a technologie:** C, Python, SQL, HTML/CSS, JavaScript, Flask 
+- **Základní koncepty:** Algoritmy, datové struktury, správa paměti, vývoj webových aplikací 
+- **Projekty:** Vytvořil jsem 25+ projektů včetně webových aplikací, databázových systémů a algoritmických řešení 
 
-#### 1. Programovací jazyk C 
-- **HELLO, MARIO, CASH, SCRABBLE:** Základní programy na řízení toku, práci s pamětí a datovými strukturami.
-- **READABILITY & CAESAR:** Analýza textu pomocí indexu Coleman-Liau a vytvoření jednoduchých kryptografických nástrojů.
-- **FILTER & RECOVER:** Práce s obrazovými daty a obnova JPEG souborů z poškozených paměťových karet, procvičení práce se soubory a obnovy dat.
-
-#### 2. SQL a analýza dat
-- **SONGS & MOVIES DATABASE:** Pokročilé SQL dotazy na reálných datech.
-- **FIFTYVILLE MYSTERY:** Řešení těchto detektivních úkolů pomocí detailní datové analýzy.
-
-#### 3. Webový vývoj (Python, Flask, HTML/CSS)
-- **BIRTHDAY APP:** Správu uživatelských dat a narozenin s pomocí Flask a SQLite.
-- **FINANCE:** Simulovaná obchodní platforma pro akcie s integrací reálných API.
-- **HOMEPAGE:** Osobní webová stránka navržená a stylizovaná pomocí HTML, CSS, Bootstrap a JavaScriptu.
-
-#### 4. Algoritmické myšlení ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
-- **SPELLER:** Efektivní kontrola pravopisu pomocí hash tabulek. 
-- **TIDEMAN:** Systém pro hlasování využívající grafovou teorii a detekci cyklů. 
-
-#### Závěrečný projekt: Hra Člověče nezlob se 
-- **Webová hra Člověče nezlob se** (HTML, CSS, JS, Flask, Python): Responzivní design, automatizovaná hra a plány pro uložení stavu hry a další rozšiřování funkcí.
-- **[Kód k nahlédnutí](./CS50x_project/)**
+**Závěrečný projekt:** Webová hra Člověče nezlob se (HTML, CSS, JS, Flask, Python). Responzivní design, automatizovaná hra a plány pro trvalé uložení stavu hry a rozšíření funkcí. 
+- **[Podívejte se na podrobné projekty →](./projects/project1/README.md)**
 
 ---
 
-### [Přehled kurzu CS50 Python](https://cs50.harvard.edu/python/)
+### CS50 Python: Úvod do programování (Harvardská univerzita) (https://cs50.harvard.edu/python/) 
+#### Pokročilý kurz Pythonu zaměřený na: 
+- **Základní dovednosti:** OOP, práce se soubory, zpracování dat, integrace API, testování jednotek 
+- **Projekty:** 40+ sad problémů demonstrujících Python zdatnost 
 
-#### Hlavní témata kurzu
-- **Základy Pythonu:** Silné základy v Pythonu díky široké škále úloh zaměřených na zpracování vstupů/výstupů, manipulaci s textem a řízení toku programu.
-- **Manipulace a zpracování dat:** Zvládnutí různých datových typů a struktur, včetně využití technik jako manipulace s řetězci, seznamovými výrazy a operacemi se slovníky.
-- **Práce se soubory a I/O:** Řešení úloh zahrnující ukládání, načítání a zpracování dat, včetně práce s CSV soubory a manipulace s texty.
-- **Testování a ladění:** Tvorba rozsáhlých testovacích sad a postupy ladění pro zajištění přesnosti kódu.
-- **Objektově orientované programování (OOP):** Návrh vlastních tříd pro modelování reálných objektů, zvládnutí zapouzdření a implementace metod.
+**Závěrečný projekt:** Sledovač bolestí hlavy (CLI & webové rozhraní): Umožňuje uživatelům zaznamenávat, sledovat a analyzovat výskyt bolestí hlavy organizovaným způsobem. Uživatelé mohou zaznamenávat specifika každé bolesti hlavy—například datum, trvání, intenzitu, dietní triggery, úroveň stresu, kvalitu spánku a účinnost jakýchkoli užívaných léků. 
+**[Podívejte se na podrobné projekty →](./projects/project2/README.md)** 
 
-#### Ukázkové projekty a přístupy
-- **Řešení úloh:**
-  - **INDOR:** Zaměření na základní zpracování vstupů a textu.
-  - **FACES:** Demonstrace funkcí, iterací a nahrazování řetězců, nezbytné pro datové transformace.
-  - **BANK:** Ilustrace rozhodovací logiky v aplikacích pomocí řetězcových operací a řízení toku.
-  - **TWTR:** Filtrování a efektivní zpracování textových dat použitím manipulace s řetězci.
-  - **PLATES:** Validace vstupů s využitím podmínek, smyček a logické práce s řetězci.
-  - **FUEL:** Modelování stavových systémů za pomocí matematických operací a logických podmínek.
-  - **GAME:** Vývoj interaktivní aplikace zahrnující náhodné jevy a uživatelské vstupy.
-  - **BITCOIN:** Efektivní práce s API zpracování dat v reálném čase přes HTTP požadavky.
-  - **COOKIE JAR:** Demonstrace principů OOP při zapouzdření dat a chování ve třídách.
-
-#### Závěrečný projekt: Sledování výskytů bolestí hlavy
-- **:** 
-  - **Funkce:** 
-  - **Dovednosti:** 
-  - **Plány do budoucna:** 
 
 ---
 
-### [IT Network: Programování webových aplikací v Pythonu](https://www.itnetwork.cz/)
-#### Rekvalifikační program akreditovaný MŠMT ČR
+### CS50 SQL: Úvod do databází (Harvardská univerzita) (https://cs50.harvard.edu/sql/)
+#### Návrh databází a optimalizace: 
+- **Dovednosti:** Návrh relačních databází, SQL dotazy, indexování, datové modelování 
+- **Projekty:** Složité databázové aplikace s více tabulkami a pohledy. Bylo absolvováno 25+ sad projektů
 
-- **HTML/CSS:** Pokročilé rozvržení a tvorba responzivního designu.
-- **Základy Pythonu & OOP:** Osvojení základů a objektově orientovaného programování v Pythonu.
-- **Django:** Vývoj webových aplikací s autentizací.
-- **Pokročilé uživatelské rozhraní:** Zlepšení uživatelského zážitku, intuitivní rozhraní a perzistence dat.
+**Závěrečný projekt:** Sledovač spotřeby kávy (SQLite): Normalizovaná SQLite databáze a sada nástrojů pro hlášení pro sledování spotřeby kanceláře přes více umístění a oddělení. 
+**[Podívejte se na podrobné projekty →](./projects/project4/README.md/)** 
 
-#### Závěrečný projekt: 
-- **Konzolová aplikace:** Aplikace pro správu záznamů o pojistnících, která uživatelům umožňuje přidávat, zobrazovat, vyhledávat a exportovat data o pojistnících.
-- **[Kód k nahlédnutí](./ITNetwork_project)**
+---
+
+### IT Network: Vývoj webových aplikací v Pythonu (Ministerstvem školství certifikované) (https://www.itnetwork.cz/)
+#### Profesionální program přeškolování pokrývající: 
+- **Technologie:** Python, Django, HTML/CSS, SQL, OOP, integrace databází 
+- **Certifikace:** Oficiální kvalifikace uznávaná českou vládu 
+
+**Závěrečný projekt:** Systém správy pojištění (Konzolová aplikace): Umožňuje spravovat záznamy pojistníků, umožňuje uživatelům přidávat, zobrazovat, vyhledávat a exportovat údaje o pojistnících
+**[Podívejte se na podrobné projekty →](./projects/project3/README.md)** 
 
 ---
 
 ## 🌟 Osobní přístup
 
-- Rád rozdělím složité problémy na zvládnutelné části a postupně zdokonaluji své projekty.
-- Oceňuji intuitivní uživatelské ovládání, otevřenou mezilidskou komunikaci a robustní kód.
-- Mám chuť se neustále učit, experimentovat a přispívat k smysluplným projektům.
+- Rád si rozkládám složité problémy na zvládnutelné kroky a iterativně vylepšuji své projekty.
+- Oceňuji intuitivní uživatelské zážitky, otevřenou komunikaci mezi lidmi a robustní kód.
+- Vždy se těším na učení, experimentování a přispívání k smysluplným projektům.
 
 ---
 
