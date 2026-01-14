@@ -281,6 +281,160 @@ def get_unique_values():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/api/export', methods=['GET'])
+def export_api():
+    """
+    API endpoint to export all records to CSV format (downloadable).
+    
+    Returns:
+        JSON response with CSV data or error message.
+    """
+    try:
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            records, column_names = tracker.get_records()
+            # Convert to CSV format for download
+            import io
+            output = io.StringIO()
+            writer = __import__('csv').writer(output)
+            writer.writerow(column_names)
+            for record in records:
+                writer.writerow(record)
+            csv_data = output.getvalue()
+            return jsonify({
+                "message": "Records exported successfully",
+                "filename": "headaches_export.csv",
+                "data": csv_data
+            }), 200
+        finally:
+            tracker.close()
+    except Exception as e:
+        app.logger.error(f"Error exporting records: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/init', methods=['POST'])
+def init_database():
+    """
+    API endpoint to initialize/reset the database.
+    
+    Returns:
+        JSON response indicating success or error.
+    """
+    try:
+        tracker = HeadacheTracker("myapp/headache.db")
+        try:
+            tracker.db_manager.initdb()
+            return jsonify({"message": "Database initialized successfully"}), 200
+        finally:
+            tracker.close()
+    except Exception as e:
+        app.logger.error(f"Error initializing database: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/api/import', methods=['POST'])
+def import_api():
+    """
+    API endpoint to import records from an uploaded CSV/Excel file.
+    
+    Form Data:
+        - file: The CSV or Excel file to import
+        - overwrite: Boolean (true/false) to overwrite existing records
+    
+    Returns:
+        JSON response with import results or error message.
+    """
+    try:
+        if 'file' not in request.files:
+            return jsonify({"error": "No file provided"}), 400
+        
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({"error": "No file selected"}), 400
+        
+        # Check file extension
+        allowed_extensions = {'csv', 'xlsx', 'xls'}
+        if not ('.' in file.filename and file.filename.rsplit('.', 1)[1].lower() in allowed_extensions):
+            return jsonify({"error": "Invalid file format. Only CSV, XLSX, XLS are allowed"}), 400
+        
+        # Save temporary file
+        import tempfile
+        import os
+        import pandas as pd
+        
+        # Create temporary directory if needed
+        temp_dir = tempfile.gettempdir()
+        temp_filename = os.path.join(temp_dir, file.filename)
+        file.save(temp_filename)
+        
+        try:
+            tracker = HeadacheTracker("myapp/headache.db")
+            try:
+                # If overwrite is requested, clear existing records
+                overwrite = request.form.get('overwrite', 'false').lower() == 'true'
+                if overwrite:
+                    cursor = tracker.db_manager.get_cursor()
+                    cursor.execute('DELETE FROM medications')
+                    cursor.execute('DELETE FROM triggers')
+                    cursor.execute('DELETE FROM headaches')
+                    cursor.execute('DELETE FROM users')
+                    tracker.db_manager.commit()
+                
+                # Import records from file
+                df = pd.read_excel(temp_filename) if file.filename.endswith(('.xlsx', '.xls')) else pd.read_csv(temp_filename)
+                
+                imported_count = 0
+                for index, row in df.iterrows():
+                    try:
+                        tracker.add_headache(
+                            user_name=str(row.get('user_name', 'Unknown')),
+                            user_age=int(row.get('user_age', 0)),
+                            user_sex=str(row.get('user_sex', 'M')),
+                            date_of_headache=str(row.get('date_of_headache', '')),
+                            time_of_headache=str(row.get('time_of_headache', '')),
+                            duration=int(row.get('duration', 0)),
+                            intensity=int(row.get('intensity', 5)),
+                            trigger=str(row.get('trigger', 'Unknown')),
+                            headache_type=str(row.get('headache_type', 'Unknown')),
+                            diet=str(row.get('diet', 'Normal')),
+                            stress_level=int(row.get('stress_level', 5)),
+                            sleep_quality=int(row.get('sleep_quality', 5)),
+                            medication=str(row.get('medication', 'None')),
+                            dosage=str(row.get('dosage', '')),
+                            effectiveness=int(row.get('effectiveness', 5))
+                        )
+                        imported_count += 1
+                    except Exception as e:
+                        app.logger.warning(f"Failed to import row {index}: {e}")
+                        continue
+                
+                tracker.close()
+                
+                # Clean up temporary file
+                os.remove(temp_filename)
+                
+                return jsonify({
+                    "message": f"File imported successfully",
+                    "imported_count": imported_count
+                }), 200
+            finally:
+                if tracker:
+                    tracker.close()
+        except Exception as e:
+            # Clean up temporary file on error
+            if os.path.exists(temp_filename):
+                try:
+                    os.remove(temp_filename)
+                except:
+                    pass
+            raise
+            
+    except Exception as e:
+        app.logger.error(f"Error importing file: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/api/stop', methods=['GET'])
 def stop_server():
     """
