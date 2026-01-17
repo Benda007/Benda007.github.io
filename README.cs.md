@@ -78,6 +78,13 @@ Věřím, že tyto dovednosti ze mě dělají efektivního komunikátora a spolu
   <a href="https://Benda007.github.io/data/ITNetwork_certificate.png" target="_blank">
     <img src="https://Benda007.github.io/data/ITNetwork_certificate.png" alt="IT Network Python Jean Kocman certificate" width="200"/>
   </a>
+
+- **CS50 SQL: Introduction to Databases** – Certifikát získán  
+  <a href="https://Benda007.github.io/data/CS50SQL_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/CS50SQL_certificate.png" alt="CS50P Jean Kocman certificate" width="250"/>
+  </a>
+
+  
 ---
 
 ## 💻 Dovednosti a technologie
