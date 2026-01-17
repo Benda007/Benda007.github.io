@@ -87,6 +87,11 @@ I believe these skills make me an effective communicator and collaborator, able 
     <img src="https://Benda007.github.io/data/ITNetwork_certificate.png" alt="IT Network Python Jean Kocman certificate" width="200"/>
   </a>
 
+- **CS50 SQL: Introduction to Databases with SQL** – Certificate earned  
+  <a href="https://Benda007.github.io/data/CS50SQL_certificate.png" target="_blank">
+    <img src="https://Benda007.github.io/data/CS50SQL_certificate.png" alt="CS50P Jean Kocman certificate" width="250"/>
+  </a>
+
 ---
 
 ## 💻 Skills & Technologies
