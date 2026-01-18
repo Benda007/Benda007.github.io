@@ -3,10 +3,10 @@ from myapp.db import HeadacheTracker
 from myapp.core import get_headaches_by_trigger
 from datetime import datetime
 import logging
+import os 
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
-
 
 @app.route('/')
 def home():
@@ -132,5 +132,7 @@ def headaches_by_trigger():
         tracker.close()
 
 
+# if __name__ == '__main__':
+#     app.run(debug=True)
 if __name__ == '__main__':
-    app.run(debug=True)
+       app.run(debug=False, host='0.0.0.0', port=5000)
