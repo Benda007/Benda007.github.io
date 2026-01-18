@@ -17,7 +17,7 @@ The main objective of the Headache Tracker is to enable users to log, track, and
 - **Headache Entry and Management**: Add, update, or delete headache records through a command-line interface or a user-friendly web interface.
 - **Data Filtering and Viewing**: Search and filter records based on user-specific criteria, making it easier to find trends or particular events.
 - **Export Functionality**: Export all recorded data to an Excel spreadsheet for external analysis and record-keeping.
-- **User Interface**: A Flask-powered web interface enhances accessibility and ease of use for managing headache data. 
+- **User Interface**: A Flask-powered web interface enhances accessibility and ease of use for managing headache data.
 
 ### Project Files Overview
 

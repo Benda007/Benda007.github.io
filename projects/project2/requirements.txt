@@ -3,9 +3,9 @@
 # To install all necessary packages, execute the following command in your terminal:
 # pip install -r requirements.txt
 
-Flask>=3.0.0
-pandas>=2.0.0
-openpyxl>=3.1.0
-tabulate>=0.9.0
-pytest>=7.0.0
-gunicorn>=21.0.0
+
+Flask
+pandas
+openpyxl
+tabulate
+pytest
