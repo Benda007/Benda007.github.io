@@ -1,0 +1,17 @@
+name: portfolio-projects
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - sqlite
+  - pip
+  - pip:
+    # Project 2 dependencies
+    - flask
+    - openpyxl
+    - tabulate
+    # Project 3 dependencies (add if you know them)
+    # - pandas  # if needed
+    # - matplotlib  # if needed
+    # Add any other dependencies your projects need
