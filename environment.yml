@@ -7,11 +7,6 @@ dependencies:
   - sqlite
   - pip
   - pip:
-    # Project 2 dependencies
-    - flask
-    - openpyxl
-    - tabulate
-    # Project 3 dependencies (add if you know them)
-    # - pandas  # if needed
-    # - matplotlib  # if needed
-    # Add any other dependencies your projects need
+      - flask         # Project 2 web API
+      - openpyxl      # Project 2 Excel export/import
+      - tabulate      # Project 2 table formatting
