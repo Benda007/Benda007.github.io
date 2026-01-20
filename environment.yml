@@ -10,3 +10,4 @@ dependencies:
       - flask         # Project 2 web API
       - openpyxl      # Project 2 Excel export/import
       - tabulate      # Project 2 table formatting
+      - pandas        # Project 2 data analysis
