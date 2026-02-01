@@ -1,0 +1,26 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.xlsx
+*.xls
+
+# Outputs
+*.png
+*.pdf
