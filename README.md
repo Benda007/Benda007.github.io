@@ -8,6 +8,7 @@
 [![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)](https://en.wikipedia.org/wiki/Czech_Republic)
 ![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
 
+<script src="https://gist.github.com/rxaviers/7360908#file-gistfile1-md"></script>
 ---
 
 ## 📝 Summary
@@ -160,6 +161,10 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 **Final Project:** Insurance Manager System (Console Application): Allows managing the records of insurance policyholders, allowing users to add, display, search, and export data about policyholders
 **[View detailed projects →](./projects/project3/README.md)** 
+
+---
+
+## Procurement spend analyser
 
 ---
 

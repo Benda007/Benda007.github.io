@@ -5,7 +5,14 @@ It interacts with the HeadacheTracker class to apply various filter criteria to 
 """
 
 import sqlite3
-from myapp.db import DatabaseManager, UserManager, HeadacheManager, TriggerManager, MedicationManager, HeadacheTracker
+from myapp.db import (
+    DatabaseManager,
+    UserManager,
+    HeadacheManager,
+    TriggerManager,
+    MedicationManager,
+    HeadacheTracker,
+)
 
 
 def filter_criteria(tracker, filter_criteria):
@@ -35,7 +42,7 @@ def filter_criteria(tracker, filter_criteria):
     """
 
     # Consistent columns to maintain consistent headers
-    query = '''
+    query = """
     SELECT users.id AS 'User ID', users.'user name', users.age, users.sex,
            headaches.id AS 'Headache ID', headaches.date, headaches.duration, headaches.intensity, headaches.type,
            triggers.diet, triggers.'stress level', triggers.'sleep quality',
@@ -45,58 +52,58 @@ def filter_criteria(tracker, filter_criteria):
     JOIN headaches ON users.id = headaches.user_id
     JOIN triggers ON headaches.id = triggers.headache_id
     LEFT JOIN medications ON headaches.id = medications.headache_id
-    '''
+    """
 
     # Apply filters using WHERE clause
     conditions = []
     params = []
 
-    if filter_criteria.get('user_name'):
+    if filter_criteria.get("user_name"):
         conditions.append("users.'user name' LIKE ?")
         params.append(f"%{filter_criteria['user_name']}%")
 
-    if filter_criteria.get('start_date'):
+    if filter_criteria.get("start_date"):
         conditions.append("headaches.date >= ?")
-        params.append(filter_criteria['start_date'])
+        params.append(filter_criteria["start_date"])
 
-    if filter_criteria.get('end_date'):
+    if filter_criteria.get("end_date"):
         conditions.append("headaches.date <= ?")
-        params.append(filter_criteria['end_date'])
+        params.append(filter_criteria["end_date"])
 
-    if filter_criteria.get('intensity') is not None:
+    if filter_criteria.get("intensity") is not None:
         conditions.append("headaches.intensity = ?")
-        params.append(filter_criteria['intensity'])
+        params.append(filter_criteria["intensity"])
 
-    if filter_criteria.get('dosage'):
+    if filter_criteria.get("dosage"):
         conditions.append("medications.dosage = ?")
-        params.append(filter_criteria['dosage'])
+        params.append(filter_criteria["dosage"])
 
-    if filter_criteria.get('medication'):
+    if filter_criteria.get("medication"):
         conditions.append("medications.medication = ?")
-        params.append(filter_criteria['medication'])
+        params.append(filter_criteria["medication"])
 
-    if filter_criteria.get('diet'):
+    if filter_criteria.get("diet"):
         conditions.append("triggers.diet = ?")
-        params.append(filter_criteria['diet'])
+        params.append(filter_criteria["diet"])
 
-    if filter_criteria.get('sleep'):
+    if filter_criteria.get("sleep"):
         conditions.append("triggers.'sleep quality' = ?")
-        params.append(filter_criteria['sleep'])
+        params.append(filter_criteria["sleep"])
 
-    if filter_criteria.get('stress'):
+    if filter_criteria.get("stress"):
         conditions.append("triggers.'stress level' = ?")
-        params.append(filter_criteria['stress'])
+        params.append(filter_criteria["stress"])
 
-    if filter_criteria.get('effectiveness'):
+    if filter_criteria.get("effectiveness"):
         conditions.append("medications.effective = ?")
-        params.append(filter_criteria['effectiveness'])
+        params.append(filter_criteria["effectiveness"])
 
     # Add WHERE clause if there are filtering conditions
     if conditions:
         query += " WHERE " + " AND ".join(conditions)
 
     # Aggregate by headache id for unique results
-    query += ' GROUP BY headaches.id;'
+    query += " GROUP BY headaches.id;"
 
     cursor = tracker.db_manager.get_cursor()
 
@@ -109,17 +116,18 @@ def filter_criteria(tracker, filter_criteria):
 
     return records, column_names
 
+
 def get_headaches_by_trigger(tracker):
     """
     Aggregates headache records by trigger and calculates the number of occurrences for each trigger.
     """
-    query = '''
+    query = """
     SELECT triggers.diet AS trigger, COUNT(headaches.id) AS headache_count
     FROM headaches
     JOIN triggers ON headaches.id = triggers.headache_id
     GROUP BY triggers.diet
-    '''
-    
+    """
+
     cursor = tracker.db_manager.get_cursor()
     cursor.execute(query)
     records = cursor.fetchall()

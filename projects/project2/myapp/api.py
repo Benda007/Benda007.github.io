@@ -3,12 +3,13 @@ from myapp.db import HeadacheTracker
 from myapp.core import get_headaches_by_trigger
 from datetime import datetime
 import logging
-import os 
+import os
 
 app = Flask(__name__)
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(levelname)s %(message)s")
 
-@app.route('/')
+
+@app.route("/")
 def home():
     """
     Home route serving the main page.
@@ -16,10 +17,10 @@ def home():
     Returns:
         Rendered HTML for the homepage.
     """
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/add', methods=['POST'])
+@app.route("/add", methods=["POST"])
 def add_record():
     """
     API endpoint for adding a new headache record to the database.
@@ -49,26 +50,33 @@ def add_record():
     app.logger.info(f"Data received for adding record: {data}")
 
     try:
-        user_name = data.get('user_name', '').strip().title()
-        user_age = int(data.get('user_age', 0))  # Validate age appropriately
-        user_sex = data.get('user_sex', '').strip().upper()
+        user_name = data.get("user_name", "").strip().title()
+        user_age = int(data.get("user_age", 0))  # Validate age appropriately
+        user_sex = data.get("user_sex", "").strip().upper()
 
-        date_str = data.get('date_of_headache', '')
-        time_str = data.get('time_of_headache', '')
+        date_str = data.get("date_of_headache", "")
+        time_str = data.get("time_of_headache", "")
 
         date_of_headache = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
         if date_of_headache > datetime.now():
-            return jsonify({"error": "The date and time of the headache cannot be in the future."}), 400
+            return (
+                jsonify(
+                    {
+                        "error": "The date and time of the headache cannot be in the future."
+                    }
+                ),
+                400,
+            )
 
         # Get the duration value and ensure default is meaningful
-        duration = int(data.get('duration', 0))
-        intensity = int(data.get('intensity'))
-        trigger = data.get('trigger', '')
-        headache_type = data.get('headache_type', '')
+        duration = int(data.get("duration", 0))
+        intensity = int(data.get("intensity"))
+        trigger = data.get("trigger", "")
+        headache_type = data.get("headache_type", "")
 
-        medication_name = data.get('medication', '')
-        dosage = data.get('dosage', 0)
-        effectiveness = data.get('effectiveness', '')
+        medication_name = data.get("medication", "")
+        dosage = data.get("dosage", 0)
+        effectiveness = data.get("effectiveness", "")
 
         tracker = HeadacheTracker("myapp/headache.db")
         user_id = tracker.user_manager.add_user(user_name, user_age, user_sex)
@@ -82,7 +90,12 @@ def add_record():
                 headache_id, medication_name, dosage, effectiveness
             )
 
-        return jsonify({"message": "Record added successfully.", "headache_id": headache_id}), 201
+        return (
+            jsonify(
+                {"message": "Record added successfully.", "headache_id": headache_id}
+            ),
+            201,
+        )
 
     except Exception as e:
         app.logger.error(f"Error adding record: {e}")
@@ -91,7 +104,7 @@ def add_record():
         tracker.close()
 
 
-@app.route('/records', methods=['GET'])
+@app.route("/records", methods=["GET"])
 def get_records():
     """
     API endpoint to retrieve all headache records from the database.
@@ -108,7 +121,7 @@ def get_records():
         tracker.close()
 
 
-@app.route('/headaches_by_trigger', methods=['GET'])
+@app.route("/headaches_by_trigger", methods=["GET"])
 def headaches_by_trigger():
     """
     API endpoint to retrieve headache counts grouped by dietary triggers.
@@ -120,13 +133,15 @@ def headaches_by_trigger():
     tracker = HeadacheTracker("myapp/headache.db")
     try:
         cursor = tracker.db_manager.get_cursor()
-        cursor.execute('''
+        cursor.execute(
+            """
         SELECT Diet, COUNT(*) AS headache_count
         FROM triggers
         GROUP BY Diet
-        ''')
+        """
+        )
         records = cursor.fetchall()
-        result = [{'trigger': row[0], 'headache_count': row[1]} for row in records]
+        result = [{"trigger": row[0], "headache_count": row[1]} for row in records]
         return jsonify(result), 200
     finally:
         tracker.close()
@@ -134,5 +149,5 @@ def headaches_by_trigger():
 
 # if __name__ == '__main__':
 #     app.run(debug=True)
-if __name__ == '__main__':
-       app.run(debug=False, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0", port=5000)

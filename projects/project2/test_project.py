@@ -2,7 +2,14 @@ import os
 import tempfile
 import pytest
 from unittest.mock import patch
-from myapp.db import DatabaseManager, UserManager, HeadacheManager, TriggerManager, MedicationManager, HeadacheTracker
+from myapp.db import (
+    DatabaseManager,
+    UserManager,
+    HeadacheManager,
+    TriggerManager,
+    MedicationManager,
+    HeadacheTracker,
+)
 from project import add_record, filter_records
 from myapp.core import filter_criteria
 
@@ -33,9 +40,25 @@ def test_add_record():
             assert len(records_before) == 0  # Check that there are initially no records
 
             # Mock inputs and add a record directly on the tracker instance
-            with patch('builtins.input', side_effect=[
-                'user01', '40', 'M', '2025-08-01', '10:20' , '60', '3', '1', '12', '1', '2', '1', '2', 'Y'
-            ]):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "40",
+                    "M",
+                    "2025-08-01",
+                    "10:20",
+                    "60",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "Y",
+                ],
+            ):
                 tracker.add_record()
 
             # Verify if a new record has been added
@@ -61,26 +84,116 @@ def test_cancel_during_user_input():
         tracker = None
         try:
             tracker = HeadacheTracker(temp_file.name)
-            #tracker.initdb()
+            # tracker.initdb()
 
             # Mock 'cancel' input at user name prompt. Simple check for first input.
-            with patch('builtins.input', side_effect=['cancel']):
+            with patch("builtins.input", side_effect=["cancel"]):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
             # Mock 'cancel' input at user name prompt. Simple check for second input.
-            with patch('builtins.input', side_effect=['user01', 'cancel', 'M', '2025-08-01', '10:30', '60', '3', '1', '12', '1', '2', '1', '2', 'Y']):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "cancel",
+                    "M",
+                    "2025-08-01",
+                    "10:30",
+                    "60",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "Y",
+                ],
+            ):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
-            with patch('builtins.input', side_effect=['user01', '99', 'M', '2025-08-01', '10:30','60', '3', '1', '12', '1', 'cancel', '1', '2', 'Y']):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "99",
+                    "M",
+                    "2025-08-01",
+                    "10:30",
+                    "60",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "cancel",
+                    "1",
+                    "2",
+                    "Y",
+                ],
+            ):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
-            with patch('builtins.input', side_effect=['user01', 'cancel', 'M', '2025-08-01', '10:30', 'cancel', '3', '1', '12', '1', '2', '1', '2', 'Y']):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "cancel",
+                    "M",
+                    "2025-08-01",
+                    "10:30",
+                    "cancel",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "Y",
+                ],
+            ):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
-            with patch('builtins.input', side_effect=['user01', 'cancel', 'M', '2025-08-01', '10:30', '60', '3', '1', '12', '1', '2', '1', 'cancel', 'Y']):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "cancel",
+                    "M",
+                    "2025-08-01",
+                    "10:30",
+                    "60",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "2",
+                    "1",
+                    "cancel",
+                    "Y",
+                ],
+            ):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
-            with patch('builtins.input', side_effect=['user01', 'cancel', 'M', '2025-08-01', '10:30', '60', '3', '1', '12', '1', '2', '1', '2', 'cancel']):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "user01",
+                    "cancel",
+                    "M",
+                    "2025-08-01",
+                    "10:30",
+                    "60",
+                    "3",
+                    "1",
+                    "12",
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "cancel",
+                ],
+            ):
                 with pytest.raises(SystemExit):
                     tracker.add_record()
 
@@ -89,11 +202,6 @@ def test_cancel_during_user_input():
                 tracker.close()
             temp_file.close()
             os.remove(temp_file.name)
-
-
-
-
-
 
 
 def test_for_valid_input():
@@ -110,38 +218,41 @@ def test_for_valid_input():
             tracker = HeadacheTracker(temp_file.name)
 
             # Expanded input list to align with code validation and expected retries
-            with patch('builtins.input', side_effect=[
-                '',                   # Empty username, re-prompt
-                'user01',             # Correct username
-                'fourty four',        # Invalid age, re-prompt
-                '44',                 # Correct age
-                'd',                  # Invalid gender, re-prompt
-                'F',                  # Correct gender
-                '01-12-1999',         # Invalid date format
-                '10:30',              # Correct time
-                '2020-01-01',         # Correct date (ensure non-future date)
-                '25:80',              # Invalid time format, re-prompt
-                '2020-01-01',         # Correct date (ensure non-future date)
-                '10:30',              # Correct time
-                'one minute',         # Invalid duration, re-prompt
-                '60',                 # Correct duration
-                'medium',             # Invalid intensity, re-prompt
-                '3',                  # Correct intensity
-                'invalid_type',       # Invalid headache type, re-select
-                '2',                  # Correct - selects "Migraine"
-                '',                   # Invalid dietary trigger entry, re-select
-                '7',                  # Correct
-                'wrong_level',        # Invalid stress level
-                '1',                  # Correct stress level - "Low"
-                'bad_quality',        # Incorrect quality of sleep
-                '2',                  # Correct sleep quality - "Medium"
-                '',                   # No medication input previously (blank), re-prompt
-                '1',                  # "Paracetamol"
-                'twenty',             # Invalid dosage
-                '1',                  # Correct dosage as 1 pill
-                'Nope',               # Invalid effectiveness input
-                'Yes'                 # Correct effectivity
-            ]):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "",  # Empty username, re-prompt
+                    "user01",  # Correct username
+                    "fourty four",  # Invalid age, re-prompt
+                    "44",  # Correct age
+                    "d",  # Invalid gender, re-prompt
+                    "F",  # Correct gender
+                    "01-12-1999",  # Invalid date format
+                    "10:30",  # Correct time
+                    "2020-01-01",  # Correct date (ensure non-future date)
+                    "25:80",  # Invalid time format, re-prompt
+                    "2020-01-01",  # Correct date (ensure non-future date)
+                    "10:30",  # Correct time
+                    "one minute",  # Invalid duration, re-prompt
+                    "60",  # Correct duration
+                    "medium",  # Invalid intensity, re-prompt
+                    "3",  # Correct intensity
+                    "invalid_type",  # Invalid headache type, re-select
+                    "2",  # Correct - selects "Migraine"
+                    "",  # Invalid dietary trigger entry, re-select
+                    "7",  # Correct
+                    "wrong_level",  # Invalid stress level
+                    "1",  # Correct stress level - "Low"
+                    "bad_quality",  # Incorrect quality of sleep
+                    "2",  # Correct sleep quality - "Medium"
+                    "",  # No medication input previously (blank), re-prompt
+                    "1",  # "Paracetamol"
+                    "twenty",  # Invalid dosage
+                    "1",  # Correct dosage as 1 pill
+                    "Nope",  # Invalid effectiveness input
+                    "Yes",  # Correct effectivity
+                ],
+            ):
                 tracker.add_record()
 
             # Verify the number of records is 1
@@ -150,8 +261,20 @@ def test_for_valid_input():
 
             # Ensure the record data is formatted as expected -- adjust to your logic's design
             expected_record = (
-                1, 'User01', 44, 'F', 1, '2020-01-01 10:30', 60, 3, 'Migraine',
-                'Chocolate', 'Low', 'Medium', 'Paracetamol (1)', 'Yes'
+                1,
+                "User01",
+                44,
+                "F",
+                1,
+                "2020-01-01 10:30",
+                60,
+                3,
+                "Migraine",
+                "Chocolate",
+                "Low",
+                "Medium",
+                "Paracetamol (1)",
+                "Yes",
             )
             assert records[0] == expected_record
 
@@ -160,6 +283,7 @@ def test_for_valid_input():
                 tracker.close()
             temp_file.close()
             os.remove(temp_file.name)
+
 
 def test_filtering_reccords():
     """
@@ -174,22 +298,25 @@ def test_filtering_reccords():
             tracker = HeadacheTracker(temp_file.name)
 
             # Simulate adding a single record - ensure each selection input is covered
-            with patch('builtins.input', side_effect=[
-                'User01',       # User name
-                '30',           # Age
-                'M',            # Sex
-                '2023-08-01',   # Date
-                '10:20',        # Time
-                '60',           # Duration
-                '3',            # Intensity
-                '1',            # Headache type (e.g., Tension)
-                '12',           # Dietary trigger (e.g., Irregular Meal Patterns)
-                '1',            # Stress level (e.g., Low)
-                '2',            # Sleep quality (e.g., Medium)
-                '1',            # Medication usage (e.g., Eletriptan (1))
-                '2',            # Dosage (e.g., number of pills)
-                'Yes'           # Effectiveness
-            ]):
+            with patch(
+                "builtins.input",
+                side_effect=[
+                    "User01",  # User name
+                    "30",  # Age
+                    "M",  # Sex
+                    "2023-08-01",  # Date
+                    "10:20",  # Time
+                    "60",  # Duration
+                    "3",  # Intensity
+                    "1",  # Headache type (e.g., Tension)
+                    "12",  # Dietary trigger (e.g., Irregular Meal Patterns)
+                    "1",  # Stress level (e.g., Low)
+                    "2",  # Sleep quality (e.g., Medium)
+                    "1",  # Medication usage (e.g., Eletriptan (1))
+                    "2",  # Dosage (e.g., number of pills)
+                    "Yes",  # Effectiveness
+                ],
+            ):
                 tracker.add_record()
 
             # Verify if a new record has been added
@@ -198,13 +325,27 @@ def test_filtering_reccords():
             assert len(records) == 1  # Expecting a single record
 
             # Establish filter criteria to match this specific record
-            criteria = {'user_name': 'User01'}
+            criteria = {"user_name": "User01"}
             filtered_records, _ = filter_criteria(tracker, criteria)
 
             # Validate the result of filtering
             assert len(filtered_records) == 1
-            expected_record = (1, 'User01', 30, 'M', 1, '2023-08-01 10:20', 60, 3, 'Tension',
-                            'Irregular Meal Patterns', 'Low', 'Medium', 'Paracetamol (2)', 'Yes')
+            expected_record = (
+                1,
+                "User01",
+                30,
+                "M",
+                1,
+                "2023-08-01 10:20",
+                60,
+                3,
+                "Tension",
+                "Irregular Meal Patterns",
+                "Low",
+                "Medium",
+                "Paracetamol (2)",
+                "Yes",
+            )
             assert filtered_records[0] == expected_record
 
         finally:
@@ -212,5 +353,3 @@ def test_filtering_reccords():
                 tracker.close()
             temp_file.close()
             os.remove(temp_file.name)
-
-

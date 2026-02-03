@@ -3,6 +3,7 @@ db.py
 This module contains the classes and functions for managing the database related to the Headache Tracker application.
 It handles interaction with the SQLite database to add, edit, and retrieve headache-related data.
 """
+
 import sqlite3
 import sys
 from datetime import datetime
@@ -34,7 +35,7 @@ def select_from_list(options, prompt):
     Usage:
         Provide the user with a list of options to choose from. If the user inputs "cancel", the operation will cease.
     """
-    print(f"\nSelect {prompt} from the following options or type \"cancel\": ")
+    print(f'\nSelect {prompt} from the following options or type "cancel": ')
     for i, option in enumerate(options, start=1):
         print(f"{i}. {option['name']}: {option['description']}")
 
@@ -46,7 +47,7 @@ def select_from_list(options, prompt):
                 sys.exit()
             choice = int(choice)
             if 1 <= choice <= len(options):
-                return options[choice - 1]['name']
+                return options[choice - 1]["name"]
             else:
                 print("Invalid choice. Please, select from the list.")
         except ValueError:
@@ -102,21 +103,25 @@ def upload_from_excel(db_manager, excel_filename):
     tracker = HeadacheTracker()
     try:
         # Ask user if they want to overwrite existing records
-        action = input("Do you want to overwrite existing records? (yes/no): ").strip().lower()
+        action = (
+            input("Do you want to overwrite existing records? (yes/no): ")
+            .strip()
+            .lower()
+        )
 
-        if action == 'yes':
+        if action == "yes":
             # Clear previous records
             cursor = tracker.db_manager.get_cursor()
 
             # Remove related records before clearing main entry to maintain referential integrity
-            cursor.execute('DELETE FROM triggers')
-            cursor.execute('DELETE FROM medications')
-            cursor.execute('DELETE FROM headaches')
-            cursor.execute('DELETE FROM users')
+            cursor.execute("DELETE FROM triggers")
+            cursor.execute("DELETE FROM medications")
+            cursor.execute("DELETE FROM headaches")
+            cursor.execute("DELETE FROM users")
 
             tracker.db_manager.commit()
             print("Existing records successfully cleared.")
-        elif action != 'no':
+        elif action != "no":
             print("Invalid choice. Operation cancelled.")
             return
 
@@ -125,15 +130,17 @@ def upload_from_excel(db_manager, excel_filename):
 
         for index, row in df.iterrows():
             # Add user and obtain user_id
-            user_id = tracker.user_manager.add_user(row['User name'], row['Age'], row['Sex'])
+            user_id = tracker.user_manager.add_user(
+                row["User name"], row["Age"], row["Sex"]
+            )
 
             # Handle date parsing
-            date_str = row['Date']
+            date_str = row["Date"]
             if isinstance(date_str, datetime):
                 date_str = date_str.strftime("%Y-%m-%d %H:%M:%S")
 
             try:
-                if len(date_str.split(':')) == 2:  # Only has hour and minute
+                if len(date_str.split(":")) == 2:  # Only has hour and minute
                     datetime_combined = datetime.strptime(date_str, "%Y-%m-%d %H:%M")
                 else:  # Includes seconds
                     datetime_combined = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
@@ -144,26 +151,24 @@ def upload_from_excel(db_manager, excel_filename):
             headache_id = tracker.headache_manager.add_headache_record(
                 user_id,
                 datetime_combined,
-                row['Duration'],
-                row['Intensity'],
-                row['Type']
+                row["Duration"],
+                row["Intensity"],
+                row["Type"],
             )
 
             tracker.trigger_manager.add_triggers(
-                headache_id,
-                row['Diet'],
-                row['Stress level'],
-                row['Sleep quality']
+                headache_id, row["Diet"], row["Stress level"], row["Sleep quality"]
             )
 
-            if pd.notna(row['Medication usage']):
-                medications = row['Medication usage'].split(' / ')
+            if pd.notna(row["Medication usage"]):
+                medications = row["Medication usage"].split(" / ")
                 for med_info in medications:
-                    med_name, dosage = med_info.split(' (')
-                    dosage = dosage.strip(')')
-                    effectiveness = row['Effective']
+                    med_name, dosage = med_info.split(" (")
+                    dosage = dosage.strip(")")
+                    effectiveness = row["Effective"]
                     tracker.medication_manager.add_medication(
-                        headache_id, med_name, dosage, effectiveness)
+                        headache_id, med_name, dosage, effectiveness
+                    )
 
         print(f"Data successfully imported from {excel_filename}.")
     finally:
@@ -202,16 +207,19 @@ class DatabaseManager:
         cursor = self.connection.cursor()
 
         # user - patient
-        cursor.execute('''
+        cursor.execute(
+            """
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             'User name' TEXT,
             Age INTEGER,
             Sex TEXT
         );
-        ''')
+        """
+        )
         # severity of headache
-        cursor.execute('''
+        cursor.execute(
+            """
         CREATE TABLE IF NOT EXISTS headaches (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id INTEGER,
@@ -221,9 +229,11 @@ class DatabaseManager:
             Type TEXT,
             FOREIGN KEY (user_id) REFERENCES users (id)
         );
-        ''')
+        """
+        )
         # triggers table - what is causing headache
-        cursor.execute('''
+        cursor.execute(
+            """
         CREATE TABLE IF NOT EXISTS triggers (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             headache_id INTEGER,
@@ -232,10 +242,12 @@ class DatabaseManager:
             'Sleep quality' TEXT,
             FOREIGN KEY (headache_id) REFERENCES headaches (id)
         );
-        ''')
+        """
+        )
 
         # medications table - pills taken
-        cursor.execute('''
+        cursor.execute(
+            """
         CREATE TABLE IF NOT EXISTS medications (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             headache_id INTEGER,
@@ -244,7 +256,8 @@ class DatabaseManager:
             Effective TEXT,
             FOREIGN KEY (headache_id) REFERENCES headaches (id)
         );
-        ''')
+        """
+        )
         self.connection.commit()
 
     def get_cursor(self):
@@ -287,7 +300,7 @@ class UserManager:
         if name is None:
             # Get username from user.
             while True:
-                name = input("Enter username or type \"cancel\": ").strip()
+                name = input('Enter username or type "cancel": ').strip()
                 if name.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -300,7 +313,7 @@ class UserManager:
         if age is None:
             while True:
                 try:
-                    age = input("\nEnter user\'s age or type \"cancel\": ")
+                    age = input('\nEnter user\'s age or type "cancel": ')
                     if age.lower() == "cancel":
                         print(opcan)
                         sys.exit()
@@ -314,18 +327,24 @@ class UserManager:
 
         if sex is None:
             while True:
-                sex = input("\nEnter user\'s sex (M or F) or type \"cancel\": ").strip().upper()
+                sex = (
+                    input('\nEnter user\'s sex (M or F) or type "cancel": ')
+                    .strip()
+                    .upper()
+                )
                 if sex.lower() == "cancel":
                     print(opcan)
                     sys.exit()
-                elif sex in ['M', 'F']:
+                elif sex in ["M", "F"]:
                     break
                 else:
                     print("Invalid input. Please, enter M or F.")
 
         cursor = self.db_manager.get_cursor()
-        cursor.execute("INSERT INTO users ('User name', Age, Sex) VALUES (?, ?, ?)",
-                       (name, age, sex))
+        cursor.execute(
+            "INSERT INTO users ('User name', Age, Sex) VALUES (?, ?, ?)",
+            (name, age, sex),
+        )
         self.db_manager.commit()
         return cursor.lastrowid
 
@@ -349,7 +368,9 @@ class HeadacheManager:
     def __init__(self, db_manager):
         self.db_manager = db_manager
 
-    def add_headache_record(self, user_id, datetime_combined, duration, intensity, headache_type):
+    def add_headache_record(
+        self, user_id, datetime_combined, duration, intensity, headache_type
+    ):
         """
         Insert a headache record associated with a user.
 
@@ -364,8 +385,16 @@ class HeadacheManager:
             int: Database ID of newly added headache record.
         """
         cursor = self.db_manager.get_cursor()
-        cursor.execute("INSERT INTO headaches (user_id, Date, Duration, Intensity, Type) VALUES (?, ?, ?, ?, ?)",
-                       (user_id, datetime_combined.strftime("%Y-%m-%d %H:%M"), duration, intensity, headache_type))
+        cursor.execute(
+            "INSERT INTO headaches (user_id, Date, Duration, Intensity, Type) VALUES (?, ?, ?, ?, ?)",
+            (
+                user_id,
+                datetime_combined.strftime("%Y-%m-%d %H:%M"),
+                duration,
+                intensity,
+                headache_type,
+            ),
+        )
         self.db_manager.commit()
         return cursor.lastrowid
 
@@ -385,7 +414,8 @@ class HeadacheManager:
             try:
                 # Ask for a date of headache episode
                 user_date = input(
-                    "\nEnter the date of the headache episode in format (YYYY-MM-DD), or type \"cancel\": ")
+                    '\nEnter the date of the headache episode in format (YYYY-MM-DD), or type "cancel": '
+                )
                 if user_date.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -394,7 +424,8 @@ class HeadacheManager:
 
                 # Ask for a time of the headache episode
                 user_time = input(
-                    "\nEnter the time of the headache episode in format (HH:MM), or type \"cancel\": ")
+                    '\nEnter the time of the headache episode in format (HH:MM), or type "cancel": '
+                )
                 if user_time.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -404,14 +435,17 @@ class HeadacheManager:
 
                 # Ensure the combined datetime is not in the future
                 if headache_datetime > datetime.now():
-                    print("The date and time cannot be in the future. Please enter a valid past date and time.")
+                    print(
+                        "The date and time cannot be in the future. Please enter a valid past date and time."
+                    )
                     continue  # Restart the input process for both date and time
 
                 return headache_datetime  # Return the valid past datetime
 
             except ValueError as e:
                 print(
-                    f"Invalid input: {e}. Please ensure your inputs match the required format and try again.")
+                    f"Invalid input: {e}. Please ensure your inputs match the required format and try again."
+                )
 
     def get_duration(self):
         """
@@ -423,7 +457,8 @@ class HeadacheManager:
         while True:
             try:
                 duration = input(
-                    "\nEnter the duration of the headache in minutes, or type \"cancel\": ")
+                    '\nEnter the duration of the headache in minutes, or type "cancel": '
+                )
                 if duration.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -446,7 +481,8 @@ class HeadacheManager:
         while True:
             try:
                 intensity = input(
-                    "\nRate the intensity of the headache on a scale from 1 (very mild) to 10 (unspeakable) or type \"cancel\": ")
+                    '\nRate the intensity of the headache on a scale from 1 (very mild) to 10 (unspeakable) or type "cancel": '
+                )
                 if intensity.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -472,20 +508,14 @@ class HeadacheManager:
         types = [
             {
                 "name": "Tension",
-                "description": "Dull, aching pain on both sides of the head."
+                "description": "Dull, aching pain on both sides of the head.",
             },
-            {
-                "name": "Migraine",
-                "description": "Intense, throbbing headaches."
-            },
+            {"name": "Migraine", "description": "Intense, throbbing headaches."},
             {
                 "name": "Cluster",
-                "description": "Severe, burning pain, usually around one eye or one side of the head."
+                "description": "Severe, burning pain, usually around one eye or one side of the head.",
             },
-            {
-                "name": "Other",
-                "description": ""
-            }
+            {"name": "Other", "description": ""},
         ]
         return select_from_list(types, "Types of headache.")
 
@@ -517,8 +547,10 @@ class TriggerManager:
         Commits trigger data into the database.
         """
         cursor = self.db_manager.get_cursor()
-        cursor.execute("INSERT INTO triggers (headache_id, Diet, 'Stress level', 'Sleep quality') VALUES (?, ?, ?, ?)",
-                       (headache_id, diet, stress_level, sleep_quality))
+        cursor.execute(
+            "INSERT INTO triggers (headache_id, Diet, 'Stress level', 'Sleep quality') VALUES (?, ?, ?, ?)",
+            (headache_id, diet, stress_level, sleep_quality),
+        )
         self.db_manager.commit()
 
 
@@ -549,8 +581,10 @@ class MedicationManager:
         Commits medication data into the database.
         """
         cursor = self.db_manager.get_cursor()
-        cursor.execute("INSERT INTO medications (headache_id, Medication, Dosage, Effective) VALUES (?, ?, ?, ?)",
-                       (headache_id, medication_name, dosage, effectiveness))
+        cursor.execute(
+            "INSERT INTO medications (headache_id, Medication, Dosage, Effective) VALUES (?, ?, ?, ?)",
+            (headache_id, medication_name, dosage, effectiveness),
+        )
         self.db_manager.commit()
 
 
@@ -608,16 +642,21 @@ class HeadacheTracker:
         headache_type = self.headache_manager.choose_headache_type()
 
         headache_id = self.headache_manager.add_headache_record(
-            user_id, datetime_combined, duration, intensity, headache_type)
+            user_id, datetime_combined, duration, intensity, headache_type
+        )
 
         diet = self.choose_diet()
         stress_level = self.choose_stress_level()
         sleep_quality = self.choose_sleep_quality()
 
-        self.trigger_manager.add_triggers(headache_id, diet, stress_level, sleep_quality)
+        self.trigger_manager.add_triggers(
+            headache_id, diet, stress_level, sleep_quality
+        )
 
         medication_name, dosage, effectiveness = self.get_medication_info()
-        self.medication_manager.add_medication(headache_id, medication_name, dosage, effectiveness)
+        self.medication_manager.add_medication(
+            headache_id, medication_name, dosage, effectiveness
+        )
 
         print("\nRecord added successfully!\n")
 
@@ -625,7 +664,7 @@ class HeadacheTracker:
         """Edit a record identified by its ID. ID of headache incident"""
         cursor = self.db_manager.get_cursor()
 
-        cursor.execute('''SELECT * FROM headaches WHERE id = ?''', (headache_id,))
+        cursor.execute("""SELECT * FROM headaches WHERE id = ?""", (headache_id,))
         record = cursor.fetchone()
         if not record:
             print("No such record exists.")
@@ -637,9 +676,12 @@ class HeadacheTracker:
         intensity = self.headache_manager.get_intensity()
         headache_type = self.headache_manager.choose_headache_type()
 
-        cursor.execute('''
+        cursor.execute(
+            """
             UPDATE headaches SET Duration = ?, Intensity = ?, Type = ?
-            WHERE id = ?''', (duration, intensity, headache_type, headache_id))
+            WHERE id = ?""",
+            (duration, intensity, headache_type, headache_id),
+        )
         self.db_manager.commit()
         print(f"Record with Headache ID {headache_id} updated successfully!")
 
@@ -647,16 +689,18 @@ class HeadacheTracker:
         """Delete a record by its ID."""
         cursor = self.db_manager.get_cursor()
 
-        cursor.execute('''SELECT * FROM headaches WHERE id = ?''', (headache_id,))
+        cursor.execute("""SELECT * FROM headaches WHERE id = ?""", (headache_id,))
         record = cursor.fetchone()
         if not record:
             print("No such record exists.")
             return
 
         # Delete related records in triggers and medications first, then headache
-        cursor.execute('''DELETE FROM triggers WHERE headache_id = ?''', (headache_id,))
-        cursor.execute('''DELETE FROM medications WHERE headache_id = ?''', (headache_id,))
-        cursor.execute('''DELETE FROM headaches WHERE id = ?''', (headache_id,))
+        cursor.execute("""DELETE FROM triggers WHERE headache_id = ?""", (headache_id,))
+        cursor.execute(
+            """DELETE FROM medications WHERE headache_id = ?""", (headache_id,)
+        )
+        cursor.execute("""DELETE FROM headaches WHERE id = ?""", (headache_id,))
         self.db_manager.commit()
         print("Record deleted successfully!")
 
@@ -684,52 +728,43 @@ class HeadacheTracker:
         dietary_triggers = [
             {
                 "name": "Tyramine",
-                "description": "Found in aged cheeses and cured meats."
+                "description": "Found in aged cheeses and cured meats.",
             },
             {
                 "name": "Nitrates/Nitrites",
-                "description": "Common in processed meats like bacon and hot dogs."
+                "description": "Common in processed meats like bacon and hot dogs.",
             },
-            {
-                "name": "Alcohol",
-                "description": "Especially red wine."
-            },
+            {"name": "Alcohol", "description": "Especially red wine."},
             {
                 "name": "Caffeine",
-                "description": "Found in coffee, tea, and some sodas."
+                "description": "Found in coffee, tea, and some sodas.",
             },
             {
                 "name": "Monosodium Glutamate (MSG)",
-                "description": "Used as a flavor enhancer in many foods."
+                "description": "Used as a flavor enhancer in many foods.",
             },
             {
                 "name": "Aspartame",
-                "description": "An artificial sweetener in diet products."
+                "description": "An artificial sweetener in diet products.",
             },
-            {
-                "name": "Chocolate",
-                "description": "Contains caffeine and theobromine."
-            },
+            {"name": "Chocolate", "description": "Contains caffeine and theobromine."},
             {
                 "name": "Cultured Dairy Products",
-                "description": "Like yogurt and sour cream."
+                "description": "Like yogurt and sour cream.",
             },
             {
                 "name": "Processed Foods",
-                "description": "High in preservatives and additives."
+                "description": "High in preservatives and additives.",
             },
             {
                 "name": "High Sugar Intake",
-                "description": "Can cause blood sugar fluctuations."
+                "description": "Can cause blood sugar fluctuations.",
             },
-            {
-                "name": "Dehydration",
-                "description": "Not drinking enough water."
-            },
+            {"name": "Dehydration", "description": "Not drinking enough water."},
             {
                 "name": "Irregular Meal Patterns",
-                "description": "Skipping meals or eating at odd times."
-            }
+                "description": "Skipping meals or eating at odd times.",
+            },
         ]
         return select_from_list(dietary_triggers, "Dietary trigger")
         # return dietary_triggers
@@ -744,22 +779,19 @@ class HeadacheTracker:
         - Short descrtiption is provided to each of records.
         """
         stress_levels = [
-            {
-                "name": "Low",
-                "description": "Minimal stress, manageable daily life."
-            },
+            {"name": "Low", "description": "Minimal stress, manageable daily life."},
             {
                 "name": "Moderate",
-                "description": "Increased stress from work or personal life."
+                "description": "Increased stress from work or personal life.",
             },
             {
                 "name": "High",
-                "description": "Significant stress, anxiety, or pressure."
+                "description": "Significant stress, anxiety, or pressure.",
             },
             {
                 "name": "Severe",
-                "description": "Chronic stress, trauma, or overwhelming situations"
-            }
+                "description": "Chronic stress, trauma, or overwhelming situations",
+            },
         ]
         return select_from_list(stress_levels, "Stress level")
         # return stress_levels
@@ -778,16 +810,16 @@ class HeadacheTracker:
         sleep_category = [
             {
                 "name": "Low",
-                "description": "Sleep duration of less than 6 hours per night."
+                "description": "Sleep duration of less than 6 hours per night.",
             },
             {
                 "name": "Medium",
-                "description": "Sleep duration between 6 to 8 hours per night."
+                "description": "Sleep duration between 6 to 8 hours per night.",
             },
             {
                 "name": "High",
-                "description": "Sleep duration of 7 to 9 hours per night."
-            }
+                "description": "Sleep duration of 7 to 9 hours per night.",
+            },
         ]
 
         return select_from_list(sleep_category, "Quality of sleep")
@@ -802,50 +834,38 @@ class HeadacheTracker:
         """
         # Medication part
         medications = [
-            {
-                "name": "Paracetamol",
-                "description": "Safe for most; short-term use."
-            },
-            {
-                "name": "Ibuprofen",
-                "description": "Effective; caution with GI issues."
-            },
-            {
-                "name": "Aspirin",
-                "description": "Not for children; Reye's risk."
-            },
-            {
-                "name": "Naproxen",
-                "description": "Effective; similar to ibuprofen."
-            },
+            {"name": "Paracetamol", "description": "Safe for most; short-term use."},
+            {"name": "Ibuprofen", "description": "Effective; caution with GI issues."},
+            {"name": "Aspirin", "description": "Not for children; Reye's risk."},
+            {"name": "Naproxen", "description": "Effective; similar to ibuprofen."},
             {
                 "name": "Metamizol",
-                "description": "Similar to Paracetamol but a bit stronger."
+                "description": "Similar to Paracetamol but a bit stronger.",
             },
-            {
-                "name": "Diclofenac",
-                "description": "Caution in CV/GI issues."
-            },
+            {"name": "Diclofenac", "description": "Caution in CV/GI issues."},
             {
                 "name": "Sumatriptan",
-                "description": "For acute migraines; medical guidance needed."
+                "description": "For acute migraines; medical guidance needed.",
             },
             {
                 "name": "Rizatriptan",
-                "description": "For acute migraines; consult provider."
+                "description": "For acute migraines; consult provider.",
             },
             {
                 "name": "Eletriptan",
-                "description": "For migraines; caution in CV issues."
-            }
+                "description": "For migraines; caution in CV issues.",
+            },
         ]
-        medication_name = select_from_list(medications, "medication taken for the headache")
+        medication_name = select_from_list(
+            medications, "medication taken for the headache"
+        )
 
         while True:
             try:
                 # Prompt for dosage as number of pills
                 dosage = input(
-                    f"\nEnter the number of pills taken for {medication_name} or type \"cancel\": ")
+                    f'\nEnter the number of pills taken for {medication_name} or type "cancel": '
+                )
                 if dosage.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -860,8 +880,13 @@ class HeadacheTracker:
         # Track whether medication did help or not.
         while True:
             try:
-                effectiveness = input(
-                    "\nDid the medication help? Enter Yes or No, or type \"cancel\": ").strip().title()
+                effectiveness = (
+                    input(
+                        '\nDid the medication help? Enter Yes or No, or type "cancel": '
+                    )
+                    .strip()
+                    .title()
+                )
                 if effectiveness.lower() == "cancel":
                     print(opcan)
                     sys.exit()
@@ -871,7 +896,7 @@ class HeadacheTracker:
                     else:
                         effectiveness = "No"
                     break
-                print("Invalid input. Please enter \"Yes\" or \"No\".")
+                print('Invalid input. Please enter "Yes" or "No".')
             except ValueError:
                 print("Invalid input. Please enter 'Yes' or 'No'.")
 
@@ -879,7 +904,8 @@ class HeadacheTracker:
 
     def get_records(self):
         cursor = self.db_manager.get_cursor()
-        cursor.execute('''
+        cursor.execute(
+            """
         SELECT users.id AS 'User ID', users.'user name', users.age, users.sex,
             headaches.id AS 'Headache ID', headaches.date, headaches.duration, headaches.intensity, headaches.type,
             triggers.diet, triggers.'stress level', triggers.'sleep quality',
@@ -889,7 +915,8 @@ class HeadacheTracker:
         JOIN triggers ON headaches.id = triggers.headache_id
         LEFT JOIN medications ON headaches.id = medications.headache_id
         GROUP BY headaches.id;
-        ''')
+        """
+        )
 
         column_names = [description[0] for description in cursor.description]
         records = cursor.fetchall()
@@ -897,7 +924,10 @@ class HeadacheTracker:
 
     def preprocess_records(self, records):
         # Replace None in records with 'N/A' or an appropriate placeholder
-        return [[cell if cell is not None else 'N/A' for cell in record] for record in records]
+        return [
+            [cell if cell is not None else "N/A" for cell in record]
+            for record in records
+        ]
 
     # Display formatted records with headers
 
@@ -912,8 +942,15 @@ class HeadacheTracker:
             print(header_line)
             print("-" * len(header_line))
         else:
-            print(tabulate(processed_records, headers=column_names, tablefmt="fancy_grid", maxcolwidths=[
-                25] * len(column_names), colalign=["center"] * len(column_names)))
+            print(
+                tabulate(
+                    processed_records,
+                    headers=column_names,
+                    tablefmt="fancy_grid",
+                    maxcolwidths=[25] * len(column_names),
+                    colalign=["center"] * len(column_names),
+                )
+            )
 
     def close(self):
         self.db_manager.close()
