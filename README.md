@@ -164,7 +164,15 @@ Algorithms, Data Structures, OOP, APIs, Responsive Design
 
 ---
 
-## Procurement spend analyser
+## Procurement spend analyser 
+
+
+Automated tool for analyzing supplier spend data and generating actionable insights for procurement professionals.
+Designed to turn raw ERP/procurement exports into a clean dataset, summary metrics, and ready-to-use charts.
+
+> Time saving idea: replace repetitive Excel spend analysis with a repeatable Python workflow (load → clean → analyze → report → visualize → export).
+
+- **Technologies:** Python
 
 ---
 
