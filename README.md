@@ -8,7 +8,6 @@
 [![Location](https://img.shields.io/badge/Location-Czech%20Republic-orange?style=flat-square)](https://en.wikipedia.org/wiki/Czech_Republic)
 ![Status](https://img.shields.io/badge/Open%20to-New%20Opportunities-green?style=flat-square)
 
-<script src="https://gist.github.com/rxaviers/7360908#file-gistfile1-md"></script>
 ---
 
 ## 📝 Summary
