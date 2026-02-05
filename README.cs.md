@@ -11,7 +11,7 @@
 
 ## 📝 Shrnutí
 
-Zkušený profesionál v globálním nákupu (15+ let) propojující hlubokou znalost oboru s moderními technickými dovednostmi. Absolvent **Harvard CS50** (informatický program s mírou dokončení kolem 1-2 % dle community odhadů), nyní zaměřený na procurement technologie, datovou analytiku a automatizaci procesů.
+Zkušený profesionál v globálním nákupu (15+ let) propojující hlubokou znalost oboru s moderními technickými dovednostmi. Absolvent **Harvard CS50** (vzdělávací program v počítačových vědách s mírou dokončení kolem 1-2 % dle community odhadů), nyní zaměřený na procurement technologie, datovou analytiku a automatizaci procesů.
 
 Spojuji svět nákupních operací a technologií — rozumím jak obchodním problémům, tak technickým řešením.
 
