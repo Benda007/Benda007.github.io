@@ -54,7 +54,7 @@
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" data-target="4">0</div>
-                            <div class="stat-label">Harvard/MoE Certs</div>
+                            <div class="stat-label">Harvard/MEYS Certs</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" data-target="3">0</div>
@@ -76,7 +76,7 @@
 
                 <div class="hero-image reveal-text">
                     <div class="image-glow">
-                        <img src="data/JK_photo.jpg" alt="Jean Kocman - Procurement Technology Professional">
+                        <img src="data/profile_photo.jpg" alt="Jean Kocman - Procurement Technology Professional">
                     </div>
                     
                     <div class="learning-card">
@@ -150,23 +150,102 @@
 <span class="typing-line">    </span>
 <span class="typing-line">    # Top suppliers by spend</span>
 <span class="typing-line">    top_suppliers = df.groupby('Supplier')['Spend'] \</span>
-    .sum().nlargest(10)
-    
-    # Spend by category
-    category_spend = df.groupby('Category')['Spend'] \
-        .sum()
-    
-    # Year-over-year trend
-    yoy_trend = df.groupby('Year')['Spend'] \
-        .sum().sort_index()
-    
-    return {
-        'top_suppliers': top_suppliers,
-        'category_spend': category_spend,
-        'yoy_trend': yoy_trend
-    }</code></pre>
+<span class="typing-line">        .sum().nlargest(10)</span>
+<span class="typing-line">    </span>
+<span class="typing-line">    # Spend by category</span>
+<span class="typing-line">    category_spend = df.groupby('Category')['Spend'] \</span>
+<span class="typing-line">        .sum()</span>
+<span class="typing-line">    </span>
+<span class="typing-line">    # Year-over-year trend</span>
+<span class="typing-line">    yoy_trend = df.groupby('Year')['Spend'] \</span>
+<span class="typing-line">        .sum().sort_index()</span>
+<span class="typing-line">    </span>
+<span class="typing-line">    return {</span>
+<span class="typing-line">        'top_suppliers': top_suppliers,</span>
+<span class="typing-line">        'category_spend': category_spend,</span>
+<span class="typing-line">        'yoy_trend': yoy_trend</span>
+<span class="typing-line">    }</span></code></pre>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Procurement Projects (In Development) -->
+    <section class="realworld-projects-section">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-tag">Procurement Tech Pipeline</span>
+                <h2>Real-World Procurement Projects In Development</h2>
+                <p>Combining Power BI, Power Automate, APIs & Python for enterprise procurement solutions</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Supplier Risk Dashboard -->
+                <article class="project-card project-coming reveal-card">
+                    <div class="coming-badge">📊</div>
+                    <div class="card-header">
+                        <h3>Supplier Risk Dashboard</h3>
+                        <span class="project-badge badge-coming">In Development</span>
+                    </div>
+                    <p>Interactive dashboard for comprehensive supplier risk assessment. Combines financial health analysis, delivery performance metrics, and compliance scoring.</p>
+                    <div class="tech-tags">
+                        <span>Power BI</span>
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>REST API</span>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-item">📈 Real-time risk scoring</span>
+                        <span class="feature-item">📊 Heat maps & trends</span>
+                        <span class="feature-item">⚠️ Alert system</span>
+                    </div>
+                    <p class="project-note">Expected Q1 2026</p>
+                </article>
+
+                <!-- SAP Ariba Mock Integration -->
+                <article class="project-card project-coming reveal-card">
+                    <div class="coming-badge">🏛️</div>
+                    <div class="card-header">
+                        <h3>SAP Ariba Mock Integration</h3>
+                        <span class="project-badge badge-coming">In Development</span>
+                    </div>
+                    <p>Simulation of SAP Ariba API integration demonstrating enterprise procurement system connectivity. Includes mock endpoints for purchase orders, supplier management, and contract lifecycle operations.</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Node.js</span>
+                        <span>REST API</span>
+                        <span>Swagger</span>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-item">📦 Mock API endpoints</span>
+                        <span class="feature-item">📊 BI-friendly export</span>
+                        <span class="feature-item">🔗 ERP integration pattern</span>
+                    </div>
+                    <p class="project-note">Expected Q2 2026</p>
+                </article>
+
+                <!-- Contract Expiry Tracker -->
+                <article class="project-card project-coming reveal-card">
+                    <div class="coming-badge">📅</div>
+                    <div class="card-header">
+                        <h3>Contract Expiry Tracker</h3>
+                        <span class="project-badge badge-coming">In Development</span>
+                    </div>
+                    <p>Web application for contract lifecycle management and automated expiration monitoring. Sends proactive notifications and maintains comprehensive contract portfolio dashboard with timeline visualization.</p>
+                    <div class="tech-tags">
+                        <span>Flask</span>
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>APScheduler</span>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature-item">📤 Contract uploads</span>
+                        <span class="feature-item">📧 Smart notifications</span>
+                        <span class="feature-item">📊 Timeline dashboard</span>
+                    </div>
+                    <p class="project-note">Expected Q2 2026</p>
+                </article>
             </div>
         </div>
     </section>
@@ -176,8 +255,8 @@
         <div class="container">
             <div class="section-header reveal-text">
                 <span class="section-tag">Technical Foundations</span>
-                <h2>Harvard CS50 & Professional Training</h2>
-                <p>Selected projects demonstrating programming fundamentals and problem-solving</p>
+                <h2>Harvard CS50 & Academic Projects</h2>
+                <p>Programming fundamentals, data structures, and web development essentials</p>
             </div>
 
             <div class="projects-grid">
@@ -193,7 +272,7 @@
                         <span>JavaScript</span>
                         <span>Python</span>
                     </div>
-                    <a href="projects/project1/README.html" class="card-link">View details →</a>
+                    <a href="projects/project1/README.md" class="card-link">View details →</a>
                 </article>
 
                 <!-- CS50P -->
@@ -208,7 +287,7 @@
                         <span>Flask</span>
                         <span>Data Analysis</span>
                     </div>
-                    <a href="projects/project2/README.html" class="card-link">View details →</a>
+                    <a href="projects/project2/README.md" class="card-link">View details →</a>
                 </article>
 
                 <!-- CS50 SQL -->
@@ -223,7 +302,7 @@
                         <span>Database Design</span>
                         <span>Analytics</span>
                     </div>
-                    <a href="projects/project4/README.html" class="card-link">View details →</a>
+                    <a href="projects/project4/README.md" class="card-link">View details →</a>
                 </article>
 
                 <!-- IT Network -->
@@ -238,7 +317,7 @@
                         <span>OOP</span>
                         <span>CLI</span>
                     </div>
-                    <a href="projects/project3/README.html" class="card-link">View details →</a>
+                    <a href="projects/project3/README.md" class="card-link">View details →</a>
                 </article>
             </div>
         </div>
@@ -406,7 +485,7 @@
                     <a href="https://www.linkedin.com/in/jeankocman" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon ripple">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:jean.kocman@seznam.cz" aria-label="Email" class="social-icon ripple">
+                    <a href="mailto:kocman@duck.com" aria-label="Email" class="social-icon ripple">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
