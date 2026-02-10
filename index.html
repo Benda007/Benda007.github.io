@@ -1,375 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Kocman - Procurement Technology & SAP Business Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">Jean Kocman</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jean Kocman - IT Developer | Portfolio</title>
-        <meta name="description" content="Jean Kocman - IT Developer and Technical Professional. Portfolio showcasing full-stack development projects and expertise in Python, Web Development, and Software Engineering.">
-        <meta name="keywords" content="developer, python, web development, full-stack, portfolio, czech republic">
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="scripts/main.js"></script>
-    </head>
-
-    <body>
-        <!-- HEADER -->
-        <header>
-            <div class="container">
-                <nav>
-                    <div class="logo">Jean Kocman</div>
-                    <ul class="nav-links">
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Jean Kocman</h1>
-                <p class="tagline">"Bridging Business & Technology"</p>
-                <p>Business & Technology Professional with 15+ years of international 
-                procurement experience, now combining business expertise with technical 
-                skills. Passionate about digital transformation and data-driven solutions.</p>
-                    <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">↓ View Projects</a>
-                    <a href="https://github.com/Benda007/Benda007.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile →</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="data/JK_photo.jpg" alt="Jean Kocman - IT Developer">
-            </div>
-        </section>
-
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="gradient-bg"></div>
         <div class="container">
-            <!-- PROJECTS SECTION -->
-            <section class="projects" id="projects">
-                <div class="section-title">
-                    <h2>Featured Projects</h2>
-                    <p>Showcase of my development work and technical expertise</p>
-                    <div class="accent-line"></div>
-                </div>
-
-                <div class="projects-grid">
-                    <!-- Project 1: Web App -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>♟️ Ludo Game</h3>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                                <span class="tag">HTML5</span>
-                                <span class="tag">CSS3</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">SQLite</span>
-                                <span class="tag featured">Live Demo</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p>Full-stack web application built for <a href="https://cs50.harvard.edu/x/2024/" target="_blank" rel="noopener noreferrer" >Harvard's CS50x</a> 
-                                course final project.<br>
-                                Ludo game based using using HTML, CSS, and JavaScript for the frontend, and Python with Flask for the backend.<br>
-                                Responsive User Interface: Styled with Bootstrap.<br>
-                                Interactive Gameplay: Automated logic for piece movement.<br>
-                                Dynamic UI Components: Animated pieces and player status indicators enhance the interactive experience.</p>
-                            <div class="project-buttons">
-                                <a href="https://benda007-github-io-ludogame.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-small btn-demo">🚀 Launch  Demo</a>
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project1" target="_blank" rel="noopener noreferrer" class="btn-small btn-code">📄 Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Advanced Python -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>⚕️ Headache tracker</h3>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OOP</span>
-                                <span class="tag">Unit Testing</span>
-                                <span class="tag">Database Design</span>
-                                <span class="tag">API</span>
-                                <span class="tag featured">Live Demo</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p>Final project for <a href="https://cs50.harvard.edu/python/" target="_blank" rel="noopener noreferrer" >Harvard's CS50 Python</a>.<br> 
-                                A comprehensive Python application designed with OOP principles to aid users in managing and analyzing their headache episodes.<br>
-                                Developed as a final project for the CS50 Python course, this application is built using Python and Flask, providing both CLI and GUI (HTML) interfaces for user interactions.</p>
-                            <div class="project-buttons">
-                                <a href="https://benda007-github-io-headachetracker.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-small btn-demo">🚀 Launch Demo</a>
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project2" target="_blank" rel="noopener noreferrer" class="btn-small btn-code">📄 Source Code</a>
-                                <!-- <a href="#contact" class="btn-small btn-code">📧 More Info</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Insurance Manager -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>📈 Insurance Manager System</h3>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OOP</span>
-                                <span class="tag">Data Processing</span>
-                                <span class="tag">CSV</span>
-                                <span class="tag">Business Logic</span>
-                                <span class="tag featured">Live Demo</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p>Real-world application developed during <a href="https://www.itnetwork.cz/it-e-learning" target="_blank" rel="noopener noreferrer" >IT Network</a> professional retraining program.<br>
-                                A console application for managing the records of insurance policyholders, allowing users to add, display, search, and export data about policyholders.<br>
-                                Among options available in CLI are: Add a new policyholder, List all policyholders, Search, Export database into CSV, Exit program.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project3" target="_blank" rel="noopener noreferrer" class="btn-small btn-demo">🚀 Launch  Demo</a>
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project3" target="_blank" rel="noopener noreferrer" class="btn-small btn-code">📄 Source Code</a>
-                                <!-- <a href="#contact" class="btn-small btn-code">📧 More Info</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Coffee consumption tracker -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3> ☕ Coffee consumption tracker</h3>
-                            <div class="project-tags">
-                                <span class="tag">SQLite</span>
-                                <span class="tag">Data Processing</span>
-                                <span class="tag">Business Logic</span>
-                                <span class="tag featured">Live Demo</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p>Complex SQLite database application for tracking daily coffee consumption with detailed analytics and reporting capabilities. 
-                                Designed as a final project for <a href="https://cs50.harvard.edu/sql/" target="_blank" rel="noopener noreferrer" >Harvard's CS50 SQL</a> course.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project4" target="_blank" rel="noopener noreferrer" class="btn-small btn-demo">🚀 Launch  Demo</a>
-                                <a href="https://github.com/Benda007/Benda007.github.io/tree/main/projects/project4" target="_blank" rel="noopener noreferrer" class="btn-small btn-code">📄 Source Code</a>
-                                <!-- <a href="#contact" class="btn-small btn-code">📧 More Info</a> -->
-                            </div>
-                        </div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="badge-dot"></span>
+                        Open to Remote/Hybrid opportunities
                     </div>
                     
-                    <!-- Project 5: Procurement spend analyser -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>📊 Procurement Spend Analyser</h3>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OOP</span>
-                                <span class="tag">Data Processing</span>
-                                <span class="tag">CSV/XLSX</span>
-                                <span class="tag">Business Logic</span>
-                                <!-- <span class="tag featured">Live Demo</span> -->
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <p>Automated tool for analyzing supplier spend data and generating actionable insights for procurement professionals.<br>
-                            Designed to turn raw ERP/procurement exports into a clean dataset, summary metrics, and ready-to-use charts.<br>
-                            Time saving idea: replace repetitive Excel spend analysis with a repeatable Python workflow <i>(load → clean → analyze → report → visualize → export).</i></p>
-                            <div class="project-buttons">
-                                <!-- <a href="https://github.com/Benda007/procurement-spend-analyzer" target="_blank" rel="noopener noreferrer" class="btn-small btn-demo">🚀 Launch  Demo</a> -->
-                                <a href="https://github.com/Benda007/procurement-spend-analyzer" target="_blank" rel="noopener noreferrer" class="btn-small btn-code">📄 Source Code</a>
-                                <!-- <a href="#contact" class="btn-small btn-code">📧 More Info</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-
-            <!-- EDUCATION TIMELINE -->
-            <section class="education" id="education">
-                <div class="section-title">
-                    <h2>Education & Certifications</h2>
-                    <p>Professional development and technical training</p>
-                    <div class="accent-line"></div>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline-items">
-                        <!-- CS50x -->
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>CS50x: Introduction to Computer Science</h3>
-                                <p class="institution">Harvard University</p>
-                                <p>University-level course covering C, Python, SQL, Web Development, and computer science fundamentals. This rigorous program provides comprehensive knowledge of algorithms, data structures, and software engineering principles.</p>
-                            </div>
-                            <div>
-                                <a href="data/CS50x_certificate.png" target="_blank" rel="noopener noreferrer">
-                                    <img src="data/CS50x_certificate.png" alt="CS50x Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                                </a>
-                            </div>
-                            <div class="timeline-dot"></div>
-                        </div>
-
-                        <!-- CS50P -->
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>CS50 Python: Introduction to Programming</h3>
-                                <p class="institution">Harvard University</p>
-                                <p>Advanced Python programming course focusing on object-oriented programming, software design, and practical application development. Builds on foundational CS50x knowledge with industry-relevant Python practices.</p>
-                            </div>
-                            <div>
-                                <a href="data/CS50P_certificate.png" target="_blank" rel="noopener noreferrer">
-                                    <img src="data/CS50P_certificate.png" alt="CS50P Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                                </a>
-                            </div>
-                            <div class="timeline-dot"></div>
-                        </div>
-
-                        <!-- IT Network -->
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>IT Professional Retraining Program</h3>
-                                <p class="institution">IT Network | Certified by Czech Ministry of Education, Youth and Sports</p>
-                                <p>Official professional retraining program accredited by the Czech government. Comprehensive curriculum covering programming, databases, software development, and IT professional standards. This certification validates professional competency for IT careers in Czech Republic.</p>
-                            </div>
-                            <div>
-                                <a href="data/ITNetwork_certificate.png" target="_blank" rel="noopener noreferrer">
-                                    <img src="data/ITNetwork_certificate.png" alt="IT Network Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                                </a>
-                            </div>
-                            <div class="timeline-dot"></div>
-                        </div>
-
-                        <!-- CS50SQL -->
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>CS50 SQL: Introduction to Databases with SQL</h3>
-                                <p class="institution">Harvard University</p>
-                                <p>Designed and optimized relational databases with SQL, including data modeling, normalization, indexing, and integration with Python and Java.</p>
-                            </div>
-                            <div>
-                                <a href="data/CS50P_certificate.png" target="_blank" rel="noopener noreferrer">
-                                    <img src="data/CS50P_certificate.png" alt="CS50P Certificate" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                                </a>
-                            </div>
-                            <div class="timeline-dot"></div>
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SKILLS SECTION -->
-            <section class="skills" id="skills">
-                <div class="section-title">
-                    <h2>Technical Skills</h2>
-                    <p>Technologies and tools I work with</p>
-                    <div class="accent-line"></div>
-                </div>
-
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4>Python</h4>
-                        <p>Advanced</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>Flask</h4>
-                        <p>Web Framework</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>HTML5</h4>
-                        <p>Markup</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>CSS3</h4>
-                        <p>Styling</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>JavaScript</h4>
-                        <p>Web Development</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>SQL</h4>
-                        <p>Databases</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>Git / GitHub</h4>
-                        <p>Version Control</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4>OOP</h4>
-                        <p>Programming Paradigm</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- FOOTER -->
-        <footer id="contact">
-            <div class="container">
-                <div class="footer-content">
-                    <h2>Let's Work Together</h2>
-                    <p style="margin: 20px 0; font-size: 16px;">Open to opportunities in Digital Procurement, Business Analysis, 
-IT Category Management, and roles bridging business operations with technology</p>
-
-                    <div class="social-links">
-                        <a href="https://github.com/Benda007/Benda007.github.io" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub profile">
-                            <img src="data/github.png" alt="" aria-hidden="true" class="social-icon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/jeankocman/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn profile">
-                            <img src="data/linkedin.png" alt="" aria-hidden="true" class="social-icon">
-                        </a>
-                        <a href="mailto:kocman@duck.com" title="Email">✉</a>
-                    </div>
-
-                    <p style="font-size: 16px; margin-bottom: 10px;">
-                        <strong>📍 Location:</strong> Vysočina, Czech Republic<br>
-                        <!-- <strong>📧 Email:</strong> <a href="mailto:kocman@duck.com" style="color: var(--primary-color);">kocman @ duck.com</a> -->
+                    <h1 class="reveal-text">Procurement Technology & SAP Business Analysis</h1>
+                    
+                    <p class="tagline reveal-text">
+                        Senior procurement professional (15+ years) transitioning into procurement 
+                        technology, SAP business analysis and intelligent automation.
                     </p>
+                    
+                    <p class="description reveal-text">
+                        I combine deep experience in global purchasing (automotive, finance sectors) 
+                        with a solid technical foundation from <strong>Harvard CS50</strong>, focusing 
+                        on digital procurement, data analytics, and process automation.
+                    </p>
+
+                    <div class="hero-stats reveal-text">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Years in Procurement</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label">Harvard/MoE Certs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Global Regions</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons reveal-text">
+                        <a href="https://github.com/Benda007" class="btn btn-primary ripple" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span>View GitHub Portfolio</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jeankocman" class="btn btn-secondary ripple" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Jean Kocman. All rights reserved. | <a href="https://github.com/Benda007/Benda007.github.io" style="color: var(--primary-color);">Detailed About</a></p>
+                <div class="hero-image reveal-text">
+                    <div class="image-glow">
+                        <img src="data/profile_photo.png" alt="Jean Kocman - Procurement Technology Professional">
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-title">🎯 Currently Learning (2026)</div>
+                        <div class="learning-tags">
+                            <span>Power BI</span>
+                            <span>Power Platform</span>
+                            <span>Azure (AZ-900)</span>
+                            <span>SAP Ariba</span>
+                            <span>AI Agents</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <script>
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+    <!-- Featured Project -->
+    <section class="featured-project" id="projects">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-tag">Featured Project</span>
+                <h2>Real-World Procurement Technology</h2>
+                <p>Where 15 years of procurement expertise meets Python automation</p>
+            </div>
 
-            // Add scroll animation for elements
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
+            <div class="featured-card reveal-text">
+                <div class="card-glow"></div>
+                <div class="featured-content">
+                    <div class="project-tags">
+                        <span class="tag tag-featured">Procurement Tech</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                    
+                    <h3>Procurement Spend Analyzer</h3>
+                    
+                    <p class="project-lead">
+                        Automated tool that turns raw ERP/procurement exports into clean datasets, 
+                        summary metrics and ready-to-use charts. Built to replace repetitive Excel 
+                        spend analysis with a repeatable Python workflow.
+                    </p>
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Reduces monthly spend analysis from hours to minutes</li>
+                        <li><i class="fas fa-check-circle"></i> Handles EU/US CSV formats with robust parsing</li>
+                        <li><i class="fas fa-check-circle"></i> Real business problem + technical implementation</li>
+                    </ul>
 
-            document.querySelectorAll('.project-card, .timeline-item, .skill-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        </script>
-    </body>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Benda007/procurement-spend-analyzer" class="btn btn-primary ripple" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                    </div>
+                </div>
 
+                <div class="featured-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="window-title">spend_analyzer.py</span>
+                        </div>
+                        <pre><code><span class="typing-line">def analyze_spend(df):</span>
+<span class="typing-line">    """Perform comprehensive spend analysis"""</span>
+<span class="typing-line">    </span>
+<span class="typing-line">    # Top suppliers by spend</span>
+<span class="typing-line">    top_suppliers = df.groupby('Supplier')['Spend'] \</span>
+    .sum().nlargest(10)
+    
+    # Spend by category
+    category_spend = df.groupby('Category')['Spend'] \
+        .sum()
+    
+    # Year-over-year trend
+    yoy_trend = df.groupby('Year')['Spend'] \
+        .sum().sort_index()
+    
+    return {
+        'top_suppliers': top_suppliers,
+        'category_spend': category_spend,
+        'yoy_trend': yoy_trend
+    }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Foundations (CS50 Projects) -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-tag">Technical Foundations</span>
+                <h2>Harvard CS50 & Professional Training</h2>
+                <p>Selected projects demonstrating programming fundamentals and problem-solving</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- CS50x Ludo - zachováváme tvou strukturu odkazů -->
+                <article class="project-card reveal-card">
+                    <div class="card-header">
+                        <h3>Ludo Web Game</h3>
+                        <span class="project-badge">CS50x Final</span>
+                    </div>
+                    <p>Full-stack Ludo implementation with Flask backend, responsive UI and automated game logic.</p>
+                    <div class="tech-tags">
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                    </div>
+                    <a href="projects/project1/README.html" class="card-link">View details →</a>
+                </article>
+
+                <!-- CS50P - zachováváme tvou strukturu odkazů -->
+                <article class="project-card reveal-card">
+                    <div class="card-header">
+                        <h3>Headache Tracker</h3>
+                        <span class="project-badge">CS50 Python</span>
+                    </div>
+                    <p>CLI and web app with OOP design for logging health data. Focus on clean architecture.</p>
+                    <div class="tech-tags">
+                        <span>Python OOP</span>
+                        <span>Flask</span>
+                        <span>Data Analysis</span>
+                    </div>
+                    <a href="projects/project2/README.html" class="card-link">View details →</a>
+                </article>
+
+                <!-- CS50 SQL - zachováváme tvou strukturu odkazů -->
+                <article class="project-card reveal-card">
+                    <div class="card-header">
+                        <h3>Coffee Tracker DB</h3>
+                        <span class="project-badge">CS50 SQL</span>
+                    </div>
+                    <p>Normalized SQLite database with complex queries, views and reporting capabilities.</p>
+                    <div class="tech-tags">
+                        <span>SQL</span>
+                        <span>Database Design</span>
+                        <span>Analytics</span>
+                    </div>
+                    <a href="projects/project4/README.html" class="card-link">View details →</a>
+                </article>
+
+                <!-- IT Network - zachováváme tvou strukturu odkazů -->
+                <article class="project-card reveal-card">
+                    <div class="card-header">
+                        <h3>Insurance Manager</h3>
+                        <span class="project-badge">IT Network</span>
+                    </div>
+                    <p>Console app for policyholder management. Czech government-recognized certification.</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>OOP</span>
+                        <span>CLI</span>
+                    </div>
+                    <a href="projects/project3/README.html" class="card-link">View details →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-tag">Education & Certifications</span>
+                <h2>Formal Technical Training</h2>
+                <p>Building procurement technology capabilities on a solid CS foundation</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="edu-card reveal-card">
+                    <div class="edu-icon">🎓</div>
+                    <h3>Harvard CS50x</h3>
+                    <p class="edu-org">Harvard University (edX)</p>
+                    <p class="edu-description">
+                        Introduction to Computer Science covering C, Python, SQL and web development. 
+                        Community estimates put completion rate around 1–2% due to demanding curriculum.
+                    </p>
+                    <a href="https://Benda007.github.io/data/CS50x_certificate.png" target="_blank" class="cert-link ripple">
+                        View certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="edu-card reveal-card">
+                    <div class="edu-icon">🐍</div>
+                    <h3>CS50 Python & CS50 SQL</h3>
+                    <p class="edu-org">Harvard University (edX)</p>
+                    <p class="edu-description">
+                        Advanced Python programming (OOP, testing, libraries) and relational database 
+                        design with focus on practical application development.
+                    </p>
+                    <div class="cert-links">
+                        <a href="https://Benda007.github.io/data/CS50P_certificate.png" target="_blank" class="ripple">Python cert <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://Benda007.github.io/data/CS50SQL_certificate.png" target="_blank" class="ripple">SQL cert <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="edu-card reveal-card">
+                    <div class="edu-icon">🇨🇿</div>
+                    <h3>IT Network – Web Development</h3>
+                    <p class="edu-org">Czech Ministry of Education Certified</p>
+                    <p class="edu-description">
+                        Professional retraining program (Python, Django, databases) leading to 
+                        government-recognized IT qualification in Czech Republic.
+                    </p>
+                    <a href="https://Benda007.github.io/data/ITNetwork_certificate.png" target="_blank" class="cert-link ripple">
+                        View certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Focus Areas -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-tag">Skills & Expertise</span>
+                <h2>Where Procurement Meets Technology</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-box reveal-card">
+                    <div class="skill-icon">💼</div>
+                    <h3>Procurement & Business</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span>Strategic Sourcing & Category Management</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <span>Spend Analysis & TCO Modeling</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <span>Supplier Risk Management</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <span>Cross-Regional Coordination</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-box reveal-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span>Python (Pandas, Flask)</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                        </li>
+                        <li>
+                            <span>SQL & Database Design</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </li>
+                        <li>
+                            <span>Web Development</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                        </li>
+                        <li>
+                            <span>Data Analysis & Visualization</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-box skill-learning reveal-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Currently Learning (2026)</h3>
+                    <ul class="skill-list learning">
+                        <li>
+                            <span>Microsoft Power BI</span>
+                            <div class="skill-bar learning"><div class="skill-fill" style="width: 40%"></div></div>
+                        </li>
+                        <li>
+                            <span>Power Platform (PL-900)</span>
+                            <div class="skill-bar learning"><div class="skill-fill" style="width: 35%"></div></div>
+                        </li>
+                        <li>
+                            <span>Azure Fundamentals (AZ-900)</span>
+                            <div class="skill-bar learning"><div class="skill-fill" style="width: 30%"></div></div>
+                        </li>
+                        <li>
+                            <span>SAP Ariba Basics</span>
+                            <div class="skill-bar learning"><div class="skill-fill" style="width: 25%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-box reveal-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Target Roles</h3>
+                    <ul class="target-roles">
+                        <li><i class="fas fa-check"></i> SAP Business Analyst (Procurement/Supply Chain)</li>
+                        <li><i class="fas fa-check"></i> Procurement Systems Analyst</li>
+                        <li><i class="fas fa-check"></i> Power Platform Developer (Procurement focus)</li>
+                        <li><i class="fas fa-check"></i> Digital Procurement Specialist</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>
+                    If you're building the future of digital procurement, SAP-enabled processes, 
+                    or procurement technology solutions, I'd love to talk.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://github.com/Benda007" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon ripple">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeankocman" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon ripple">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:jean.kocman@seznam.cz" aria-label="Email" class="social-icon ripple">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="footer-info">
+                    <p><strong>📍 Location:</strong> Vysočina, Czech Republic | Open to Remote/Hybrid</p>
+                    <p><strong>🌍 Languages:</strong> Czech (native) · English (fluent)</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jean Kocman · Procurement Technology & SAP Business Analysis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script src="scripts/script.js"></script>
+</body>
 </html>
