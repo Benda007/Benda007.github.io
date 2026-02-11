@@ -1,3 +1,34 @@
+// Mobile menu toggle functionality
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (mobileMenuToggle && navLinks) {
+    // Toggle menu on button click
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const isClickInsideNav = navLinks.contains(e.target);
+        const isClickInsideToggle = mobileMenuToggle.contains(e.target);
+        
+        if (!isClickInsideNav && !isClickInsideToggle && navLinks.classList.contains('active')) {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
 // Intersection Observer for scroll reveal animations
 const observerOptions = {
     threshold: 0.1,

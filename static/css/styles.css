@@ -64,6 +64,18 @@ body {
     padding: 0 24px;
 }
 
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+}
+
 /* Scroll Reveal Animation */
 .reveal-text,
 .reveal-card {
@@ -102,12 +114,45 @@ nav {
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: -0.5px;
+    z-index: 101;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 102;
+    padding: 0;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-base);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .nav-links a {
@@ -139,7 +184,41 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
     .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        list-style: none;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        max-height: 300px;
+    }
+    
+    .nav-links li {
+        padding: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 16px 24px;
+    }
+    
+    .nav-links a::after {
         display: none;
     }
 }
@@ -248,6 +327,14 @@ nav {
     padding: 24px 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 640px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px 0;
+    }
 }
 
 .stat-item {
@@ -508,6 +595,26 @@ nav {
     margin: 0 auto;
 }
 
+@media (max-width: 640px) {
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Readability: ensure long paragraphs are left-aligned and limited in width */
 .project-card p,
 .project-lead,
@@ -736,6 +843,40 @@ code {
     .featured-card {
         grid-template-columns: 1fr;
         padding: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .featured-card {
+        padding: 20px;
+        gap: 24px;
+    }
+    
+    .featured-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-lead {
+        font-size: 1rem;
+    }
+    
+    .code-window {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-project {
+        padding: 40px 0;
+    }
+    
+    .featured-card {
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .featured-card h3 {
+        font-size: 1.25rem;
     }
 }
 
@@ -1182,5 +1323,85 @@ footer {
     .education-section,
     .skills-section {
         padding: 60px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-section,
+    .education-section,
+    .skills-section {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        gap: 16px;
+    }
+    
+    .project-card {
+        padding: 16px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .project-card p {
+        font-size: 0.875rem;
+    }
+    
+    .education-grid {
+        gap: 20px;
+    }
+    
+    .edu-card {
+        padding: 20px;
+    }
+    
+    .edu-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .skills-grid {
+        gap: 20px;
+    }
+    
+    .skill-box {
+        padding: 20px 16px;
+    }
+    
+    .skill-box h3 {
+        font-size: 1.125rem;
+    }
+    
+    .footer-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-content p {
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
     }
 }
